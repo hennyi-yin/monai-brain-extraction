@@ -1,18 +1,24 @@
 # Deep Learning Brain Extraction on NFBS (MONAI 3D U-Net)
 
 <!-- RESULTS:START -->
-Training and held-out evaluation are pending. No measured performance is claimed yet.
+A MONAI 3D U-Net achieves Dice **0.99** on **25** held-out NFBS T1w scans, **21.3 points above** fixed FSL BET (-R, uncropped scans; paired Wilcoxon p = 5.96046e-08).
 
 | Method | Dice mean ± SD | Dice median | HD95 mm mean ± SD | p vs U-Net |
 |---|---:|---:|---:|---:|
-| MONAI 3D U-Net | Pending | Pending | Pending | — |
-| FSL BET default | Pending | Pending | Pending | Pending |
-| FSL BET robust (`-R`) | Pending | Pending | Pending | Pending |
+| MONAI 3D U-Net | 0.9863 ± 0.0018 | 0.9868 | 1.43 ± 0.19 | — |
+| FSL BET (default, -f 0.5) | 0.7581 ± 0.1199 | 0.7735 | 46.54 ± 27.25 | 5.96046e-08 |
+| FSL BET (-R, -f 0.5) (selected) | 0.7734 ± 0.3014 | 0.9301 | 32.92 ± 41.66 | 5.96046e-08 |
+
+The selected BET setting has 7/25 cases with Dice <0.8 and 2 zero-overlap masks. Its median Dice is 0.9301; the median paired U-Net gain is 5.7 points. The larger mean gain is influenced by these BET failures. This comparison uses the two fixed commands on uncropped inputs, and is not a comparison against a neck-cropped or otherwise optimized FSL pipeline. The [NFBS paper](https://link.springer.com/article/10.1186/s13742-016-0150-5) reported BET Dice 0.893 ± 0.027 using FSL 5.0.7 with `bet -B` (bias-field and neck cleanup), not the default/-R settings evaluated here. That published reference is a different protocol.
 <!-- RESULTS:END -->
 
 ![Paired held-out Dice](results/figures/paired_dice.png)
 ![Best, median and worst U-Net sagittal overlays](results/figures/overlays.png)
 ![Training and validation curves](results/figures/training_curves.png)
+
+Supplementary baseline review: the three lowest-scoring BET -R cases retain the original grid and place much of the mask in the neck. Native-grid checks and world-coordinate centroids are recorded in [baseline QC](results/baseline_qc.json); no cases were excluded and no test-time parameters were changed.
+
+![Three worst BET -R masks](results/figures/bet_failure_qc.png)
 
 The source dataset contains 125 defaced 1 mm T1w scans and brain masks. Subject IDs are sorted, shuffled with Python `random.Random(42)`, and split into **85 train / 15 validation / 25 test**. Only the source T1w and mask are used. See [the frozen split](splits/split.json), [data audit](results/data_audit.json), and [protocol](docs/protocol.md).
 
@@ -53,6 +59,8 @@ The release provides all 75 prediction masks plus manifests. The repository prov
 
 For this machine, see [the local run instructions](docs/local_run.md). Exact installed transitive dependencies are recorded in `requirements-lock.txt`, and FSL package builds in `environment-fsl-explicit.txt`. GPU/driver/library differences may cause small numerical differences in new training runs.
 
+The completed experiment was replayed in a fresh isolated environment installed from the lock file: all 47 pinned package versions matched, eight protocol tests passed, and `python evaluate.py` reproduced the 75-row CSV byte for byte. [Reproduction evidence](results/reproducibility.json).
+
 Some source masks contain fractional voxels in [0,1]. All training, validation and final evaluation labels use the same **≥0.5** threshold; counts are retained in the data audit.
 
 ## Implementation
@@ -76,6 +84,8 @@ Both fixed BET commands are evaluated: `-f 0.5 -m -n` and `-f 0.5 -R -m -n`. The
 - `checkpoints/best.pt`, `last.pt`: weights plus optimizer/scaler/random state for resumption; excluded from Git.
 
 `python -m scripts.audit_delivery` verifies completed artifacts against R1–R10, including all 75 native-grid binary masks. `python -m scripts.package_release` prepares release assets and SHA-256 checksums in the ignored `artifacts/release/` directory.
+
+After committing the final files, `python -m scripts.package_delivery` creates a local ZIP containing the committed source/results and verified release assets. Raw NFBS scans must be downloaded with the included script for replay; the personal resume is delivered separately.
 
 Raw data, persistent cache, mask volumes and checkpoints are excluded from Git. Publish the weights and mask archive as release assets rather than committing them. [Delivery checklist](docs/delivery.md).
 

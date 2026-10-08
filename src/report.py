@@ -32,6 +32,9 @@ def summarize(frame):
                          "p_vs_unet": None if method == "unet" else paired_test(pivot.unet, pivot[method])}
     x, y = stats["unet"]["dice_mean"], (stats["unet"]["dice_mean"] - stats[baseline]["dice_mean"]) * 100
     return {"n": len(pivot), "selected_bet": baseline, "methods": stats,
+            "baseline_diagnostics": {"dice_below_0_8_count": int((pivot[baseline] < 0.8).sum()),
+                                     "zero_overlap_count": int((pivot[baseline] == 0).sum()),
+                                     "paired_median_gain_points": float(np.median(pivot.unet - pivot[baseline]) * 100)},
             "resume": {"X": f"{x:.2f}", "N": len(pivot), "Y": f"{y:.1f}",
                        "delta_points_unrounded": y}}
 
@@ -54,10 +57,20 @@ def build_report(frame, cfg):
     resume = result["resume"]
     direction = "above" if resume["delta_points_unrounded"] >= 0 else "below"
     sentence = (f"A MONAI 3D U-Net achieves Dice **{resume['X']}** on **{resume['N']}** held-out NFBS T1w scans, "
-                f"**{abs(float(resume['Y'])):.1f} points {direction}** FSL BET ({'-R' if selected == 'bet_robust' else 'default'}; "
+                f"**{abs(float(resume['Y'])):.1f} points {direction}** fixed FSL BET ({'-R' if selected == 'bet_robust' else 'default'}, uncropped scans; "
                 f"paired Wilcoxon p = {result['methods'][selected]['p_vs_unet']:.6g}).")
     table = "\n".join(rows)
-    text = (sentence + "\n\n" + table + "\n\n"
+    diagnostic = result["baseline_diagnostics"]
+    caveat = (f"The selected BET setting has {diagnostic['dice_below_0_8_count']}/{result['n']} cases with Dice <0.8 "
+              f"and {diagnostic['zero_overlap_count']} zero-overlap masks. Its median Dice is "
+              f"{result['methods'][selected]['dice_median']:.4f}; the median paired U-Net gain is "
+              f"{diagnostic['paired_median_gain_points']:.1f} points. The larger mean gain is influenced by these "
+              "BET failures. This comparison uses the two fixed commands on uncropped inputs, and is not a comparison "
+              "against a neck-cropped or otherwise optimized FSL pipeline.")
+    caveat += (" The [NFBS paper](https://link.springer.com/article/10.1186/s13742-016-0150-5) "
+               "reported BET Dice 0.893 ± 0.027 using FSL 5.0.7 with `bet -B` (bias-field and neck cleanup), "
+               "not the default/-R settings evaluated here. That published reference is a different protocol.")
+    text = (sentence + "\n\n" + table + "\n\n" + caveat + "\n\n"
             "SD is the sample standard deviation (ddof=1). Two-sided paired Wilcoxon tests align by subject ID; "
             "zero differences are excluded, and an all-zero difference returns p=1. "
             "HD95 is the maximum of the two directed 95th-percentile surface distances, in mm.\n\n"
@@ -67,7 +80,7 @@ def build_report(frame, cfg):
             "The U-Net checkpoint and all model decisions use only training/validation data.\n\n"
             "Resume wording (rounded mean Dice; delta computed from unrounded means):\n\n"
             f"> Achieved a Dice of {resume['X']} on NFBS brain extraction ({resume['N']} held-out T1w scans), "
-            f"{abs(float(resume['Y'])):.1f} points {direction} FSL BET, by training a MONAI 3D U-Net "
+            f"{abs(float(resume['Y'])):.1f} points {direction} FSL BET (best of default/-R on uncropped scans), by training a MONAI 3D U-Net "
             "with intensity normalization and spatial augmentation.\n")
     (out / "summary.md").write_text(text, encoding="utf-8")
     readme = path("README.md")
@@ -76,7 +89,7 @@ def build_report(frame, cfg):
         start, end = "<!-- RESULTS:START -->", "<!-- RESULTS:END -->"
         before, tail = current.split(start, 1)
         _, after = tail.split(end, 1)
-        readme.write_text(before + start + "\n" + sentence + "\n\n" + table + "\n" + end + after, encoding="utf-8")
+        readme.write_text(before + start + "\n" + sentence + "\n\n" + table + "\n\n" + caveat + "\n" + end + after, encoding="utf-8")
     pivot = frame.pivot(index="id", columns="method", values="dice").sort_index()
     fig, ax = plt.subplots(figsize=(6, 5), layout="constrained")
     for _, row in pivot.iterrows():

@@ -1,0 +1,91 @@
+{
+  "config": {
+    "seed": 42,
+    "data_dir": "data/NFBS",
+    "split_file": "splits/split.json",
+    "cache_dir": "cache",
+    "checkpoint_dir": "checkpoints",
+    "log_dir": "logs",
+    "results_dir": "results",
+    "device": "cuda",
+    "model": {
+      "channels": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "strides": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "num_res_units": 2
+    },
+    "train": {
+      "roi_size": [
+        96,
+        96,
+        96
+      ],
+      "batch_size": 2,
+      "num_samples": 2,
+      "num_workers": 2,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "max_epochs": 200,
+      "val_interval": 5,
+      "patience_epochs": 30,
+      "amp": true,
+      "cpu_threads": 4
+    },
+    "infer": {
+      "roi_size": [
+        96,
+        96,
+        96
+      ],
+      "sw_batch_size": 2,
+      "overlap": 0.5,
+      "blend_mode": "constant"
+    },
+    "postprocess": {
+      "connectivity": 1
+    },
+    "bet": {
+      "executable": "bet",
+      "fractional_threshold": 0.5
+    }
+  },
+  "checkpoint_sha256": "167ecd9e5a9b6d7054052488d52ab71ab354eb83b6f382cecb45538e8f06735c",
+  "split_sha256": "3fd54e142f72eb2d795219ae0780e56229fd874516b54f3c8f26fb49027e137a",
+  "test_ids": [
+    "A00033747",
+    "A00034854",
+    "A00038642",
+    "A00039391",
+    "A00039431",
+    "A00040524",
+    "A00043721",
+    "A00043722",
+    "A00043998",
+    "A00050940",
+    "A00051927",
+    "A00055446",
+    "A00056627",
+    "A00057182",
+    "A00057235",
+    "A00057808",
+    "A00058214",
+    "A00058667",
+    "A00059428",
+    "A00060279",
+    "A00061709",
+    "A00062248",
+    "A00062917",
+    "A00063326",
+    "A00063368"
+  ]
+}

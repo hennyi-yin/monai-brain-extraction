@@ -6,6 +6,7 @@
 
 - 训练环境：`/home/hengyi/.venvs/monai-brain`
 - FSL BET 环境：`/home/hengyi/.venvs/fsl-bet`
+- 独立复现环境：`/home/hengyi/.venvs/monai-reproduce-check`，已锁定安装、通过 8 项测试并逐字节复现结果表。
 
 在 PowerShell 打开 WSL 后运行：
 

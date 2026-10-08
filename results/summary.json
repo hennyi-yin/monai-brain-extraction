@@ -1,0 +1,44 @@
+{
+  "n": 25,
+  "selected_bet": "bet_robust",
+  "methods": {
+    "unet": {
+      "dice_mean": 0.9863483888258696,
+      "dice_sd": 0.0018351205609044774,
+      "dice_median": 0.986843124130642,
+      "hd95_mean_mm": 1.4298826448096682,
+      "hd95_sd_mm": 0.19171613323360454,
+      "hd95_nonfinite_count": 0,
+      "p_vs_unet": null
+    },
+    "bet_default": {
+      "dice_mean": 0.7580715106361989,
+      "dice_sd": 0.11985307989202273,
+      "dice_median": 0.7734502193530963,
+      "hd95_mean_mm": 46.54269150695987,
+      "hd95_sd_mm": 27.245746297512703,
+      "hd95_nonfinite_count": 0,
+      "p_vs_unet": 5.960464477539063e-08
+    },
+    "bet_robust": {
+      "dice_mean": 0.7734294539448259,
+      "dice_sd": 0.30142132352051126,
+      "dice_median": 0.9301482479045571,
+      "hd95_mean_mm": 32.92411277925657,
+      "hd95_sd_mm": 41.66369021091211,
+      "hd95_nonfinite_count": 0,
+      "p_vs_unet": 5.960464477539063e-08
+    }
+  },
+  "baseline_diagnostics": {
+    "dice_below_0_8_count": 7,
+    "zero_overlap_count": 2,
+    "paired_median_gain_points": 5.676126471684995
+  },
+  "resume": {
+    "X": "0.99",
+    "N": 25,
+    "Y": "21.3",
+    "delta_points_unrounded": 21.291893488104375
+  }
+}

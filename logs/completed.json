@@ -1,0 +1,6 @@
+{
+  "last_epoch": 200,
+  "best_epoch": 190,
+  "best_val_dice": 0.9860030764618912,
+  "checkpoint_sha256": "167ecd9e5a9b6d7054052488d52ab71ab354eb83b6f382cecb45538e8f06735c"
+}

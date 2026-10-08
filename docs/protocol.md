@@ -21,4 +21,8 @@ The best checkpoint uses full validation volumes and inference postprocessing; n
 
 Two baseline settings are fixed in advance. Selecting the better BET variant on test data is retained to match the brief and explicitly disclosed. The resulting p-value is descriptive, unadjusted for that selection. Never modify the test split, retrain based on test overlays, or claim synthetic smoke scores as experimental results.
 
+After scoring, the large BET discrepancy was investigated using the original shape, affine, orientation, qform/sform and world-coordinate centroids. The two zero-overlap -R masks are nonempty masks centered in the neck, rather than grid misalignment. All 25 cases remain in the analysis. The selected baseline's median Dice is 0.9301, while seven failures below 0.8 reduce its mean to 0.7734; the median paired gain is 5.7 points. The 21.3-point mean gain must retain the fixed-command, uncropped-input qualification.
+
+The [NFBS article](https://link.springer.com/article/10.1186/s13742-016-0150-5) used FSL 5.0.7 `bet -B` for bias-field correction and neck cleanup when reporting 0.893 ± 0.027. This project implements the supplied brief's default and -R settings; it does not reproduce that historical baseline. A stronger baseline comparison would require a separate protocol chosen using training/validation data.
+
 Determinism is enabled with seed 42. Training checkpoints record Python/NumPy/PyTorch/CUDA/DataLoader random states; worker transform seeds derive from the restored loader generator. Exact bitwise replay can still depend on hardware and CUDA library behavior. Checkpoints contain optimizer metadata and must be loaded only from a trusted local run or verified release hash.

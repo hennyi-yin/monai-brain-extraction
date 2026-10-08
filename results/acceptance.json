@@ -1,0 +1,17 @@
+{
+  "R1_to_R10": "passed",
+  "subjects": 125,
+  "test_subjects": 25,
+  "metric_rows": 75,
+  "native_binary_masks": 75,
+  "best_epoch": 190,
+  "last_epoch": 200,
+  "checkpoint_sha256": "167ecd9e5a9b6d7054052488d52ab71ab354eb83b6f382cecb45538e8f06735c",
+  "resume": {
+    "X": "0.99",
+    "N": 25,
+    "Y": "21.3",
+    "delta_points_unrounded": 21.291893488104375
+  },
+  "publication_and_resume_compilation": "checked separately"
+}

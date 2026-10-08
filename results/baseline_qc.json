@@ -1,0 +1,94 @@
+{
+  "cases": [
+    {
+      "id": "A00039391",
+      "dice": 0.0,
+      "hd95_mm": 127.7915834,
+      "shape": [
+        256,
+        256,
+        192
+      ],
+      "native_orientation": [
+        "P",
+        "I",
+        "R"
+      ],
+      "qform_matches": true,
+      "sform_matches": true,
+      "truth_centroid_world_mm": [
+        5.205437669764521,
+        6.378132414585593,
+        32.35133366971486
+      ],
+      "bet_centroid_world_mm": [
+        14.91955160681644,
+        -30.395653584850436,
+        -86.2637000911921
+      ],
+      "true_overlap_voxels": 0,
+      "bet_foreground_voxels": 1119125
+    },
+    {
+      "id": "A00063368",
+      "dice": 0.0,
+      "hd95_mm": 125.3027693,
+      "shape": [
+        256,
+        256,
+        192
+      ],
+      "native_orientation": [
+        "P",
+        "I",
+        "R"
+      ],
+      "qform_matches": true,
+      "sform_matches": true,
+      "truth_centroid_world_mm": [
+        2.441707312323871,
+        2.6782946996083012,
+        10.629599034067908
+      ],
+      "bet_centroid_world_mm": [
+        1.2131867098821942,
+        -40.16394937418639,
+        -108.22696551939151
+      ],
+      "true_overlap_voxels": 0,
+      "bet_foreground_voxels": 1127419
+    },
+    {
+      "id": "A00063326",
+      "dice": 0.141089823,
+      "hd95_mm": 86.64825825,
+      "shape": [
+        256,
+        256,
+        192
+      ],
+      "native_orientation": [
+        "P",
+        "I",
+        "R"
+      ],
+      "qform_matches": true,
+      "sform_matches": true,
+      "truth_centroid_world_mm": [
+        8.026843277415693,
+        -5.8242277107563325,
+        -0.7559598782713834
+      ],
+      "bet_centroid_world_mm": [
+        0.49045655877993966,
+        -9.147367511061162,
+        -97.15821371540574
+      ],
+      "true_overlap_voxels": 198310,
+      "bet_foreground_voxels": 1506868
+    }
+  ],
+  "parameters_changed": false,
+  "primary_masks_changed": false,
+  "interpretation": "Native-grid headers match. Worst fixed BET masks lie in the neck rather than the brain."
+}

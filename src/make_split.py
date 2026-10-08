@@ -35,7 +35,8 @@ def main():
             raise ValueError(f"{sid}: label must be in [0,1] with foreground at threshold 0.5")
         items.append({"id": sid, "image": f"{cfg['data_dir']}/{sid}/{img.name}",
                       "label": f"{cfg['data_dir']}/{sid}/{mask.name}"})
-        audit.append({"id": sid, "shape": list(image.shape), "spacing_mm": [1, 1, 1],
+        audit.append({"id": sid, "shape": list(image.shape),
+                      "spacing_mm": [float(value) for value in image.header.get_zooms()],
                       "orientation": list(nib.aff2axcodes(image.affine)), "grid_aligned": True,
                       "fractional_label_voxels": int(np.count_nonzero((label_values > 0) & (label_values < 1))),
                       "label_threshold": 0.5})
