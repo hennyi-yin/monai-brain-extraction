@@ -11,6 +11,8 @@ from src.common import load_split, path, write_json
 from src.metrics import paired_test
 
 COLORS = {"Ground truth": "#33cc77", "U-Net": "#22bbee", "BET": "#ee8844"}
+DISPLAY = {"unet": "MONAI 3D U-Net", "bet_default": "FSL BET (default, -f 0.5)",
+           "bet_robust": "FSL BET (-R, -f 0.5)"}
 
 
 def summarize(frame):
@@ -47,12 +49,12 @@ def build_report(frame, cfg):
         s = result["methods"][method]
         hd = f"{s['hd95_mean_mm']:.2f} ± {s['hd95_sd_mm']:.2f}" if s["hd95_mean_mm"] is not None else "∞ (empty prediction)"
         p = "—" if s["p_vs_unet"] is None else f"{s['p_vs_unet']:.6g}"
-        rows.append(f"| {method}{' (selected)' if method == selected else ''} | "
+        rows.append(f"| {DISPLAY[method]}{' (selected)' if method == selected else ''} | "
                     f"{s['dice_mean']:.4f} ± {s['dice_sd']:.4f} | {s['dice_median']:.4f} | {hd} | {p} |")
     resume = result["resume"]
     direction = "above" if resume["delta_points_unrounded"] >= 0 else "below"
     sentence = (f"A MONAI 3D U-Net achieves Dice **{resume['X']}** on **{resume['N']}** held-out NFBS T1w scans, "
-                f"**{abs(float(resume['Y'])):.1f} points {direction}** FSL BET ({selected}; "
+                f"**{abs(float(resume['Y'])):.1f} points {direction}** FSL BET ({'-R' if selected == 'bet_robust' else 'default'}; "
                 f"paired Wilcoxon p = {result['methods'][selected]['p_vs_unet']:.6g}).")
     table = "\n".join(rows)
     text = (sentence + "\n\n" + table + "\n\n"
@@ -81,7 +83,7 @@ def build_report(frame, cfg):
         ax.plot([0, 1], [row[selected], row.unet], color="#9aabb9", alpha=0.65, linewidth=1)
     ax.scatter(np.zeros(len(pivot)), pivot[selected], color="#ee8844", label=selected, zorder=3)
     ax.scatter(np.ones(len(pivot)), pivot.unet, color="#2288bb", label="U-Net", zorder=3)
-    ax.set(xticks=[0, 1], xticklabels=[selected, "MONAI U-Net"], ylabel="Foreground Dice",
+    ax.set(xticks=[0, 1], xticklabels=["FSL BET -R" if selected == "bet_robust" else "FSL BET default", "MONAI U-Net"], ylabel="Foreground Dice",
            title=f"Paired held-out scores (n={len(pivot)})")
     fig.savefig(figures / "paired_dice.png", dpi=180)
     plt.close(fig)
@@ -105,7 +107,8 @@ def build_report(frame, cfg):
         ax.set_title(f"{rank}: {sid}\nU-Net Dice {pivot.loc[sid, 'unet']:.4f}")
         ax.axis("off")
     from matplotlib.lines import Line2D
-    fig.legend([Line2D([0], [0], color=c) for c in COLORS.values()], list(COLORS), loc="outside lower center", ncol=3)
+    legend_labels = ["Ground truth", "U-Net", "BET (-R)" if selected == "bet_robust" else "BET (default)"]
+    fig.legend([Line2D([0], [0], color=c) for c in COLORS.values()], legend_labels, loc="outside lower center", ncol=3)
     fig.savefig(figures / "overlays.png", dpi=180)
     plt.close(fig)
     training_curves(cfg)

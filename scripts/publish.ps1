@@ -20,8 +20,8 @@ if (git status --porcelain) { throw 'Commit reviewed project artifacts before pu
 if ($LASTEXITCODE -ne 0) { throw 'GitHub login required: .\.local\gh\bin\gh.exe auth login' }
 & $taskGhExecutable auth setup-git --hostname github.com
 if ($LASTEXITCODE -ne 0) { throw 'Could not configure GitHub authentication.' }
-$taskOrigin = git remote get-url origin 2>$null
-if ($LASTEXITCODE -eq 0) {
+$taskRemotes = @(git remote)
+if ($taskRemotes -contains 'origin') {
     $taskRemoteInfo = & $taskGhExecutable repo view --json nameWithOwner
     if ($LASTEXITCODE -ne 0) { throw 'Cannot inspect existing origin.' }
     if (($taskRemoteInfo | ConvertFrom-Json).nameWithOwner -ne $Repository) {
