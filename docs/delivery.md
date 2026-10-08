@@ -4,7 +4,7 @@
 - [x] Three training-subject preprocessing overlays visually reviewed.
 - [x] GPU 96³ forward/backward smoke check passes (four patches, RTX 5070).
 - [ ] Complete training run; best validation checkpoint and logs retained.
-- [ ] Both BET variants produce 25 native-grid binary masks each.
+- [x] Both BET variants produce 25 native-grid binary masks each.
 - [ ] One frozen held-out analysis produces 75 metric rows and three requested figures.
 - [ ] README and summary include measured values and exact consistent resume sentence.
 - [ ] Medical resume placeholders replaced with measured results and one-page compilation verified.

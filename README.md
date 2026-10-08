@@ -62,6 +62,8 @@ Both fixed BET commands are evaluated: `-f 0.5 -m -n` and `-f 0.5 -R -m -n`. The
 - `logs/training.csv`, `run_config.json`, `environment.json`, `completed.json`: training evidence.
 - `checkpoints/best.pt`, `last.pt`: weights plus optimizer/scaler/random state for resumption; excluded from Git.
 
+`python -m scripts.audit_delivery` verifies completed artifacts against R1–R10, including all 75 native-grid binary masks. `python -m scripts.package_release` prepares release assets and SHA-256 checksums in the ignored `artifacts/release/` directory.
+
 Raw data, persistent cache, mask volumes and checkpoints are excluded from Git. Publish the weights and mask archive as release assets rather than committing them. [Delivery checklist](docs/delivery.md).
 
 ## Data and citations

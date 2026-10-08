@@ -1,0 +1,735 @@
+{
+  "signature": {
+    "split_sha256": "3fd54e142f72eb2d795219ae0780e56229fd874516b54f3c8f26fb49027e137a",
+    "bet_sha256": "16b852dc6c5b256fc059c4dd46ecad16550742d80b13a1fac91ed8982ab275b1",
+    "bet2_sha256": "fe96ab306ef61349a87bab6ee0df19dc4b29f30a35911f622451220035a3123f",
+    "f": 0.5
+  },
+  "commands": [
+    {
+      "id": "A00057235",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00057235/sub-A00057235_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00057235",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "b129ea03411b23d43d40d9129b0824e59583ef8a3a30b67967843034c162e366"
+    },
+    {
+      "id": "A00057235",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00057235/sub-A00057235_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00057235",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "c405cca5ca7a6efb7310e56898b92f7d68575797f8b875a0a98c180fbfc0843d"
+    },
+    {
+      "id": "A00061709",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00061709/sub-A00061709_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00061709",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "51ee37ba56ae11dc4dcb39149278d0ec75c71cd054793617009d0f63fd78e715"
+    },
+    {
+      "id": "A00061709",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00061709/sub-A00061709_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00061709",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "ec35794efec8a559cd25b5e9dc766c30d1ea03607e7af30e2cfa8a999a33e528"
+    },
+    {
+      "id": "A00058214",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00058214/sub-A00058214_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00058214",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "d13d2ec75b7c9893c732ec04c697e184b1ece972968694bc150979e3aa491a0c"
+    },
+    {
+      "id": "A00058214",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00058214/sub-A00058214_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00058214",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "6053a89e1613732b00e386b876a3295a0ed72c6010829334d7186f9b371153c6"
+    },
+    {
+      "id": "A00056627",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00056627/sub-A00056627_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00056627",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "2f18293b43bfb9a43e0c2d805f901f0ce5b74eb9c88de0586d66dcd9c1660e04"
+    },
+    {
+      "id": "A00056627",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00056627/sub-A00056627_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00056627",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "213d583f152ee928d2b6242b301006df1c320fad3c37bf023d053367e2a0c35b"
+    },
+    {
+      "id": "A00043998",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00043998/sub-A00043998_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00043998",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "efc524908a5490010d2a3d565561fcb369da86a8150009622c712efd905cbd3b"
+    },
+    {
+      "id": "A00043998",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00043998/sub-A00043998_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00043998",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "4ab005233dc5357e631c4167a7d7ebaab28ed4cb97180cfd9a2285ae54b3f915"
+    },
+    {
+      "id": "A00043721",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00043721/sub-A00043721_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00043721",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "84fee07ad6ee40d1cc959b6e5985ad20a94d0dbcf370595aad545d2b67bc189f"
+    },
+    {
+      "id": "A00043721",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00043721/sub-A00043721_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00043721",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "f4113416cc171e5f7cff7c6ceace723ff454263a3f37d48535930f85529ecb82"
+    },
+    {
+      "id": "A00062248",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00062248/sub-A00062248_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00062248",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "d945d3648bff311394ddd89e4f3666eed01a43cedebac247d13fbaa9dfbe77f4"
+    },
+    {
+      "id": "A00062248",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00062248/sub-A00062248_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00062248",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "177c8052ce4b1878a7dec264ca34e577695fb0c5833c11759883a860c903757a"
+    },
+    {
+      "id": "A00063368",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00063368/sub-A00063368_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00063368",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "e27c7d3b8fbd1ab3cc917660f4a7c6b74d2709354a151380949b61909ff1bb8b"
+    },
+    {
+      "id": "A00063368",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00063368/sub-A00063368_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00063368",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "d7b4405b6483b4abc667a36e1fde7dc613dfb7d0d4c29cff026b84c02670995a"
+    },
+    {
+      "id": "A00034854",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00034854/sub-A00034854_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00034854",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "2a47c0579b964d90ddbfcfdaa8b84290a8d198c35648c50462b36febae94e78c"
+    },
+    {
+      "id": "A00034854",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00034854/sub-A00034854_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00034854",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "a5e9dc164cd4ddaf9745de502b88c1943fef78339e1a9216405ff4d2d61f5995"
+    },
+    {
+      "id": "A00055446",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00055446/sub-A00055446_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00055446",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "4083ed9d16c450aa9d85dea0a7e6fdeb7c21707db1730c87b9493b2f2d64637d"
+    },
+    {
+      "id": "A00055446",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00055446/sub-A00055446_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00055446",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "a05c11850cfcad8e09e214bb752173ec79437e0e378951961abc59bbb7df16f9"
+    },
+    {
+      "id": "A00057808",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00057808/sub-A00057808_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00057808",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "82067e1723dda9187489ca748a4320eafab625ce80a26388e6217cedc0c38b29"
+    },
+    {
+      "id": "A00057808",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00057808/sub-A00057808_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00057808",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "95dfb183da9d2ef40db5260645ed1bf33fd4fd3e15b64f2c2b08e1407be1e472"
+    },
+    {
+      "id": "A00038642",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00038642/sub-A00038642_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00038642",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "864f1b867041e4d96a3a151a278861d4546a5a2fc51e5ecab48f6fcff12fd159"
+    },
+    {
+      "id": "A00038642",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00038642/sub-A00038642_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00038642",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "c6f7287ce3c0978b6d42f13fdf5f4489f08acdaef55d1f319ba98593a094dcc5"
+    },
+    {
+      "id": "A00057182",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00057182/sub-A00057182_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00057182",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "dfed582e1a1d23c269a1364bc96187c672909ebbb6b838e2af25c3561ef7ec34"
+    },
+    {
+      "id": "A00057182",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00057182/sub-A00057182_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00057182",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "4555e077b39653856b65b3ccc4e45f88c7cfa4e73c60ad9563db99b8981ddc98"
+    },
+    {
+      "id": "A00062917",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00062917/sub-A00062917_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00062917",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "a4a03e5d00084b86a723da0fbe0bd6416c677df11f3b392e09b17ef41cce4d08"
+    },
+    {
+      "id": "A00062917",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00062917/sub-A00062917_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00062917",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "2efb6945f8fc8ab2f591f2f668f041225863a18c1d7767299cfaf0e7817c8448"
+    },
+    {
+      "id": "A00059428",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00059428/sub-A00059428_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00059428",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "25a7ec397268c2ba7caf6f309068cc8dcc51f8282818a2eb84858cb14c711c32"
+    },
+    {
+      "id": "A00059428",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00059428/sub-A00059428_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00059428",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "9aa6bea14ad45409119eeb7ad5f0e953392c051acaee26b89423db8af215692c"
+    },
+    {
+      "id": "A00039391",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00039391/sub-A00039391_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00039391",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "defa883facaa0990620ed600892a18af82856fc0feec3877cadbf256b967e4c9"
+    },
+    {
+      "id": "A00039391",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00039391/sub-A00039391_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00039391",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "37e585d88e1f01194ffa6d51e6cbf47b8bf502a700d969285d0e1530e5b4bda8"
+    },
+    {
+      "id": "A00063326",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00063326/sub-A00063326_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00063326",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "2cb0def0c8f9e32f97d1023f7e08a8437f276eab7fe4a89afc4fccb438f63f9e"
+    },
+    {
+      "id": "A00063326",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00063326/sub-A00063326_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00063326",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "54e35687a0406b52238062d16cde66f412c9262224ff4d2b21ae334a420c5471"
+    },
+    {
+      "id": "A00040524",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00040524/sub-A00040524_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00040524",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "fb164a14b22e424f994e5f5ddc29951075d95f38ce1ed4758941f4ca1785f435"
+    },
+    {
+      "id": "A00040524",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00040524/sub-A00040524_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00040524",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "15d337954cdcdeace82245333f8b39535626a9af66787e20f4482bfbf3820c16"
+    },
+    {
+      "id": "A00043722",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00043722/sub-A00043722_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00043722",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "7465e4c13b7927dbe21c60c5ab59ba7360cd791b85df4aae83eefc46cb281774"
+    },
+    {
+      "id": "A00043722",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00043722/sub-A00043722_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00043722",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "51dfb46d9079ef24d62671400866462f1843ef741cb22e23924a38c2496ce159"
+    },
+    {
+      "id": "A00050940",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00050940/sub-A00050940_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00050940",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "abbbc10fa99f5b36df7b14418711e51d431e4a866cd62d205a1e00fe2acb5871"
+    },
+    {
+      "id": "A00050940",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00050940/sub-A00050940_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00050940",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "0288cff47e5c60dc56a63c2252566abb821177a6b09551c1aa27fd9be91970c0"
+    },
+    {
+      "id": "A00051927",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00051927/sub-A00051927_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00051927",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "bedec682d05b9725e47c0d995e63f21d0b0c433b8626428756d37d56bd1ca475"
+    },
+    {
+      "id": "A00051927",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00051927/sub-A00051927_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00051927",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "56980373c6e956d1f67d5265ad7c5fa4fc847155c9d0ff6b479322c829d58361"
+    },
+    {
+      "id": "A00060279",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060279/sub-A00060279_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00060279",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "428a544dddf1bd5e6139d32a2d38c421a74da547d6be38827c680676159def92"
+    },
+    {
+      "id": "A00060279",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060279/sub-A00060279_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00060279",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "17b0a891647716b42ec3df0cf87dfeb2154d201547145048d622b688f6ef5b6a"
+    },
+    {
+      "id": "A00033747",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00033747/sub-A00033747_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00033747",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "422bff9e96b947ee0271c2965990d5f7b9edc2db376015cfec46509be93c516a"
+    },
+    {
+      "id": "A00033747",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00033747/sub-A00033747_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00033747",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "eab844f76b43bd21fa068abb3d4ec1ff0949204aaed6ff1a5ba3dc3bdccdc5e2"
+    },
+    {
+      "id": "A00039431",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00039431/sub-A00039431_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00039431",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "941d30049249639b8c5c56d9a54ace457eed3a724cf17176569f2aec1cb720e7"
+    },
+    {
+      "id": "A00039431",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00039431/sub-A00039431_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00039431",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "2c1da57b5d1c80b5a8ce5f2c3d5558f3abd007be7b1cf71872e52d0d5cd7b0ba"
+    },
+    {
+      "id": "A00058667",
+      "method": "bet_default",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00058667/sub-A00058667_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_default/A00058667",
+        "-f",
+        "0.5",
+        "-m",
+        "-n"
+      ],
+      "mask_sha256": "1a747210f7c98b23080cdfa093557b815beceb02b4088af2cac1f207b58dabfb"
+    },
+    {
+      "id": "A00058667",
+      "method": "bet_robust",
+      "argv": [
+        "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00058667/sub-A00058667_ses-NFB3_T1w.nii.gz",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robust/A00058667",
+        "-f",
+        "0.5",
+        "-m",
+        "-n",
+        "-R"
+      ],
+      "mask_sha256": "6a4d30db6a4716f6664e18b6b61f7b5f710794b75bb79b519de238a3cff21386"
+    }
+  ]
+}
