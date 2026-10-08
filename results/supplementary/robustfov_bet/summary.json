@@ -1,0 +1,93 @@
+{
+  "post_hoc": true,
+  "n": 25,
+  "methods": {
+    "unet": {
+      "dice_mean": 0.986348388824,
+      "dice_sd": 0.001835120562044212,
+      "dice_median": 0.9868431241,
+      "dice_min": 0.9820443905,
+      "dice_below_0_8_count": 0,
+      "zero_overlap_count": 0,
+      "hd95_median_mm": 1.414143432,
+      "hd95_nonfinite_count": 0,
+      "p_vs_unet": null
+    },
+    "bet_robust": {
+      "dice_mean": 0.77342945394,
+      "dice_sd": 0.30142132351890566,
+      "dice_median": 0.9301482479,
+      "dice_min": 0.0,
+      "dice_below_0_8_count": 7,
+      "zero_overlap_count": 2,
+      "hd95_median_mm": 9.505195893,
+      "hd95_nonfinite_count": 0,
+      "p_vs_unet": 5.960464477539063e-08
+    },
+    "bet_robustfov": {
+      "dice_mean": 0.9177603019912712,
+      "dice_sd": 0.015356946797676671,
+      "dice_median": 0.9173784589186889,
+      "dice_min": 0.88299896907582,
+      "dice_below_0_8_count": 0,
+      "zero_overlap_count": 0,
+      "hd95_median_mm": 10.723722059537609,
+      "hd95_nonfinite_count": 0,
+      "p_vs_unet": 5.960464477539063e-08
+    }
+  },
+  "unet_vs_robustfov_bet": {
+    "mean_gain_points": 6.858808683272872,
+    "median_gain_points": 6.783530584761099,
+    "wins": 25,
+    "ties": 0
+  },
+  "robustfov_bet_vs_plain_bet_R": {
+    "mean_gain_points": 14.433084805127125,
+    "median_gain_points": -0.9868017369678683,
+    "wins": 7,
+    "paired_wilcoxon_p": 0.8325093984603882,
+    "previous_failures_recovered_to_0_8": 7,
+    "previous_failure_count": 7,
+    "previous_failure_cases": [
+      {
+        "id": "A00034854",
+        "plain_bet_R_dice": 0.6583172863,
+        "robustfov_bet_dice": 0.9077158350973931
+      },
+      {
+        "id": "A00038642",
+        "plain_bet_R_dice": 0.5767429276,
+        "robustfov_bet_dice": 0.9081126044744997
+      },
+      {
+        "id": "A00039391",
+        "plain_bet_R_dice": 0.0,
+        "robustfov_bet_dice": 0.9398881848307064
+      },
+      {
+        "id": "A00057182",
+        "plain_bet_R_dice": 0.6035442398,
+        "robustfov_bet_dice": 0.9173784589186889
+      },
+      {
+        "id": "A00061709",
+        "plain_bet_R_dice": 0.5647882106,
+        "robustfov_bet_dice": 0.914209084652389
+      },
+      {
+        "id": "A00063326",
+        "plain_bet_R_dice": 0.141089823,
+        "robustfov_bet_dice": 0.9069023970400156
+      },
+      {
+        "id": "A00063368",
+        "plain_bet_R_dice": 0.0,
+        "robustfov_bet_dice": 0.9208283256488138
+      }
+    ]
+  },
+  "minimum_roi_brain_retention": 0.9999873237383422,
+  "roi_retention_available_count": 25,
+  "failed_subjects": []
+}

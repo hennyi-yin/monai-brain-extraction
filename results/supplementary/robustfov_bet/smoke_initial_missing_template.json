@@ -1,0 +1,252 @@
+{
+  "post_hoc": true,
+  "signature": {
+    "split_sha256": "3fd54e142f72eb2d795219ae0780e56229fd874516b54f3c8f26fb49027e137a",
+    "config_sha256": "e554aedc523d00f822cc4211af63a6140d896f279facb9b2afc33eb0976a8285",
+    "group": "train",
+    "pipeline": "fslreorient2std -> robustfov -b 170 -> bet -f 0.5 -R -m -n",
+    "executable_sha256": {
+      "fslreorient2std": "542fe146e069b00b0ce26bcf58b04dc098b4d41aa4933a3b96d7f4118cb24cbc",
+      "robustfov": "e778b853ca8e78f0f2ed9b38e599db304b890b14e33c9f8ec815d2ffd6651971",
+      "bet": "16b852dc6c5b256fc059c4dd46ecad16550742d80b13a1fac91ed8982ab275b1",
+      "bet2": "fe96ab306ef61349a87bab6ee0df19dc4b29f30a35911f622451220035a3123f"
+    },
+    "protocol_commit": "b40aeca"
+  },
+  "environment": {
+    "FSLDIR": "/home/hengyi/.venvs/fsl-bet",
+    "fslversion_path": "/home/hengyi/.venvs/fsl-bet/etc/fslversion",
+    "fslversion": null,
+    "fslversion_status": "missing in modular conda installation",
+    "which_command": {
+      "argv": [
+        "which",
+        "fslreorient2std",
+        "robustfov",
+        "bet"
+      ],
+      "returncode": 0,
+      "stdout": "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std\n/home/hengyi/.venvs/fsl-bet/bin/robustfov\n/home/hengyi/.venvs/fsl-bet/bin/bet\n",
+      "stderr": ""
+    },
+    "executables": {
+      "fslreorient2std": "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+      "robustfov": "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+      "bet": "/home/hengyi/.venvs/fsl-bet/bin/bet",
+      "bet2": "/home/hengyi/.venvs/fsl-bet/bin/bet2",
+      "convert_xfm": null,
+      "flirt": null
+    },
+    "executable_sha256": {
+      "fslreorient2std": "542fe146e069b00b0ce26bcf58b04dc098b4d41aa4933a3b96d7f4118cb24cbc",
+      "robustfov": "e778b853ca8e78f0f2ed9b38e599db304b890b14e33c9f8ec815d2ffd6651971",
+      "bet": "16b852dc6c5b256fc059c4dd46ecad16550742d80b13a1fac91ed8982ab275b1",
+      "bet2": "fe96ab306ef61349a87bab6ee0df19dc4b29f30a35911f622451220035a3123f"
+    },
+    "fsl_packages": [
+      {
+        "name": "fsl-avwutils",
+        "version": "2209.8",
+        "build": "h67d7eeb_2"
+      },
+      {
+        "name": "fsl-base",
+        "version": "2608.1",
+        "build": "pyh4616a5c_0"
+      },
+      {
+        "name": "fsl-bet2",
+        "version": "2111.9",
+        "build": "hcdb67c3_3"
+      },
+      {
+        "name": "fsl-cprob",
+        "version": "2111.0",
+        "build": "h9f0ab69_8"
+      },
+      {
+        "name": "fsl-installer",
+        "version": "3.21.0",
+        "build": "py_0"
+      },
+      {
+        "name": "fsl-meshclass",
+        "version": "2111.0",
+        "build": "h8c873e0_12"
+      },
+      {
+        "name": "fsl-misc_c",
+        "version": "2111.1",
+        "build": "h3986bbc_1"
+      },
+      {
+        "name": "fsl-misc_tcl",
+        "version": "2607.0",
+        "build": "0"
+      },
+      {
+        "name": "fsl-miscmaths",
+        "version": "2412.7",
+        "build": "hb1b1de1_0"
+      },
+      {
+        "name": "fsl-newimage",
+        "version": "2601.0",
+        "build": "h541c7df_0"
+      },
+      {
+        "name": "fsl-newnifti",
+        "version": "5.0.0",
+        "build": "h56e42e0_0"
+      },
+      {
+        "name": "fsl-sub",
+        "version": "2.11",
+        "build": "py_0"
+      },
+      {
+        "name": "fsl-utils",
+        "version": "2412.6",
+        "build": "hdf63e7b_1"
+      },
+      {
+        "name": "fsl-znzlib",
+        "version": "2511.3",
+        "build": "hcc786c9_101_zlib"
+      }
+    ]
+  },
+  "code_commit": "b40aeca34e634e8eaaed8d9348c25b25ab0d3c3b",
+  "subjects": [
+    {
+      "id": "A00037511",
+      "group": "train",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Image Exception : #63 :: No image files match: /home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  No image files match: /home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain\nAborted (core dumped)\n"
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz",
+            "-r",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "-b",
+            "170",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_reoriented.mat"
+          ],
+          "returncode": -6,
+          "stdout": "",
+          "stderr": "Image Exception : #63 :: No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented\nImage Exception : #22 :: Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented\n"
+        }
+      ],
+      "status": "failed",
+      "input_sha256": {
+        "image": "1d2dcc77e9e45d8239d4342b34f8ae2adfa22de98c15b9efc0b7ea5b6700d32a",
+        "truth": "561b157305d9c36d57ebd021351d3291af3d53651dfccf1c5ff4e2a8dac524a2"
+      },
+      "roi_brain_retention": null,
+      "mapping": null,
+      "failure": "Command failed (-6): ['/home/hengyi/.venvs/fsl-bet/bin/robustfov', '-i', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz'), '-r', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz'), '-b', '170', '-m', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_reoriented.mat')]: Image Exception : #63 :: No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented\nImage Exception : #22 :: Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented\n",
+      "output": "results/bet_robustfov/smoke/A00037511_mask.nii.gz",
+      "output_sha256": "c7dad66605e5abbefe7d79f652c32368f02416a612b02eb8bfa0f47a73ffd3e7",
+      "intermediate_sha256": {}
+    },
+    {
+      "id": "A00060407",
+      "group": "train",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060407/sub-A00060407_ses-NFB3_T1w.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Image Exception : #63 :: No image files match: /home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  No image files match: /home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain\nAborted (core dumped)\n"
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz",
+            "-r",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/roi.nii.gz",
+            "-b",
+            "170",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/roi_to_reoriented.mat"
+          ],
+          "returncode": -6,
+          "stdout": "",
+          "stderr": "Image Exception : #63 :: No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented\nImage Exception : #22 :: Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented\n"
+        }
+      ],
+      "status": "failed",
+      "input_sha256": {
+        "image": "6fd09f5d8300c08a6f4aafb8c2c5779a1a212fbf640bd3d53f58d840bd7fecb1",
+        "truth": "726a55b6f43c32fc779d424345eb812113d37c45dbbe56954ac54a21ea5332df"
+      },
+      "roi_brain_retention": null,
+      "mapping": null,
+      "failure": "Command failed (-6): ['/home/hengyi/.venvs/fsl-bet/bin/robustfov', '-i', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz'), '-r', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/roi.nii.gz'), '-b', '170', '-m', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/roi_to_reoriented.mat')]: Image Exception : #63 :: No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented\nImage Exception : #22 :: Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented\n",
+      "output": "results/bet_robustfov/smoke/A00060407_mask.nii.gz",
+      "output_sha256": "af4b1993f7ebe8d8f475fd69381d7b2381164a66e83f19093e695d77fe9ae371",
+      "intermediate_sha256": {}
+    },
+    {
+      "id": "A00060480",
+      "group": "train",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060480/sub-A00060480_ses-NFB3_T1w.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Image Exception : #63 :: No image files match: /home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  No image files match: /home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain\nAborted (core dumped)\n"
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz",
+            "-r",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/roi.nii.gz",
+            "-b",
+            "170",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/roi_to_reoriented.mat"
+          ],
+          "returncode": -6,
+          "stdout": "",
+          "stderr": "Image Exception : #63 :: No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented\nImage Exception : #22 :: Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented\n"
+        }
+      ],
+      "status": "failed",
+      "input_sha256": {
+        "image": "98a079a55461cdffdb38443a72ddf338b381715d7526d7b07fa2539e49474cbe",
+        "truth": "a54dbcd73de6784f7761e34bed7c268b43454d4e923522db49dcb975fe2f1d60"
+      },
+      "roi_brain_retention": null,
+      "mapping": null,
+      "failure": "Command failed (-6): ['/home/hengyi/.venvs/fsl-bet/bin/robustfov', '-i', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz'), '-r', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/roi.nii.gz'), '-b', '170', '-m', PosixPath('/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/roi_to_reoriented.mat')]: Image Exception : #63 :: No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented\nImage Exception : #22 :: Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  Failed to read volume /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz\nError : No image files match: /mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented\n",
+      "output": "results/bet_robustfov/smoke/A00060480_mask.nii.gz",
+      "output_sha256": "f8fcd24cfd15d3461a8c468576c4806c707c6ac2cc690415882ddebb505beca0",
+      "intermediate_sha256": {}
+    }
+  ],
+  "complete": true
+}

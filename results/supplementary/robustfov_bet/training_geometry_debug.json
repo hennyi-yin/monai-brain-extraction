@@ -1,0 +1,270 @@
+{
+  "provenance": "Reconstructed from retained training-only debugging scripts and terminal results; no test commands or scores involved.",
+  "experiments": [
+    {
+      "training_id": "A00037511",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "-inverse",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented.mat"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-concat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_reoriented.mat"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_roi.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/bet_mask.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_mask.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_footprint.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_footprint.nii.gz"
+          ],
+          "returncode": 0
+        }
+      ],
+      "roi_t1w_max_abs_diff": 1022.0,
+      "verification_passed": false
+    },
+    {
+      "training_id": "A00037511",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "-inverse",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented.mat"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-concat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_reoriented.mat"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_roi.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/bet_mask.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_mask.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_footprint.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_footprint.nii.gz"
+          ],
+          "returncode": 0
+        }
+      ],
+      "roi_t1w_max_abs_diff": 1022.0,
+      "verification_passed": false
+    },
+    {
+      "training_id": "A00037511",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native_flirt.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/basis_roi.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/bet_mask.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native_flirt.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/basis_mask.nii.gz"
+          ],
+          "returncode": 0
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_footprint.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native_flirt.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/basis_footprint.nii.gz"
+          ],
+          "returncode": 0
+        }
+      ],
+      "roi_t1w_max_abs_diff": 0.0,
+      "verification_passed": true,
+      "matrix_definition": "F_reoriented @ raw_reorientation_matrix @ F_native; then inverse @ crop_matrix"
+    }
+  ]
+}

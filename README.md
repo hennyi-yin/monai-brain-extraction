@@ -104,3 +104,16 @@ MONAI Consortium. *MONAI: An open-source framework for deep learning in healthca
 This is an internal held-out evaluation from a single dataset. It does not establish clinical performance or cross-dataset robustness. Artificial degradation experiments and an augmentation ablation are optional follow-up work, and are not part of the primary results. No external neuroimaging laboratory data is used.
 
 [中文面试准备](docs/interview.md). This project's code is MIT-licensed; external data and FSL retain their own terms.
+
+
+## Supplementary baseline (post hoc): robustfov + BET -R
+
+On the same 25 held-out scans, the post-hoc robustfov + BET -R baseline achieves Dice 0.9178 ± 0.0154; the frozen U-Net's mean paired gain is 6.86 points (25/25 wins).
+
+| Method | Dice mean ± SD | Median | Min | n < 0.8 | HD95 median (mm) | p vs U-Net |
+|---|---:|---:|---:|---:|---:|---:|
+| U-Net (frozen) | 0.9863 ± 0.0018 | 0.9868 | 0.9820 | 0 | 1.41 | — |
+| BET -R (frozen) | 0.7734 ± 0.3014 | 0.9301 | 0.0000 | 7 | 9.51 | 5.96046e-08 |
+| robustfov + BET -R (post hoc) | 0.9178 ± 0.0154 | 0.9174 | 0.8830 | 0 | 10.72 | 5.96046e-08 |
+
+Chosen after viewing test scores; all 25 subjects and the pre-declared pipeline are retained. The frozen primary analysis above is unchanged. See the [addendum](docs/protocol.md#addendum-2026-10-08-post-hoc-supplementary-baseline), [supplementary summary](results/supplementary/robustfov_bet/summary.md) and [command/geometry manifest](results/supplementary/robustfov_bet/manifest.json).

@@ -1,0 +1,612 @@
+{
+  "post_hoc": true,
+  "signature": {
+    "split_sha256": "3fd54e142f72eb2d795219ae0780e56229fd874516b54f3c8f26fb49027e137a",
+    "config_sha256": "e554aedc523d00f822cc4211af63a6140d896f279facb9b2afc33eb0976a8285",
+    "group": "train",
+    "pipeline": "fslreorient2std -> robustfov -b 170 -> bet -f 0.5 -R -m -n",
+    "executable_sha256": {
+      "fslreorient2std": "542fe146e069b00b0ce26bcf58b04dc098b4d41aa4933a3b96d7f4118cb24cbc",
+      "robustfov": "e778b853ca8e78f0f2ed9b38e599db304b890b14e33c9f8ec815d2ffd6651971",
+      "bet": "16b852dc6c5b256fc059c4dd46ecad16550742d80b13a1fac91ed8982ab275b1",
+      "bet2": "fe96ab306ef61349a87bab6ee0df19dc4b29f30a35911f622451220035a3123f",
+      "convert_xfm": "7c5b9930b094212183a30b5b20e25381d8fccd68e718c19de13e0b0dcb47760a",
+      "flirt": "36f248e35fda52012190f08606f5f53b5f3f5afd31f3ba837ef8bf5b23a4cb52"
+    },
+    "protocol_commit": "b40aeca"
+  },
+  "environment": {
+    "FSLDIR": "/home/hengyi/.venvs/fsl-bet",
+    "fslversion_path": "/home/hengyi/.venvs/fsl-bet/etc/fslversion",
+    "fslversion": null,
+    "fslversion_status": "missing in modular conda installation",
+    "fslversion_read_command": {
+      "argv": [
+        "cat",
+        "/home/hengyi/.venvs/fsl-bet/etc/fslversion"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "cat: /home/hengyi/.venvs/fsl-bet/etc/fslversion: No such file or directory\n"
+    },
+    "standard_orientation_reference": {
+      "path": "/home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain.nii.gz",
+      "sha256": "09c925ad165dfbe6b41b572876d67e9bbf8c5e26517e7817f9b43a8256227f53"
+    },
+    "which_command": {
+      "argv": [
+        "which",
+        "fslreorient2std",
+        "robustfov",
+        "bet"
+      ],
+      "returncode": 0,
+      "stdout": "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std\n/home/hengyi/.venvs/fsl-bet/bin/robustfov\n/home/hengyi/.venvs/fsl-bet/bin/bet\n",
+      "stderr": ""
+    },
+    "executables": {
+      "fslreorient2std": "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+      "robustfov": "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+      "bet": "/home/hengyi/.venvs/fsl-bet/bin/bet",
+      "bet2": "/home/hengyi/.venvs/fsl-bet/bin/bet2",
+      "convert_xfm": "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+      "flirt": "/home/hengyi/.venvs/fsl-bet/bin/flirt"
+    },
+    "executable_sha256": {
+      "fslreorient2std": "542fe146e069b00b0ce26bcf58b04dc098b4d41aa4933a3b96d7f4118cb24cbc",
+      "robustfov": "e778b853ca8e78f0f2ed9b38e599db304b890b14e33c9f8ec815d2ffd6651971",
+      "bet": "16b852dc6c5b256fc059c4dd46ecad16550742d80b13a1fac91ed8982ab275b1",
+      "bet2": "fe96ab306ef61349a87bab6ee0df19dc4b29f30a35911f622451220035a3123f",
+      "convert_xfm": "7c5b9930b094212183a30b5b20e25381d8fccd68e718c19de13e0b0dcb47760a",
+      "flirt": "36f248e35fda52012190f08606f5f53b5f3f5afd31f3ba837ef8bf5b23a4cb52"
+    },
+    "fsl_packages": [
+      {
+        "name": "fsl-avwutils",
+        "version": "2209.8",
+        "build": "h67d7eeb_2"
+      },
+      {
+        "name": "fsl-base",
+        "version": "2608.1",
+        "build": "pyh4616a5c_0"
+      },
+      {
+        "name": "fsl-basisfield",
+        "version": "2203.4",
+        "build": "h465c9ab_3"
+      },
+      {
+        "name": "fsl-bet2",
+        "version": "2111.9",
+        "build": "hcdb67c3_3"
+      },
+      {
+        "name": "fsl-cprob",
+        "version": "2111.0",
+        "build": "h9f0ab69_8"
+      },
+      {
+        "name": "fsl-data_standard",
+        "version": "2208.0",
+        "build": "0"
+      },
+      {
+        "name": "fsl-flirt",
+        "version": "2111.4",
+        "build": "h28ab0de_3"
+      },
+      {
+        "name": "fsl-installer",
+        "version": "3.21.0",
+        "build": "py_0"
+      },
+      {
+        "name": "fsl-meshclass",
+        "version": "2111.0",
+        "build": "h8c873e0_12"
+      },
+      {
+        "name": "fsl-misc_c",
+        "version": "2111.1",
+        "build": "h3986bbc_1"
+      },
+      {
+        "name": "fsl-misc_tcl",
+        "version": "2607.0",
+        "build": "0"
+      },
+      {
+        "name": "fsl-miscmaths",
+        "version": "2412.7",
+        "build": "hb1b1de1_0"
+      },
+      {
+        "name": "fsl-newimage",
+        "version": "2601.0",
+        "build": "h541c7df_0"
+      },
+      {
+        "name": "fsl-newnifti",
+        "version": "5.0.0",
+        "build": "h56e42e0_0"
+      },
+      {
+        "name": "fsl-sub",
+        "version": "2.11",
+        "build": "py_0"
+      },
+      {
+        "name": "fsl-utils",
+        "version": "2412.6",
+        "build": "hdf63e7b_1"
+      },
+      {
+        "name": "fsl-warpfns",
+        "version": "2501.1",
+        "build": "h49c61e4_0"
+      },
+      {
+        "name": "fsl-znzlib",
+        "version": "2511.3",
+        "build": "hcc786c9_101_zlib"
+      }
+    ]
+  },
+  "code_commit": "b40aeca34e634e8eaaed8d9348c25b25ab0d3c3b",
+  "subjects": [
+    {
+      "id": "A00037511",
+      "group": "train",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented.nii.gz",
+            "-r",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "-b",
+            "170",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_reoriented.mat"
+          ],
+          "returncode": 0,
+          "stdout": "Final FOV is: \n0.000000 192.000000 0.000000 256.000000 75.000000 170.000000 \n\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "-inverse",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented.mat"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-concat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_reoriented.mat"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_roi.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/bet_mask.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_mask.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_footprint.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_footprint.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "-inverse",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/native_to_reoriented_flirt.mat"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+            "-omat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-concat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/reoriented_to_native.mat",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_reoriented.mat"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_roi.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/bet_mask.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_mask.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/flirt",
+            "-in",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_footprint.nii.gz",
+            "-ref",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-applyxfm",
+            "-init",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/roi_to_native.mat",
+            "-interp",
+            "nearestneighbour",
+            "-setbackground",
+            "0",
+            "-noclamp",
+            "-noresampblur",
+            "-out",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00037511/mapped_footprint.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "input_sha256": {
+        "image": "1d2dcc77e9e45d8239d4342b34f8ae2adfa22de98c15b9efc0b7ea5b6700d32a",
+        "truth": "561b157305d9c36d57ebd021351d3291af3d53651dfccf1c5ff4e2a8dac524a2"
+      },
+      "roi_brain_retention": 1.0,
+      "mapping": {
+        "method": "FSL matrices and FLIRT nearestneighbour",
+        "roi_t1w_max_abs_diff": 0.0,
+        "roi_footprint_voxels_original": 8355840,
+        "roi_footprint_voxels_native": 8355840,
+        "mask_voxels_original": 1246737,
+        "mask_voxels_native": 1246737,
+        "passed": true
+      },
+      "failure": null,
+      "nibabel_mapping": {
+        "roi_t1w_max_abs_diff": 0.0,
+        "roi_footprint_voxels_original": 8355840,
+        "roi_footprint_voxels_native": 8306688,
+        "mask_voxels_original": 1246737,
+        "mask_voxels_native": 1246737,
+        "passed": false
+      },
+      "output": "results/bet_robustfov/smoke/A00037511_mask.nii.gz",
+      "output_sha256": "d8d3e922329d39ab727c5ee83073fa8ae45382a27c933d21702a4965a62e7509",
+      "intermediate_sha256": {
+        "basis_footprint.nii.gz": "5629be467561c4e4acad15f4d4939a5248cb4aa3eed38cd263558fb47f314953",
+        "basis_mask.nii.gz": "a6a6cac623d561391a32d42e25c73a0f82a4120426aaf2d851b4e511aa9ed030",
+        "basis_roi.nii.gz": "550468e6cd7e4da15e2c0171b78c1e34ee212e289276c572c8dbf5be6e8ffa2a",
+        "bet.nii.gz": "4da8083d463668fe4796ef14cc345d172f8d318ce4f58f8abd12c0c29dc8035c",
+        "bet_mask.nii.gz": "8337942adb0d3d8c61491130995db91e394d4d795c414fefd72d9c20effb8ba6",
+        "mapped_footprint.nii.gz": "5629be467561c4e4acad15f4d4939a5248cb4aa3eed38cd263558fb47f314953",
+        "mapped_mask.nii.gz": "a6a6cac623d561391a32d42e25c73a0f82a4120426aaf2d851b4e511aa9ed030",
+        "mapped_roi.nii.gz": "550468e6cd7e4da15e2c0171b78c1e34ee212e289276c572c8dbf5be6e8ffa2a",
+        "matrix_coordinate_conversion.json": "c4157af2bf1488fa03293f88e1559e6c9930753465d313dce1331be23b70e77b",
+        "native_to_reoriented.mat": "e585464ac3d3d23b82ad2dda07bcc6707ad726ee36f39675e0c76dc5bb974214",
+        "native_to_reoriented_flirt.mat": "0879931590f9084007fbcc04064af17bb9d206772e4be6081fc20756b8afe0ae",
+        "reoriented.nii.gz": "049c597e9f2a95c851d106f71c70b6038e2b5e75f5bcda98aebbe2cb161438bc",
+        "reoriented_to_native.mat": "4c99e7ad804d7820c50eb058659fb528a139bb6db8aaa4dcc8775dd7e143222a",
+        "roi.nii.gz": "9c47bebc75e510dac85aa137b7eef78bcbfe3af5385bc5b319db2ebe28cfedda",
+        "roi_footprint.nii.gz": "9d0605b0da1c04b89878da460896ad6c2d9159cb22b6dcb1ef1b2dad854229cd",
+        "roi_to_native.mat": "496b330e3ab8873061457b0d4b95249f97bf771db489604f79e3f1f44f0deae3",
+        "roi_to_native_flirt.mat": "d3f7ba48ecc8384b5ced36bebfab2812f7603143bf0223e2f4669031b5258096",
+        "roi_to_reoriented.mat": "abccde46058b1d2ccdcb71c863aabc3c10ad650bf3e36578ea1e50566dacdfc8"
+      },
+      "mapping_repair_note": "Training-only geometry fix: zero exterior background, no intensity clamping or resampling blur in FLIRT; no crop/BET rerun or parameter change."
+    },
+    {
+      "id": "A00060407",
+      "group": "train",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060407/sub-A00060407_ses-NFB3_T1w.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/reoriented.nii.gz",
+            "-r",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/roi.nii.gz",
+            "-b",
+            "170",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/roi_to_reoriented.mat"
+          ],
+          "returncode": 0,
+          "stdout": "Final FOV is: \n0.000000 192.000000 0.000000 256.000000 72.000000 170.000000 \n\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/roi.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060407/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "input_sha256": {
+        "image": "6fd09f5d8300c08a6f4aafb8c2c5779a1a212fbf640bd3d53f58d840bd7fecb1",
+        "truth": "726a55b6f43c32fc779d424345eb812113d37c45dbbe56954ac54a21ea5332df"
+      },
+      "roi_brain_retention": 1.0,
+      "mapping": {
+        "method": "nibabel.resample_from_to(order=0)",
+        "roi_t1w_max_abs_diff": 0.0,
+        "roi_footprint_voxels_original": 8355840,
+        "roi_footprint_voxels_native": 8355840,
+        "mask_voxels_original": 1196926,
+        "mask_voxels_native": 1196926,
+        "passed": true
+      },
+      "failure": null,
+      "nibabel_mapping": {
+        "roi_t1w_max_abs_diff": 0.0,
+        "roi_footprint_voxels_original": 8355840,
+        "roi_footprint_voxels_native": 8355840,
+        "mask_voxels_original": 1196926,
+        "mask_voxels_native": 1196926,
+        "passed": true
+      },
+      "output": "results/bet_robustfov/smoke/A00060407_mask.nii.gz",
+      "output_sha256": "6cd72c1d011e532d43d8bc134bf8141693c3169634a7847e6627f2a2a761fd6d",
+      "intermediate_sha256": {
+        "bet.nii.gz": "0ebc0f3a93f5179eea83d23e0c975b920707cbb54a067fdf858cb62b182ec0cf",
+        "bet_mask.nii.gz": "2c6ca249055257a321a47857b397fbf0c9683d3b395153ef18cd5df8d38d6a0a",
+        "reoriented.nii.gz": "5c72075a274cdacb6ec95aeba8f85b412b5067be10813d9df8aa3d2ef17ffad9",
+        "roi.nii.gz": "428b7462a082b7bdeb1e7f315f3d66bb13f5e0404589cb7a7856a4abe5d32df3",
+        "roi_to_reoriented.mat": "2c42c1c487881e49e972b2408746ee3fffb496af9c352fc676d93b967343bf3d"
+      }
+    },
+    {
+      "id": "A00060480",
+      "group": "train",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060480/sub-A00060480_ses-NFB3_T1w.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/reoriented.nii.gz",
+            "-r",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/roi.nii.gz",
+            "-b",
+            "170",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/roi_to_reoriented.mat"
+          ],
+          "returncode": 0,
+          "stdout": "Final FOV is: \n0.000000 192.000000 0.000000 256.000000 73.000000 170.000000 \n\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/roi.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/bet_robustfov/work/train/A00060480/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "input_sha256": {
+        "image": "98a079a55461cdffdb38443a72ddf338b381715d7526d7b07fa2539e49474cbe",
+        "truth": "a54dbcd73de6784f7761e34bed7c268b43454d4e923522db49dcb975fe2f1d60"
+      },
+      "roi_brain_retention": 1.0,
+      "mapping": {
+        "method": "nibabel.resample_from_to(order=0)",
+        "roi_t1w_max_abs_diff": 0.0,
+        "roi_footprint_voxels_original": 8355840,
+        "roi_footprint_voxels_native": 8355840,
+        "mask_voxels_original": 1239642,
+        "mask_voxels_native": 1239642,
+        "passed": true
+      },
+      "failure": null,
+      "nibabel_mapping": {
+        "roi_t1w_max_abs_diff": 0.0,
+        "roi_footprint_voxels_original": 8355840,
+        "roi_footprint_voxels_native": 8355840,
+        "mask_voxels_original": 1239642,
+        "mask_voxels_native": 1239642,
+        "passed": true
+      },
+      "output": "results/bet_robustfov/smoke/A00060480_mask.nii.gz",
+      "output_sha256": "9d43251ab30542b80e79ab7d92d21c58c2bd2d489459ea057109cd79c408cfd6",
+      "intermediate_sha256": {
+        "bet.nii.gz": "3dce269b388dcfbdcd78bc960ee939e9d711e7e1a3c42c91ef91bb57f22ffbba",
+        "bet_mask.nii.gz": "c3112e7359933ade80333236d4c8d100dc1bc8320791be0e45ff487b16fd95c2",
+        "reoriented.nii.gz": "169c17fed545449e18b23f39109557c4542f85a1118193d87b4faaefa3d95495",
+        "roi.nii.gz": "6f08e7da67e72a55d4f549ae1780203e38cb021f63b16021b5558342c85d6815",
+        "roi_to_reoriented.mat": "c2d145cf0dc3b4cf5ff6c4ada5c9a113067fca280305c04db223e60aa7cabafd"
+      }
+    }
+  ],
+  "complete": true
+}
