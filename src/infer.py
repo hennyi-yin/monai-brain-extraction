@@ -5,6 +5,7 @@ import nibabel as nib
 import numpy as np
 import torch
 from monai.inferers import sliding_window_inference
+from monai.utils import set_determinism
 from scipy import ndimage
 
 from src.common import config, digest, load_split, path, write_json
@@ -51,6 +52,7 @@ def save_native(mask_ras, input_file, output_file):
 
 
 def run(cfg, checkpoint, group="test"):
+    set_determinism(seed=cfg["seed"])
     device = torch.device(cfg["device"])
     torch.set_num_threads(cfg["train"]["cpu_threads"])
     state = torch.load(checkpoint, map_location="cpu", weights_only=False)
