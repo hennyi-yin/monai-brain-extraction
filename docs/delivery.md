@@ -10,10 +10,10 @@
 - [x] Fresh environment replay: 47 locked dependencies verified, eight tests pass, 75-row metrics CSV SHA-256 identical.
 - [x] Medical resume placeholders replaced in `artifacts/resume_medical.tex`; original resume preserved outside the repository.
 - [ ] One-page medical resume PDF verified. The built-in compiler returns `Unable to find standard directories for platform`; source is preserved and queued in the editor, but compilation/page count remain unverified.
-- [ ] Public GitHub repository `monai-brain-extraction` created and pinned to the profile.
+- [x] [Public GitHub repository](https://github.com/hennyi-yin/monai-brain-extraction) created and pinned to the [profile](https://github.com/hennyi-yin).
 - [x] Local release assets prepared: full best checkpoint, model-only weights, 75 masks and manifests, SHA-256 hashes.
-- [ ] Weights and prediction masks uploaded to a GitHub release. GitHub CLI has no authenticated account on this machine.
+- [x] Weights and prediction masks uploaded to [Release v1.0.0](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.0.0). GitHub's asset SHA-256 digests match the local manifest.
 
-The local experiment is complete. Public repository creation, release upload and profile pinning remain pending GitHub authentication. The medical resume stays in the ignored local artifact folder.
+The experiment, public repository, release upload and profile pinning are complete. One-page resume PDF verification remains blocked by the built-in compiler's platform-directory error. The medical resume stays in the ignored local artifact folder.
 
 After GitHub CLI login and committing the final reviewed results, run `powershell -ExecutionPolicy Bypass -File scripts/publish.ps1` from the project directory. The helper checks the acceptance report, refuses a conflicting existing repository/remote, pushes the project, and creates a release with weights, masks and checksums. Pin the repository with GitHub profile → **Customize your pins**. If your OAuth token cannot push the optional GitHub Actions workflow, authenticate with the workflow scope or publish without that optional workflow.

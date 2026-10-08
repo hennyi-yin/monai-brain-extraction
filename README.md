@@ -44,7 +44,7 @@ python evaluate.py
 
 After data, trained weights and both BET masks are present, **`python evaluate.py`** recomputes the 75 metric rows, statistics, figures and README result block. If U-Net predictions are absent, it generates them from the frozen best checkpoint. The first evaluation records checkpoint/config/split and input-mask hashes; changes are rejected on replay. Recomputing the same frozen analysis is permitted; changing model decisions after viewing test scores is not.
 
-To replay the measured experiment without retraining, clone the completed project and install `requirements-lock.txt`. Obtain `best.pt` and `test_predictions.tar.gz` from the prepared local `artifacts/release/` folder (or the GitHub release once published), then run:
+To replay the measured experiment without retraining, clone [the public repository](https://github.com/hennyi-yin/monai-brain-extraction) and install `requirements-lock.txt`. Download the assets from [Release v1.0.0](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.0.0) into `artifacts/release/` (or use the prepared local folder), then run:
 
 ```bash
 python -m scripts.download_data
