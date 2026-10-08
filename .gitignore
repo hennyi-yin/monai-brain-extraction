@@ -10,6 +10,7 @@ __pycache__/
 results/unet/
 results/bet_default/
 results/bet_robust/
+results/bet_robustfov/
 results/smoke/
 logs/*.console.log
 *.nii
