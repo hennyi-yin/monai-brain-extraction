@@ -17,4 +17,4 @@ fi
 if [[ ! -x "$HOME/.venvs/fsl-bet/bin/bet" ]]; then
   "$HOME/.local/micromamba/bin/micromamba" create -y -p "$HOME/.venvs/fsl-bet" --file environment-fsl-explicit.txt
 fi
-printf 'Setup complete. Activate the training environment and set FSLDIR as in docs/local_run.md.\n'
+printf 'Setup complete. Activate the training environment and set FSLDIR as in docs/reproduce.md.\n'

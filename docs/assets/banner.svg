@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="350" viewBox="0 0 1400 350" role="img" aria-labelledby="title desc">
+  <title id="title">MONAI Brain Extraction</title>
+  <desc id="desc">A reproducible three-dimensional MRI segmentation benchmark on NFBS.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101d37"/><stop offset="1" stop-color="#153c4b"/></linearGradient>
+    <linearGradient id="accent" x2="1" y2="1"><stop stop-color="#55e6c1"/><stop offset="1" stop-color="#6aa9ff"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#77afbf" stroke-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1400" height="350" rx="20" fill="url(#bg)"/>
+  <rect width="1400" height="350" rx="20" fill="url(#grid)"/>
+  <circle cx="1220" cy="60" r="200" fill="#61d5bf" opacity=".045"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="65" y="73" fill="#69e1cc" font-size="15" font-weight="700" letter-spacing="3">NEUROIMAGING · OPEN RESEARCH</text>
+    <text x="65" y="142" fill="#f3f8ff" font-size="52" font-weight="700">MONAI Brain Extraction</text>
+    <text x="67" y="188" fill="#b8ccde" font-size="23">3D U-Net segmentation. Native-grid evaluation. Reproducible evidence.</text>
+    <g transform="translate(65 230)">
+      <rect width="205" height="63" rx="10" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".1"/>
+      <text x="16" y="27" fill="#fff" font-size="22" font-weight="700">125 MRI scans</text>
+      <text x="16" y="48" fill="#a9c5d8" font-size="13">NFBS · 85 / 15 / 25 split</text>
+      <rect x="224" width="205" height="63" rx="10" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".1"/>
+      <text x="240" y="27" fill="#fff" font-size="22" font-weight="700">0.9863 Dice</text>
+      <text x="240" y="48" fill="#a9c5d8" font-size="13">U-Net · 25 held-out subjects</text>
+      <rect x="448" width="205" height="63" rx="10" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".1"/>
+      <text x="464" y="27" fill="#fff" font-size="22" font-weight="700">Frozen protocol</text>
+      <text x="464" y="48" fill="#a9c5d8" font-size="13">SHA-256 · commands · checks</text>
+    </g>
+  </g>
+  <g transform="translate(1045 45)">
+    <rect x="-35" y="2" width="220" height="245" rx="24" fill="none" stroke="#9bc2dd" stroke-opacity=".15"/>
+    <rect x="-20" y="16" width="220" height="245" rx="24" fill="none" stroke="#9bc2dd" stroke-opacity=".25"/>
+    <rect x="-5" y="30" width="220" height="245" rx="24" fill="#162e44" stroke="#81cbd1" stroke-opacity=".5"/>
+    <path d="M104 61C84 48 51 61 45 84C24 92 20 117 33 134C19 154 28 182 47 190C43 215 70 238 92 227C101 237 113 235 119 223C140 239 167 218 164 196C188 187 193 163 178 144C193 122 181 94 164 89C163 63 131 47 112 62Z" fill="url(#accent)" fill-opacity=".13" stroke="url(#accent)" stroke-width="3"/>
+    <path d="M106 68V219M73 76C56 97 92 103 85 123C78 143 49 129 44 151M148 77C168 97 129 104 138 125C147 142 170 131 174 156M47 176C70 161 90 180 78 204M164 179C144 164 125 180 138 207M104 145C86 153 91 169 104 177M111 96C125 103 119 114 110 121" fill="none" stroke="#8bddd5" stroke-width="2" stroke-linecap="round" opacity=".75"/>
+    <text x="106" y="305" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" fill="#90bdce" font-size="13" letter-spacing="2">NATIVE T1w GRID</text>
+  </g>
+</svg>
