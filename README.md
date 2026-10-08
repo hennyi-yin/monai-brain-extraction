@@ -77,3 +77,5 @@ MONAI Consortium. *MONAI: An open-source framework for deep learning in healthca
 ## Limitations
 
 This is an internal held-out evaluation from a single dataset. It does not establish clinical performance or cross-dataset robustness. Artificial degradation experiments and an augmentation ablation are optional follow-up work, and are not part of the primary results. No external neuroimaging laboratory data is used.
+
+[中文面试准备](docs/interview.md). This project's code is MIT-licensed; external data and FSL retain their own terms.
