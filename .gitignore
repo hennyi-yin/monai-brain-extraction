@@ -1,0 +1,16 @@
+data/
+cache/
+checkpoints/
+.venv/
+.local/
+artifacts/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+results/unet/
+results/bet_default/
+results/bet_robust/
+results/smoke/
+logs/*.console.log
+*.nii
+*.nii.gz

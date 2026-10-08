@@ -1,0 +1,21 @@
+{
+  "input_shape": [
+    4,
+    1,
+    96,
+    96,
+    96
+  ],
+  "output_shape": [
+    4,
+    2,
+    96,
+    96,
+    96
+  ],
+  "loss": 1.340163230895996,
+  "seconds": 15.57792589799999,
+  "peak_allocated_gib": 0.5065293312072754,
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "test_data_used": false
+}
