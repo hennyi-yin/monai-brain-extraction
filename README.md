@@ -38,6 +38,19 @@ python evaluate.py
 
 After data, trained weights and both BET masks are present, **`python evaluate.py`** recomputes the 75 metric rows, statistics, figures and README result block. If U-Net predictions are absent, it generates them from the frozen best checkpoint. The first evaluation records checkpoint/config/split and input-mask hashes; changes are rejected on replay. Recomputing the same frozen analysis is permitted; changing model decisions after viewing test scores is not.
 
+To replay the measured experiment without retraining, clone the completed project and install `requirements-lock.txt`. Obtain `best.pt` and `test_predictions.tar.gz` from the prepared local `artifacts/release/` folder (or the GitHub release once published), then run:
+
+```bash
+python -m scripts.download_data
+mkdir -p checkpoints
+cp artifacts/release/best.pt checkpoints/best.pt
+tar -xzf artifacts/release/test_predictions.tar.gz
+python evaluate.py
+python -m scripts.audit_delivery
+```
+
+The release provides all 75 prediction masks plus manifests. The repository provides the frozen split, protocol and completion metadata. Scoring existing masks works on CPU; generating new U-Net predictions uses the configured CUDA device. Verify the release files against `SHA256SUMS.json` before replay.
+
 For this machine, see [the local run instructions](docs/local_run.md). Exact installed transitive dependencies are recorded in `requirements-lock.txt`, and FSL package builds in `environment-fsl-explicit.txt`. GPU/driver/library differences may cause small numerical differences in new training runs.
 
 Some source masks contain fractional voxels in [0,1]. All training, validation and final evaluation labels use the same **≥0.5** threshold; counts are retained in the data audit.
