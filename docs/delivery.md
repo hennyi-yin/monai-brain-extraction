@@ -12,3 +12,5 @@
 - [ ] Weights and prediction masks attached to a release with SHA-256 hashes.
 
 Publication is an external action; the local repository and release files should be reviewed before publishing. No medical resume or personal contact information belongs in the project repository.
+
+After GitHub CLI login and committing the final reviewed results, run `powershell -ExecutionPolicy Bypass -File scripts/publish.ps1` from the project directory. The helper checks the acceptance report, refuses a conflicting existing repository/remote, pushes the project, and creates a release with weights, masks and checksums. Pin the repository with GitHub profile → **Customize your pins**. If your OAuth token cannot push the optional GitHub Actions workflow, authenticate with the workflow scope or publish without that optional workflow.
