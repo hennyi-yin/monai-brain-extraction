@@ -26,3 +26,25 @@ After scoring, the large BET discrepancy was investigated using the original sha
 The [NFBS article](https://link.springer.com/article/10.1186/s13742-016-0150-5) used FSL 5.0.7 `bet -B` for bias-field correction and neck cleanup when reporting 0.893 ± 0.027. This project implements the supplied brief's default and -R settings; it does not reproduce that historical baseline. A stronger baseline comparison would require a separate protocol chosen using training/validation data.
 
 Determinism is enabled with seed 42. Training checkpoints record Python/NumPy/PyTorch/CUDA/DataLoader random states; worker transform seeds derive from the restored loader generator. Exact bitwise replay can still depend on hardware and CUDA library behavior. Checkpoints contain optimizer metadata and must be loaded only from a trusted local run or verified release hash.
+
+## Addendum (2026-10-08): post-hoc supplementary baseline
+
+The uncropped primary BET -R masks have Dice <0.8 in seven of 25 subjects, including two zero-overlap masks localized in the neck. This motivates exactly one stronger supplementary baseline: neck cropping before robust BET. It was chosen after viewing test scores and is **post hoc**, not a replacement for the primary analysis. The reorientation/cropping order follows [FSL fsl_anat](https://fsl.fmrib.ox.ac.uk/fsl/docs/structural/fsl_anat.html). This addendum is committed alone before any supplementary BET test-subject run.
+
+The single pre-declared pipeline is, for every subject:
+
+```bash
+fslreorient2std <native_T1w> <reoriented_T1w>
+robustfov -i <reoriented_T1w> -r <roi_T1w> -b 170 -m <roi_to_reoriented.mat>
+bet <roi_T1w> <output> -f 0.5 -R -m -n
+```
+
+`-b 170` is robustfov's default brain extent in mm; `-m` records geometry only. No tuning, -B, per-subject settings, exclusions, extra postprocessing, or changes to the trained model are allowed. Only the first three training subjects in the frozen split are used for implementation smoke tests; no smoke scores guide parameter choices. After those checks pass, all 25 test subjects are processed and scored once. Subject failures produce native-grid empty masks, Dice 0 and HD95 infinity, and remain in all reports.
+
+Map each ROI and BET mask to the native T1w grid with `nibabel.processing.resample_from_to(..., order=0)`. Verify exact ROI T1w identity inside the mapped ROI (maximum absolute difference 0), preservation of the ROI footprint voxel count, and preservation of the foreground mask voxel count. Save uint8 binary masks with the original affine. If world-coordinate mapping fails, use FSL's recorded transformations (`fslreorient2std -m`, `robustfov -m`, `convert_xfm`, `flirt -applyxfm -interp nearestneighbour -ref <native_T1w>`) and repeat the same checks; if geometry still fails, score the subject as empty. Record the fraction of native ground-truth brain voxels retained by each crop as a diagnostic, without using it to change the crop or exclude subjects.
+
+The supplementary manifest records executable locations/hashes, the attempted `$FSLDIR/etc/fslversion` read (including an explicit unavailable status if absent from this modular FSL installation), exact package versions/builds, every external command/return code, input/intermediate/output SHA-256, ROI retention, map-back checks and failures. A synthetic axis-permutation/flip/crop roundtrip test must pass before test processing.
+
+Evaluation uses the existing foreground Dice and symmetric physical-space HD95 definitions in `src/metrics.py`, binary truth threshold ≥0.5 and the native grid's voxel spacing. Align all subjects by ID against the frozen U-Net and plain BET -R rows in `results/per_subject.csv`. Report means with sample SD, medians, minima, Dice <0.8 counts, zero-overlap counts, HD95 medians, two-sided paired Wilcoxon p-values vs U-Net, mean/median paired U-Net gain in points and wins/25. Also report the paired cropping gain vs plain BET -R, failure-case recovery, minimum ROI retention and every failed subject. P-values are descriptive and unadjusted in this post-hoc analysis. Both improved and unsuccessful outcomes are retained without changing parameters.
+
+Outputs are confined to `results/supplementary/robustfov_bet/` and a new ignored `results/bet_robustfov/` mask/work directory. The supplementary README section stays outside the primary results block. The split, configuration, checkpoints, primary U-Net/BET outputs, primary CSV/summaries/evaluation hash evidence and README results block are SHA-256 recorded before work and checked unchanged at completion. Exactly three local commits are made: this addendum; code and tests; results and README. Nothing is pushed.
