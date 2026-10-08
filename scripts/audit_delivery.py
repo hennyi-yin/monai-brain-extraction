@@ -23,7 +23,8 @@ def main():
     assert int(history.epoch.max()) <= cfg["train"]["max_epochs"]
     valid = history.dropna(subset=["val_dice"])
     assert all(valid.epoch % cfg["train"]["val_interval"] == 0)
-    assert completed["best_val_dice"] == float(valid.val_dice.max())
+    assert np.isclose(completed["best_val_dice"], float(valid.val_dice.max()), atol=1e-12)
+    assert completed["best_epoch"] == int(valid.loc[valid.val_dice.idxmax(), "epoch"])
     assert completed["checkpoint_sha256"] == digest(path(cfg["checkpoint_dir"]) / "best.pt")
     frame = pd.read_csv(results / "per_subject.csv")
     assert len(frame) == 75 and not frame.duplicated(["id", "method"]).any()

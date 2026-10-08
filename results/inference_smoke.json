@@ -1,0 +1,13 @@
+{
+  "id": "A00037511",
+  "group": "train",
+  "shape": [
+    256,
+    256,
+    192
+  ],
+  "native_affine_restored": true,
+  "binary_uint8": true,
+  "test_data_used": false,
+  "checkpoint_epoch": 30
+}
