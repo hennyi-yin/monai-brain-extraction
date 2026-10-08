@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-08T17:30:04.580843+00:00",
+  "release": "v1.1.1",
+  "audit_code_commit": "17b7130ce942de696b03eb4176b79a6639688b8f",
+  "workspace": "fresh local clone restored only from release assets",
+  "raw_data": "same source NFBS files accessed through a read-only data link; not bundled",
+  "asset_sha256": {
+    "best.pt": "167ecd9e5a9b6d7054052488d52ab71ab354eb83b6f382cecb45538e8f06735c",
+    "unet_weights.pt": "33fa32f070f1e2f098ff986d8883994f7da694b921e83e41e3735074d45026ff",
+    "test_predictions.tar.gz": "25627750d2398d679b7fb75370c9a87b5530acca8daa1a82be4b72044a985965",
+    "robustfov_predictions.tar.gz": "afde2da63a6aac33b3c79bc46bee6b9ef2884cd9efe6d0a6bad938e8e105f0db",
+    "frozen_audit_support.tar.gz": "7b69f927b37629cca7e4c7cf74bd67a4d914f69c03966d44c15902a5e638eedd"
+  },
+  "release_checksum_verification": "passed",
+  "primary_audit": "passed",
+  "supplementary_audit": "passed",
+  "primary_native_masks": 75,
+  "supplementary_native_masks": 25,
+  "frozen_primary_files_restored_and_unchanged": 161,
+  "readme_results_block_unchanged": true,
+  "supplementary_test_scoring_passes": 1,
+  "test_set_rescored_during_release_replay": false
+}

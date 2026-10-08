@@ -14,24 +14,25 @@ source .venv/bin/activate
 pip install -r requirements-lock.txt
 ```
 
-Download the five assets from [v1.1.0](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.0) into `artifacts/release/`. With GitHub CLI installed:
+Download the six assets from [v1.1.1](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.1) into `artifacts/release/`. With GitHub CLI installed:
 
 ```bash
-gh release download v1.1.0 --dir artifacts/release
+gh release download v1.1.1 --dir artifacts/release
 python -m scripts.verify_release artifacts/release
 python -m scripts.download_data
 mkdir -p checkpoints
 cp artifacts/release/best.pt checkpoints/best.pt
 tar -xzf artifacts/release/test_predictions.tar.gz
 tar -xzf artifacts/release/robustfov_predictions.tar.gz
+tar -xzf artifacts/release/frozen_audit_support.tar.gz
 python -m pytest -q
 python -m scripts.audit_delivery
 python -m scripts.audit_supplementary
 ```
 
-The release includes the full best checkpoint, inference-only model state, all **75 primary + 25 supplementary** native-grid masks, and SHA-256 checksums. The primary archive also includes its mask manifests. The repository supplies the split, protocol, logs, per-subject scores and evaluation manifests. The raw NFBS scans are downloaded separately.
+The release includes the full best checkpoint, inference-only model state, all **75 primary + 25 supplementary** native-grid masks, and SHA-256 checksums. The primary archive also includes its mask manifests. The support archive restores the last-epoch checkpoint and original BET intermediate/cache files required by the complete 161-file frozen audit. The repository supplies the split, protocol, logs, per-subject scores and evaluation manifests. The raw NFBS scans are downloaded separately.
 
-The two audits verify the saved analysis and native-grid masks without scoring the supplementary test set again. `audit_supplementary` also checks all 161 frozen primary file hashes and the original README results block. FSL is not required to audit the released masks.
+The two audits verify the saved analysis and native-grid masks without scoring the supplementary test set again. `audit_supplementary` also checks all 161 frozen primary file hashes and the original README results block. FSL is not required to audit the released masks. A fresh clone restored from these release assets passed both audits: [release replay evidence](../results/release_replay.json).
 
 For an independent replay of the **primary** metrics, `python evaluate.py` uses the frozen masks/checkpoint and rejects changed analysis inputs. It recomputes the 75 rows, statistics, figures and generated README block. A fresh environment installed from the lock file previously reproduced the primary CSV byte for byte: [reproduction evidence](../results/reproducibility.json). The supplementary `evaluation_once.json` deliberately prevents a second scoring pass in this completed workspace.
 
@@ -89,6 +90,6 @@ Use `python -m src.run_bet_robustfov --help` for the runner's training-only smok
 | Supplementary metrics, commands, geometry | [results/supplementary/robustfov_bet/](../results/supplementary/robustfov_bet/) |
 | Training history and environment | [logs/](../logs/) |
 | Source and tests | [src/](../src/), [tests/](../tests/) |
-| Weights and mask volumes | [GitHub release assets](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.0) |
+| Weights and mask volumes | [GitHub release assets](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.1) |
 
-Raw scans, checkpoints, caches, mask volumes and local artifacts are excluded from Git. `python -m scripts.package_release` prepares a primary release from a completed run. `python -m scripts.package_supplementary_release` preserves those assets and adds the 25 verified supplementary masks in `artifacts/release-v1.1.0/`; neither command publishes or rescans the test set.
+Raw scans, checkpoints, caches, mask volumes and local artifacts are excluded from Git. `python -m scripts.package_release` prepares a primary release from a completed run. `python -m scripts.package_supplementary_release` preserves those assets and adds the 25 verified supplementary masks and frozen audit support files in `artifacts/release-v1.1.1/`; neither command publishes or rescans the test set.

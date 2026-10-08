@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/hennyi-yin/monai-brain-extraction/actions/workflows/tests.yml"><img src="https://github.com/hennyi-yin/monai-brain-extraction/actions/workflows/tests.yml/badge.svg" alt="Protocol tests"></a>
-  <a href="https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.0"><img src="https://img.shields.io/badge/release-v1.1.0-1f9e9c" alt="Release v1.1.0"></a>
+  <a href="https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.1"><img src="https://img.shields.io/badge/release-v1.1.1-1f9e9c" alt="Release v1.1.1"></a>
   <a href="splits/split.json"><img src="https://img.shields.io/badge/NFBS-125%20subjects-4263a8" alt="NFBS: 125 subjects"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-64748b" alt="MIT license"></a>
 </p>
@@ -14,7 +14,7 @@
   <a href="docs/reproduce.md">Reproduce</a> ·
   <a href="docs/methods.md">Methods</a> ·
   <a href="docs/protocol.md">Protocol</a> ·
-  <a href="https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.0">Weights &amp; masks</a>
+  <a href="https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.1">Weights &amp; masks</a>
 </p>
 
 A reproducible brain-extraction benchmark comparing a **MONAI 3D U-Net** with fixed **FSL BET** baselines on native T1w MRI. The project includes completed training, subject-level scores, visual quality checks, verified weights and all prediction masks.
@@ -77,7 +77,7 @@ All 25 map-back checks passed with exact ROI image identity and preserved mask v
 
 ## Reproduce
 
-The [v1.1.0 release](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.0) provides the best checkpoint, inference weights, **100 native-grid prediction masks** and checksums. Existing masks can be audited on CPU; training and new U-Net inference use CUDA.
+The [v1.1.1 release](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.1) provides the best checkpoint, inference weights, **100 native-grid prediction masks** and checksums. Existing masks can be audited on CPU; training and new U-Net inference use CUDA.
 
 ```bash
 git clone https://github.com/hennyi-yin/monai-brain-extraction.git
