@@ -1,6 +1,7 @@
 data/
 cache/
 checkpoints/
+license.txt
 .venv/
 .local/
 artifacts/
@@ -11,6 +12,7 @@ results/unet/
 results/bet_default/
 results/bet_robust/
 results/bet_robustfov/
+results/freesurfer_autorecon1/
 results/smoke/
 logs/*.console.log
 *.nii

@@ -98,6 +98,7 @@ Follow the [reproduction guide](docs/reproduce.md) to download and verify the as
 | [Source](src/) / [tests](tests/) | MONAI pipeline, FSL runners, evaluation and native-grid roundtrip tests |
 | [Primary results](results/summary.md) | 75 metric rows across three fixed methods; training and QC figures |
 | [Supplementary results](results/supplementary/robustfov_bet/summary.md) | 25 extra metric rows, comparisons, commands and map-back evidence |
+| [FreeSurfer comparison protocol](docs/freesurfer.md) | Fixed `autorecon1` setup, training checks and independent evaluation commands |
 | [Training record](logs/) | 200-epoch history, selected checkpoint metadata and environment |
 
 ## Data & references
