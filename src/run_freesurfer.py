@@ -35,8 +35,8 @@ def map_to_native(auto_mask, conformed, imported, native):
     result = resample_from_to(binary, (native.shape, native.affine), order=0, mode="constant", cval=0)
     native_mask = np.asarray(result.dataobj, dtype=np.uint8)
     checks = {"imported_grid_matches_native": True, "mask_grid_matches_conformed_orig": True,
-              "native_shape": list(native.shape), "native_affine": native.affine.tolist(),
-              "conformed_shape": list(auto_mask.shape), "conformed_affine": auto_mask.affine.tolist(),
+              "native_shape": [int(size) for size in native.shape], "native_affine": native.affine.tolist(),
+              "conformed_shape": [int(size) for size in auto_mask.shape], "conformed_affine": auto_mask.affine.tolist(),
               "conformed_foreground_voxels": int(np.count_nonzero(values)),
               "native_foreground_voxels": int(native_mask.sum())}
     if not native_mask.any():
@@ -157,7 +157,7 @@ def main():
     else:
         items = training
         masks = MASKS / "smoke" / uuid.uuid4().hex[:12]
-        manifest_path = MASKS / "smoke_manifest.json"
+        manifest_path = masks / "smoke_manifest.json"
     hashes = fingerprints(items)
     subjects = masks / "subjects"
     subjects.mkdir(parents=True, exist_ok=False)
@@ -191,6 +191,8 @@ def main():
     write_json(manifest_path, manifest)
     if args.smoke and any(row["status"] != "ok" for row in manifest["subjects"]):
         raise SystemExit("Training smoke did not pass; inspect the console logs before proceeding")
+    if args.smoke:
+        write_json(MASKS / "smoke_manifest.json", manifest)
 
 
 if __name__ == "__main__":

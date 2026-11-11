@@ -1,3 +1,5 @@
+import json
+
 import nibabel as nib
 import numpy as np
 import pandas as pd
@@ -22,6 +24,7 @@ def test_mgz_map_back_with_flip_and_different_voxel_sizes(tmp_path):
     raw = nib.load(mgz)
     imported = nib.MGHImage(np.asarray(native.dataobj), native_affine)
     values, checks = map_to_native(raw, raw, imported, native)
+    assert json.loads(json.dumps(checks, allow_nan=False))["conformed_shape"] == [7, 8, 9]
     expected = np.zeros(native.shape, dtype=np.uint8)
     expected[2:8, 2:5, 3:5] = 1
     np.testing.assert_array_equal(values, expected)
