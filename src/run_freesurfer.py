@@ -1,5 +1,6 @@
 """Run the pre-declared FreeSurfer 7.4.1 autorecon1 baseline."""
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import os
 from pathlib import Path
 import re
@@ -123,6 +124,7 @@ def check_smoke(signature, items):
         raise RuntimeError("Run a successful three-subject smoke with this exact build first")
     if digest(ROOT / manifest["qc"]) != manifest["qc_sha256"]:
         raise RuntimeError("Training QC figure changed after generation")
+    return manifest
 
 
 def main():
@@ -132,7 +134,11 @@ def main():
     group.add_argument("--smoke", action="store_true", help="First three training subjects only")
     group.add_argument("--test", action="store_true", help="Run the 25 frozen test subjects once")
     parser.add_argument("--smoke-reviewed", action="store_true", help="Confirm inspection of training QC overlays")
+    parser.add_argument("--jobs", type=int, default=1,
+                        help="Concurrent subjects; each recon-all command still uses one thread")
     args = parser.parse_args()
+    if not 1 <= args.jobs <= (os.cpu_count() or 1):
+        parser.error("--jobs must be between 1 and the available logical CPU count")
     verify_frozen()
     signature = preflight()
     if args.preflight:
@@ -142,7 +148,7 @@ def main():
     if args.test:
         if not args.smoke_reviewed:
             parser.error("Review the three training overlays before test processing")
-        check_smoke(signature, training)
+        reviewed_smoke = check_smoke(signature, training)
         items = load_split(config(), ("test",))["test"]
         masks = MASKS / "test"
         manifest_path = OUTPUT / "manifest.json"
@@ -156,15 +162,24 @@ def main():
     subjects = masks / "subjects"
     subjects.mkdir(parents=True, exist_ok=False)
     manifest = {"method": METHOD, "group": "test" if args.test else "train", "signature": signature,
+                "concurrent_subjects": args.jobs,
                 "complete": False, "subjects": []}
     if args.test:
-        manifest["reviewed_training_smoke_sha256"] = digest(MASKS / "smoke_manifest.json")
+        archived = OUTPUT / "training_smoke_manifest.json"
+        shutil.copyfile(MASKS / "smoke_manifest.json", archived)
+        figure = OUTPUT / "figures/training_qc.png"
+        figure.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / reviewed_smoke["qc"], figure)
+        manifest["reviewed_training_smoke_sha256"] = digest(archived)
     write_json(manifest_path, manifest)
-    for item in items:
-        row = run_subject(item, subjects, masks, signature["tools"]["recon-all"]["path"], hashes[item["id"]])
-        manifest["subjects"].append(row)
-        write_json(manifest_path, manifest)
-        print(f"{item['id']}: {row['status']} ({row['elapsed_seconds']:.1f}s) {row['failure'] or ''}", flush=True)
+    def process(item):
+        return run_subject(item, subjects, masks, signature["tools"]["recon-all"]["path"], hashes[item["id"]])
+
+    with ThreadPoolExecutor(max_workers=args.jobs) as workers:
+        for row in workers.map(process, items):
+            manifest["subjects"].append(row)
+            write_json(manifest_path, manifest)
+            print(f"{row['id']}: {row['status']} ({row['elapsed_seconds']:.1f}s) {row['failure'] or ''}", flush=True)
     if args.smoke:
         from src.evaluate_freesurfer import plot_overlays
         qc = masks / "qc.png"

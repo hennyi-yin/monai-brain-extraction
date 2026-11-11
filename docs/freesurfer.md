@@ -23,8 +23,11 @@ python -m src.run_freesurfer --smoke
 # Inspect the printed training QC PNG: all three overlays must align spatially.
 python -m src.run_freesurfer --test --smoke-reviewed
 python -m src.evaluate_freesurfer
+python -m scripts.audit_freesurfer
 ```
 
 Smoke checks use the first three training subjects and produce no test scores. If setup or geometry fails, diagnose it from the console logs and repeat only the training smoke. The test runner requires a successful smoke with the same build and won't overwrite a started test run. The evaluator requires 25 masks and records a one-pass scoring marker.
+
+Optional `--jobs N` runs independent subjects concurrently; each `recon-all` invocation still uses `-openmp 1`. The audit checks the saved masks, scoring record, and frozen inputs without re-running FreeSurfer or scoring any subject again.
 
 Run outputs and FreeSurfer subject directories are ignored in `results/freesurfer_autorecon1/`. Reports, scores, hashes and QC figures are written separately to `results/supplementary/freesurfer_autorecon1/`. Existing primary and robustfov reports are checked by SHA-256 before and after each stage. FreeSurfer is not required to reproduce the earlier U-Net and BET analyses.
