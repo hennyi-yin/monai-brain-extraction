@@ -30,4 +30,6 @@ Smoke checks use the first three training subjects and produce no test scores. I
 
 Optional `--jobs N` runs independent subjects concurrently; each `recon-all` invocation still uses `-openmp 1`. The audit checks the saved masks, scoring record, and frozen inputs without re-running FreeSurfer or scoring any subject again.
 
+The first local training attempt produced a valid native mask but failed while writing a NumPy dimension to JSON. After correcting serialization, all three training cases passed in fresh directories and the native overlays were reviewed. The repeated first case produced a byte-identical mask. The algorithm and its flags were unchanged. Before starting the test batch, the runner also checks every T1w and reference label hash against the frozen robustfov comparison.
+
 Run outputs and FreeSurfer subject directories are ignored in `results/freesurfer_autorecon1/`. Reports, scores, hashes and QC figures are written separately to `results/supplementary/freesurfer_autorecon1/`. Existing primary and robustfov reports are checked by SHA-256 before and after each stage. FreeSurfer is not required to reproduce the earlier U-Net and BET analyses.

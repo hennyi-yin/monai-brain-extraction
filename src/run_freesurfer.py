@@ -13,9 +13,10 @@ import nibabel as nib
 from nibabel.processing import resample_from_to
 import numpy as np
 
-from src.common import ROOT, config, digest, load_split, write_json
+from src.common import ROOT, config, digest, load_split, path, write_json
 from src.freesurfer_common import MASKS, METHOD, OUTPUT, VERSION, protocol_commit, read_json, relative, verify_frozen
 from src.run_bet_robustfov import save_mask
+from src.supplementary_common import OUTPUT as CROPPED_BET_OUTPUT
 
 
 def same_grid(a, b):
@@ -159,6 +160,11 @@ def main():
         masks = MASKS / "smoke" / uuid.uuid4().hex[:12]
         manifest_path = masks / "smoke_manifest.json"
     hashes = fingerprints(items)
+    if args.test:
+        earlier = {row["id"]: row["input_sha256"] for row in read_json(path(CROPPED_BET_OUTPUT) / "manifest.json")["subjects"]}
+        for sid, values in hashes.items():
+            if values != {"image": earlier[sid]["image"], "label": earlier[sid]["truth"]}:
+                raise RuntimeError(f"Native T1w or reference mask differs from the frozen comparison for {sid}")
     subjects = masks / "subjects"
     subjects.mkdir(parents=True, exist_ok=False)
     manifest = {"method": METHOD, "group": "test" if args.test else "train", "signature": signature,
