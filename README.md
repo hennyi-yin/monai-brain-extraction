@@ -17,11 +17,11 @@
   <a href="https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.1.1">Weights &amp; masks</a>
 </p>
 
-A reproducible brain-extraction benchmark comparing a **MONAI 3D U-Net** with fixed **FSL BET** baselines on native T1w MRI. The project includes completed training, subject-level scores, visual quality checks, verified weights and all prediction masks.
+A reproducible brain-extraction benchmark comparing a **MONAI 3D U-Net** with fixed **FSL BET** and **FreeSurfer** baselines on native T1w MRI. The project includes completed training, subject-level scores, visual quality checks, verified weights and all prediction masks.
 
 - **Fixed held-out evaluation:** 85 training / 15 validation / 25 test subjects, seed 42; checkpoint selected on validation data.
 - **Traceable outputs:** native-grid masks, exact commands, dependency locks and SHA-256 manifests.
-- **Transparent comparison:** frozen primary analysis plus one explicitly labeled post-hoc neck-cropping baseline.
+- **Transparent comparison:** frozen primary analysis plus two explicitly labeled post-hoc baselines: neck-cropped BET and FreeSurfer.
 
 ## Results
 
@@ -74,6 +74,23 @@ All 25 map-back checks passed with exact ROI image identity and preserved mask v
 </details>
 
 [Protocol addendum](docs/protocol.md#addendum-2026-10-08-post-hoc-supplementary-baseline) · [Full supplementary statistics](results/supplementary/robustfov_bet/summary.md) · [Commands & geometry manifest](results/supplementary/robustfov_bet/manifest.json)
+
+## Supplementary baseline (post hoc): FreeSurfer autorecon1
+
+On the same 25 scans, **FreeSurfer 7.4.1** achieves **0.8591 ± 0.1472 Dice**. The mean paired U-Net minus FreeSurfer difference is **+12.73 Dice points** (25/25 U-Net wins). Processing failures: **0/25**, retained in the comparison.
+
+| Method | Dice mean ± SD | Dice median | Dice <0.8 | HD95 median (mm) |
+|---|---:|---:|---:|---:|
+| U-Net (frozen) | 0.9863 ± 0.0018 | 0.9868 | 0/25 | 1.41 |
+| BET -R (frozen) | 0.7734 ± 0.3014 | 0.9301 | 7/25 | 9.51 |
+| robustfov + BET -R (post hoc) | 0.9178 ± 0.0154 | 0.9174 | 0/25 | 10.72 |
+| FreeSurfer 7.4.1 autorecon1 (post hoc) | 0.8591 ± 0.1472 | 0.8994 | 2/25 | 8.25 |
+
+This independent post-hoc comparison uses the default watershed step in `recon-all -autorecon1` on uncropped T1w scans. Masks are mapped to the original T1w grid. The workflow was fixed before running the FreeSurfer test set; the original analysis and earlier supplement are unchanged.
+
+Two FreeSurfer masks fell below Dice 0.8 despite successful processing. [Native overlays](results/supplementary/freesurfer_autorecon1/figures/low_dice_qc.png) show extensive extra foreground outside the brain in both cases.
+
+[Protocol](docs/protocol.md#addendum-2026-11-10-post-hoc-freesurfer-baseline) · [Full results and native QC](results/supplementary/freesurfer_autorecon1/summary.md) · [Run and audit instructions](docs/freesurfer.md)
 
 ## Reproduce
 

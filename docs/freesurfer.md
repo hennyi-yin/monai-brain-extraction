@@ -33,3 +33,7 @@ Optional `--jobs N` runs independent subjects concurrently; each `recon-all` inv
 The first local training attempt produced a valid native mask but failed while writing a NumPy dimension to JSON. After correcting serialization, all three training cases passed in fresh directories and the native overlays were reviewed. The repeated first case produced a byte-identical mask. The algorithm and its flags were unchanged. Before starting the test batch, the runner also checks every T1w and reference label hash against the frozen robustfov comparison.
 
 Run outputs and FreeSurfer subject directories are ignored in `results/freesurfer_autorecon1/`. Reports, scores, hashes and QC figures are written separately to `results/supplementary/freesurfer_autorecon1/`. Existing primary and robustfov reports are checked by SHA-256 before and after each stage. FreeSurfer is not required to reproduce the earlier U-Net and BET analyses.
+
+After the audit passes, `python -m scripts.package_freesurfer_predictions` writes a checksum and a verified archive of the 25 native masks under `artifacts/freesurfer/`. To audit the completed comparison in another checkout, restore the v1.1.1 inputs, extract this archive at the repository root, and run `python -m scripts.audit_freesurfer`. This does not use a FreeSurfer license or rerun scoring.
+
+`python -m scripts.qc_freesurfer_low_dice` regenerates the focused overlays from the saved masks and scores. This diagnostic changes neither masks nor scores.

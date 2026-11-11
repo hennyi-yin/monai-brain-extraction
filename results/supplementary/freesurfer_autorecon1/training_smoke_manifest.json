@@ -1,0 +1,330 @@
+{
+  "method": "freesurfer_autorecon1",
+  "group": "train",
+  "signature": {
+    "version": "freesurfer-linux-ubuntu22_x86_64-7.4.1-20230614-7eb8460",
+    "build_stamp": "freesurfer-linux-ubuntu22_x86_64-7.4.1-20230614-7eb8460",
+    "tools": {
+      "recon-all": {
+        "path": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/recon-all",
+        "sha256": "b1d6ab43f396c06a9777e102d7dc0ccbba824e50e868d805d43716b8679a0e71"
+      },
+      "mri_convert": {
+        "path": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/mri_convert",
+        "sha256": "e9417c28d1225b9d091aeab892b17346a43f0202939cf1910b05917f645d3972"
+      },
+      "mri_watershed": {
+        "path": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/mri_watershed",
+        "sha256": "d6d71b5272fbc8ccf343e404c5b95454ffd1667c6251a8e503603af64c275f8b"
+      },
+      "mri_normalize": {
+        "path": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/mri_normalize",
+        "sha256": "4686ab7056a4e965e2ec97ecda38580cf8be039fc4e1d51bc99f2086000473b2"
+      },
+      "mri_em_register": {
+        "path": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/mri_em_register",
+        "sha256": "1564dc48b9f638d426560b06d4104556435ce4f8aa17f32948c45a6e37bcc59e"
+      }
+    },
+    "protocol_commit": "6602c78d24ace61c231091214a10b77248a47d52",
+    "omp_threads": 1,
+    "split_sha256": "3fd54e142f72eb2d795219ae0780e56229fd874516b54f3c8f26fb49027e137a"
+  },
+  "concurrent_subjects": 3,
+  "complete": true,
+  "subjects": [
+    {
+      "id": "A00037511",
+      "command": [
+        "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/recon-all",
+        "-i",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+        "-s",
+        "A00037511",
+        "-sd",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/freesurfer_autorecon1/smoke/094c1f69b41e/subjects",
+        "-autorecon1",
+        "-openmp",
+        "1"
+      ],
+      "console_log": "results/freesurfer_autorecon1/smoke/094c1f69b41e/A00037511.console.log",
+      "inputs": {
+        "image": "1d2dcc77e9e45d8239d4342b34f8ae2adfa22de98c15b9efc0b7ea5b6700d32a",
+        "label": "561b157305d9c36d57ebd021351d3291af3d53651dfccf1c5ff4e2a8dac524a2"
+      },
+      "output": "results/freesurfer_autorecon1/smoke/094c1f69b41e/A00037511_mask.nii.gz",
+      "status": "ok",
+      "failure": null,
+      "mapping": {
+        "imported_grid_matches_native": true,
+        "mask_grid_matches_conformed_orig": true,
+        "native_shape": [
+          256,
+          256,
+          192
+        ],
+        "native_affine": [
+          [
+            -0.0,
+            -0.0,
+            0.9999008178710938,
+            -93.23995971679688
+          ],
+          [
+            -1.0,
+            -0.0,
+            -0.0,
+            142.16867065429688
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            118.25829315185547
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "conformed_shape": [
+          256,
+          256,
+          256
+        ],
+        "conformed_affine": [
+          [
+            -1.0,
+            0.0,
+            0.0,
+            130.75051879882812
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            -113.83132934570312
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            118.25829315185547
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "conformed_foreground_voxels": 1689089,
+        "native_foreground_voxels": 1689089
+      },
+      "returncode": 0,
+      "auto_mask_sha256": "8e1bf9f9dd338186d0d1b349e5558e25ccf52f1faeaf72164ad09b575eb35025",
+      "watershed_command": "mri_watershed -T1 -brain_atlas /home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/average/RB_all_withskull_2020_01_02.gca transforms/talairach_with_skull.lta T1.mgz brainmask.auto.mgz",
+      "elapsed_seconds": 971.468,
+      "output_sha256": "b92fe0980890d123c362d52752db95c6a9cfbb0bcf04bbeb07fa59d514dc8574",
+      "console_log_sha256": "58160a82b0434bde209b60ebf80c25d6b9d735c66b2b90877c1ca679c3145d26"
+    },
+    {
+      "id": "A00060407",
+      "command": [
+        "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/recon-all",
+        "-i",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060407/sub-A00060407_ses-NFB3_T1w.nii.gz",
+        "-s",
+        "A00060407",
+        "-sd",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/freesurfer_autorecon1/smoke/094c1f69b41e/subjects",
+        "-autorecon1",
+        "-openmp",
+        "1"
+      ],
+      "console_log": "results/freesurfer_autorecon1/smoke/094c1f69b41e/A00060407.console.log",
+      "inputs": {
+        "image": "6fd09f5d8300c08a6f4aafb8c2c5779a1a212fbf640bd3d53f58d840bd7fecb1",
+        "label": "726a55b6f43c32fc779d424345eb812113d37c45dbbe56954ac54a21ea5332df"
+      },
+      "output": "results/freesurfer_autorecon1/smoke/094c1f69b41e/A00060407_mask.nii.gz",
+      "status": "ok",
+      "failure": null,
+      "mapping": {
+        "imported_grid_matches_native": true,
+        "mask_grid_matches_conformed_orig": true,
+        "native_shape": [
+          256,
+          256,
+          192
+        ],
+        "native_affine": [
+          [
+            -0.0,
+            -0.0,
+            0.9999008178710938,
+            -98.19879913330078
+          ],
+          [
+            -1.0,
+            -0.0,
+            -0.0,
+            150.84664916992188
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            110.82003784179688
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "conformed_shape": [
+          256,
+          256,
+          256
+        ],
+        "conformed_affine": [
+          [
+            -1.0,
+            0.0,
+            0.0,
+            125.79167938232422
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            -105.15333557128906
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            110.82003784179688
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "conformed_foreground_voxels": 1637867,
+        "native_foreground_voxels": 1637867
+      },
+      "returncode": 0,
+      "auto_mask_sha256": "00557a2d5d78a9c5393034f98273f0d39d8d140f91ead52466cad84208060c0b",
+      "watershed_command": "mri_watershed -T1 -brain_atlas /home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/average/RB_all_withskull_2020_01_02.gca transforms/talairach_with_skull.lta T1.mgz brainmask.auto.mgz",
+      "elapsed_seconds": 915.791,
+      "output_sha256": "9a9b17fca89e68e6e79fe308b5a4d4ce1f1e44b1e70f389029dc5b4f382fb215",
+      "console_log_sha256": "3b08eea307821ff63669365f7763e0c064cb97a54f3eafecd800e243f5efe196"
+    },
+    {
+      "id": "A00060480",
+      "command": [
+        "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/bin/recon-all",
+        "-i",
+        "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00060480/sub-A00060480_ses-NFB3_T1w.nii.gz",
+        "-s",
+        "A00060480",
+        "-sd",
+        "/mnt/c/Users/25696/Downloads/MONAI/results/freesurfer_autorecon1/smoke/094c1f69b41e/subjects",
+        "-autorecon1",
+        "-openmp",
+        "1"
+      ],
+      "console_log": "results/freesurfer_autorecon1/smoke/094c1f69b41e/A00060480.console.log",
+      "inputs": {
+        "image": "98a079a55461cdffdb38443a72ddf338b381715d7526d7b07fa2539e49474cbe",
+        "label": "a54dbcd73de6784f7761e34bed7c268b43454d4e923522db49dcb975fe2f1d60"
+      },
+      "output": "results/freesurfer_autorecon1/smoke/094c1f69b41e/A00060480_mask.nii.gz",
+      "status": "ok",
+      "failure": null,
+      "mapping": {
+        "imported_grid_matches_native": true,
+        "mask_grid_matches_conformed_orig": true,
+        "native_shape": [
+          256,
+          256,
+          192
+        ],
+        "native_affine": [
+          [
+            -0.0,
+            -0.0,
+            0.9999008178710938,
+            -98.19879913330078
+          ],
+          [
+            -1.0,
+            -0.0,
+            -0.0,
+            148.36721801757812
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            104.62149047851562
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "conformed_shape": [
+          256,
+          256,
+          256
+        ],
+        "conformed_affine": [
+          [
+            -1.0,
+            0.0,
+            0.0,
+            125.79167938232422
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            -107.63278198242188
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            104.62149047851562
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "conformed_foreground_voxels": 1792637,
+        "native_foreground_voxels": 1792637
+      },
+      "returncode": 0,
+      "auto_mask_sha256": "c16de7916b71976abf7925e26794264a1bcfb7f8dc8eb569ee739409207b1ff4",
+      "watershed_command": "mri_watershed -T1 -brain_atlas /home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/average/RB_all_withskull_2020_01_02.gca transforms/talairach_with_skull.lta T1.mgz brainmask.auto.mgz",
+      "elapsed_seconds": 924.048,
+      "output_sha256": "3ef5e5ea5f587c2408519773055cf7f17b5bb3f3be9c4a45527a63dc1e9bb9d1",
+      "console_log_sha256": "7da4c4ad4f8d873efc47811bbf22a467769c942a07dcebaceeb0b17420994c3e"
+    }
+  ],
+  "qc": "results/freesurfer_autorecon1/smoke/094c1f69b41e/qc.png",
+  "qc_sha256": "939c1a5f4d71e99ed03cf890f60d40ec8e7fc2833dbb47f444fc2d96054fb02b"
+}
