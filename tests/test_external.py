@@ -5,8 +5,9 @@ import pytest
 
 from scripts.prepare_external_data import select_ids
 from scripts.external_geometry_sensitivity import integer_map
-from src.evaluate_external import hd_quantile, paired_interval, summarize
+from src.evaluate_external import hd_quantile, paired_interval, score_native, summarize
 from src.external_common import COHORTS, METHODS
+from src.metrics import score
 
 
 def test_select_entire_publisher_test_cohorts_and_reject_duplicate():
@@ -72,3 +73,12 @@ def test_crop_mapping_accepts_only_exact_float32_representation():
     altered[0, 0, 0] = np.nextafter(altered[0, 0, 0], np.float32(np.inf))
     with pytest.raises(ValueError, match="stored precision"):
         integer_map(nib.Nifti1Image(altered, affine), raw, native)
+
+
+def test_scoring_box_preserves_anisotropic_surfaces_and_empty_policy():
+    pred, truth = np.zeros((22, 19, 24), bool), np.zeros((22, 19, 24), bool)
+    pred[0:9, 3:10, 6:16] = True
+    truth[3:11, 4:12, 4:14] = True
+    spacing = (0.94, 1.2, 1.07)
+    assert score_native(pred, truth, spacing) == score(pred, truth, spacing)
+    assert score_native(np.zeros_like(truth), truth, spacing) == (0.0, float("inf"))

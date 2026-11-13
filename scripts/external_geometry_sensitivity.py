@@ -6,10 +6,9 @@ import numpy as np
 import pandas as pd
 
 from src.common import digest, path, write_json
-from src.evaluate_external import GROUPS, summarize
+from src.evaluate_external import GROUPS, score_native, summarize
 from src.external_common import OUTPUT, WORK, binary_values, code_commit, dataset, native_grid, require_same_grid, verify_frozen
 from src.freesurfer_common import read_json
-from src.metrics import score
 from src.run_bet_robustfov import save_mask
 
 
@@ -92,7 +91,7 @@ def main():
         truth = nib.load(label)
         require_same_grid(native, truth)
         reference = np.asarray(truth.dataobj) >= .5
-        dice, hd = score(output, reference, native_grid(native))
+        dice, hd = score_native(output != 0, reference, native_grid(native))
         retention = float(reference[slices].sum() / reference.sum())
         idx = (frame.id == sid) & (frame.method == "bet_crop")
         frame.loc[idx, ["dice", "hd95_mm", "status", "failure", "crop_reference_retention"]] = [dice, hd, "ok", None, retention]

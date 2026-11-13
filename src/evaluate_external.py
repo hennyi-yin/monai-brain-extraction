@@ -46,6 +46,20 @@ def load_predictions(items):
     return runs, hashes
 
 
+def score_native(prediction, reference, spacing):
+    # Outside the union bounding box both masks are zero. Removing only that
+    # common background preserves foreground surfaces and all pairwise distances.
+    support = prediction | reference
+    slices = []
+    for axis in range(3):
+        indices = np.flatnonzero(support.any(axis=tuple(other for other in range(3) if other != axis)))
+        if not len(indices):
+            return score(prediction, reference, spacing)
+        slices.append(slice(int(indices[0]), int(indices[-1]) + 1))
+    box = tuple(slices)
+    return score(prediction[box], reference[box], spacing)
+
+
 def score_case(item, runs):
     native = nib.load(path(item["image"]))
     truth = nib.load(path(item["label"]))
@@ -61,7 +75,7 @@ def score_case(item, runs):
         values = binary_values(pred)
         if pred.get_data_dtype() != np.uint8 or int(values.sum()) != result["foreground"] or bool(values.any()) != (result["status"] == "ok"):
             raise ValueError(f"Inconsistent prediction status for {method}/{item['id']}")
-        dice, hd = score(values, reference, spacing)
+        dice, hd = score_native(values, reference, spacing)
         retention = None
         if result.get("footprint"):
             footprint = nib.load(path(result["footprint"]))

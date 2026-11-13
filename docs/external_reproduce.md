@@ -22,4 +22,6 @@ python -m scripts.external_geometry_sensitivity
 
 The audit does not recompute Dice or HD95. Prediction masks and intermediate ROI files stay under ignored `results/external_work/`. The native volume and mask hashes, exact commands, failures, all subject-level scores and the confidence interval calculation are recorded in the repository. `python -m src.evaluate_external --report-only` redraws the primary report and figure from the locked score file without rescoring.
 
+For HD95 efficiency only, scoring removes the common zero background outside the union of prediction and reference foreground bounds before calling `src.metrics.score`. This leaves both surfaces and all distances unchanged. It does not crop input scans or predictions.
+
 References: [Hoopes et al., SynthStrip](https://doi.org/10.1016/j.neuroimage.2022.119474), [IXI / Imperial College London](https://brain-development.org/ixi-dataset/), and [Juttukonda et al., ASL source study](https://doi.org/10.1016/j.neuroimage.2021.117807). Refer to the [publisher's archive license](https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/data/README) for the image and annotation licenses. The repository distributes metrics and analysis artifacts, not the scans or reference masks.
