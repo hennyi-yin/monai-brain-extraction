@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 from src.common import digest, path, write_json
-from src.evaluate_external import GROUPS, score_native, summarize
+from src.evaluate_external import GROUPS, plot_paired, score_native, summarize
 from src.external_common import OUTPUT, WORK, binary_values, code_commit, dataset, native_grid, require_same_grid, verify_frozen
 from src.freesurfer_common import read_json
 from src.run_bet_robustfov import save_mask
@@ -100,8 +100,9 @@ def main():
         print(f"Recovered {sid} using an exact whole-ROI map in the stored precision", flush=True)
     results = directory / "per_subject_bet_crop.csv"
     frame.loc[frame.method == "bet_crop"].to_csv(results, index=False, float_format="%.12g")
-    summary, _ = summarize(frame)
+    summary, pivot = summarize(frame)
     write_json(directory / "summary.json", summary)
+    plot_paired(pivot, summary, directory / "paired_dice_differences.png")
     write_json(lock, {**state, "status": "complete", "csv_sha256": digest(results)})
     assert digest(csv) == prior["csv_sha256"]
     verify_frozen()
@@ -121,6 +122,7 @@ def main():
                      f"{paired['mean_points']:+.2f} [{lo:+.2f}, {hi:+.2f}] | {paired['wins']} / {paired['ties']} / {paired['losses']} |")
     remaining = [row["id"] for row in state["subjects"] if not row["recovered"]]
     lines += ["", "Unrecovered cases: " + (", ".join(remaining) or "none") + ".", "",
+              "![Paired differences after the map-back sensitivity](paired_dice_differences.png)", "",
               "[Sensitivity protocol](../../../../docs/external_geometry_sensitivity.md) · [Evidence and hashes](evaluation_once.json) · [Primary analysis](../summary.md)", ""]
     (directory / "summary.md").write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))
