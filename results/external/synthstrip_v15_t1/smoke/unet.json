@@ -1,0 +1,41 @@
+{
+  "signature": {
+    "method": "unet",
+    "protocol_commit": "b161e009b73567cabee339d97a252f0050ce1ad3",
+    "source_sha256": {
+      "src/run_external.py": "c77ceabe52e84f86233e918ef0aebfa04a7d0b00ef3ba3d1ac3c312df5585360",
+      "src/external_common.py": "45b34f3ad0465a363afac3f0ca3e9ca71696c96684e8efddffd37ea89ba52111",
+      "src/infer.py": "7b9600ebdd5e7dd96f975f46bb461a6bd41bbdb49025d729e8286788a2475db2",
+      "src/data.py": "4c6bd9b71026306cc257afa57bc8c748cfb0f20cbe726a288b7d035873fc535c",
+      "src/model.py": "54e5dd87e984534279c3fed4ff59130edfd53689814414296c1adaf4c456804c",
+      "src/run_bet_robustfov.py": "26c1042b5b150a66936af43ece2d1c4a3f06a70847f1492f2beb77c3c35990c7",
+      "src/common.py": "07717ba6e36b7bfe8c29d847ceae5f4f3cd17bd5beb00561df84393323826079"
+    },
+    "python": "3.12.3",
+    "numpy": "2.2.6",
+    "nibabel": "5.3.2",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "checkpoint_sha256": "167ecd9e5a9b6d7054052488d52ab71ab354eb83b6f382cecb45538e8f06735c",
+    "config_sha256": "e554aedc523d00f822cc4211af63a6140d896f279facb9b2afc33eb0976a8285",
+    "monai": "1.6.1"
+  },
+  "code_commit": "b161e009b73567cabee339d97a252f0050ce1ad3",
+  "complete": true,
+  "subjects": [
+    {
+      "id": "A00037511",
+      "method": "unet",
+      "source_sha256": "1d2dcc77e9e45d8239d4342b34f8ae2adfa22de98c15b9efc0b7ea5b6700d32a",
+      "commands": [],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/smoke/unet/A00037511/native_mask.nii.gz",
+      "output_sha256": "5481dbc0fe63bdf02d080811311a4f4b7ffd08c5ad7b456d569e292756ca8020",
+      "foreground": 1446053,
+      "seconds": 17.615
+    }
+  ],
+  "dataset_sha256": null
+}

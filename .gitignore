@@ -13,6 +13,7 @@ results/bet_default/
 results/bet_robust/
 results/bet_robustfov/
 results/freesurfer_autorecon1/
+results/external_work/
 results/smoke/
 logs/*.console.log
 *.nii

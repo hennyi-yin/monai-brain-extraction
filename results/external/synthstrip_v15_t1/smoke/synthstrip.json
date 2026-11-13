@@ -1,0 +1,67 @@
+{
+  "signature": {
+    "method": "synthstrip",
+    "protocol_commit": "b161e009b73567cabee339d97a252f0050ce1ad3",
+    "source_sha256": {
+      "src/run_external.py": "c77ceabe52e84f86233e918ef0aebfa04a7d0b00ef3ba3d1ac3c312df5585360",
+      "src/external_common.py": "45b34f3ad0465a363afac3f0ca3e9ca71696c96684e8efddffd37ea89ba52111",
+      "src/infer.py": "7b9600ebdd5e7dd96f975f46bb461a6bd41bbdb49025d729e8286788a2475db2",
+      "src/data.py": "4c6bd9b71026306cc257afa57bc8c748cfb0f20cbe726a288b7d035873fc535c",
+      "src/model.py": "54e5dd87e984534279c3fed4ff59130edfd53689814414296c1adaf4c456804c",
+      "src/run_bet_robustfov.py": "26c1042b5b150a66936af43ece2d1c4a3f06a70847f1492f2beb77c3c35990c7",
+      "src/common.py": "07717ba6e36b7bfe8c29d847ceae5f4f3cd17bd5beb00561df84393323826079"
+    },
+    "python": "3.12.3",
+    "numpy": "2.2.6",
+    "nibabel": "5.3.2",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "synthstrip": {
+      "script": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+      "weights": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+      "script_sha256": "d674926f56393e3ead4eeb4a53a3b41de16f822469d653e33cdfe9d69c3185a2",
+      "weights_sha256": "37417f802196186441aae3e7f385d94f8a98c64a88acaeaa2723af995c653e33",
+      "surfa": "0.6.3",
+      "backend": "CUDA",
+      "border_mm": 1,
+      "csf_inclusive": true
+    }
+  },
+  "code_commit": "b161e009b73567cabee339d97a252f0050ce1ad3",
+  "complete": true,
+  "subjects": [
+    {
+      "id": "A00037511",
+      "method": "synthstrip",
+      "source_sha256": "1d2dcc77e9e45d8239d4342b34f8ae2adfa22de98c15b9efc0b7ea5b6700d32a",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/smoke/synthstrip/A00037511/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/NFBS/A00037511/sub-A00037511_ses-NFB3_T1w.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/smoke/synthstrip/A00037511/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/smoke/synthstrip/A00037511/native_mask.nii.gz",
+      "output_sha256": "c0e15cda9239e0457f363ee2c1755cbba941e1d0fd32c1fcd82b61ee6d0a0790",
+      "foreground": 1703717,
+      "seconds": 9.596
+    }
+  ],
+  "dataset_sha256": null
+}
