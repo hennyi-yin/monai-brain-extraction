@@ -58,3 +58,17 @@ def test_exact_crop_mapping_preserves_boundary_and_rejects_misalignment():
     altered = nib.Nifti1Image(np.asarray(roi.dataobj) + 1, roi.affine)
     with pytest.raises(ValueError, match="does not match native intensities"):
         integer_map(altered, raw, native)
+
+
+def test_crop_mapping_accepts_only_exact_float32_representation():
+    native = nib.Nifti1Image(np.arange(64, dtype=np.float64).reshape(4, 4, 4) * 1.835897445678711, np.eye(4))
+    original = np.asarray(native.dataobj)[1:3]
+    affine = native.slicer[1:3].affine
+    roi = nib.Nifti1Image(original.astype(np.float32), affine)
+    raw = nib.Nifti1Image(np.ones(roi.shape, dtype=np.uint8), affine)
+    _, _, evidence = integer_map(roi, raw, native)
+    assert not evidence["roi_intensities_exact"] and evidence["roi_matches_after_native_float32_cast"]
+    altered = np.asarray(roi.dataobj).copy()
+    altered[0, 0, 0] = np.nextafter(altered[0, 0, 0], np.float32(np.inf))
+    with pytest.raises(ValueError, match="stored precision"):
+        integer_map(nib.Nifti1Image(altered, affine), raw, native)

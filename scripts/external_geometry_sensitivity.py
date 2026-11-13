@@ -30,14 +30,18 @@ def integer_map(roi, raw_mask, native):
     if np.any(start < 0) or np.any(stop > native.shape):
         raise ValueError("Mapped crop lies outside the native grid")
     slices = tuple(slice(a, b) for a, b in zip(start, stop))
-    if not np.array_equal(np.asarray(native.dataobj)[slices], intensities):
-        raise ValueError("Entire ROI does not match native intensities exactly")
+    original = np.asarray(native.dataobj)[slices]
+    exact = np.array_equal(original, intensities)
+    float32_roi = roi.get_data_dtype().kind == "f" and roi.get_data_dtype().itemsize == 4
+    if not exact and (not float32_roi or not np.array_equal(original.astype(np.float32), intensities)):
+        raise ValueError("Entire ROI does not match native intensities in the stored precision")
     if not mask.any():
         raise ValueError("Saved raw BET mask is empty")
     output = np.zeros(native.shape, dtype=np.uint8)
     output[slices] = mask
     return output, slices, {"corner_error_voxels": error, "native_start": start.tolist(), "native_stop": stop.tolist(),
-                            "roi_intensities_exact": True, "foreground_voxels_preserved": int(mask.sum())}
+                            "roi_intensities_exact": exact, "roi_matches_after_native_float32_cast": not exact,
+                            "foreground_voxels_preserved": int(mask.sum())}
 
 
 def main():
@@ -94,7 +98,7 @@ def main():
         frame.loc[idx, ["dice", "hd95_mm", "status", "failure", "crop_reference_retention"]] = [dice, hd, "ok", None, retention]
         record.update(recovered=True, geometry=geometry, output_sha256=digest(destination),
                       dice=dice, hd95_mm=hd, crop_reference_retention=retention)
-        print(f"Recovered {sid} using an exact whole-ROI map", flush=True)
+        print(f"Recovered {sid} using an exact whole-ROI map in the stored precision", flush=True)
     results = directory / "per_subject_bet_crop.csv"
     frame.loc[frame.method == "bet_crop"].to_csv(results, index=False, float_format="%.12g")
     summary, _ = summarize(frame)
@@ -103,8 +107,10 @@ def main():
     assert digest(csv) == prior["csv_sha256"]
     verify_frozen()
     recovered = sum(row["recovered"] for row in state["subjects"])
+    cast = sum(row.get("geometry", {}).get("roi_matches_after_native_float32_cast", False) for row in state["subjects"])
     lines = ["# Post-hoc crop map-back sensitivity", "",
-             f"Recovered **{recovered}/{len(state['subjects'])}** primary cropped BET failures by exact voxel placement. "
+             f"Recovered **{recovered}/{len(state['subjects'])}** primary cropped BET failures by exact voxel placement "
+             f"({cast} required matching the ROI's float32 intensity representation). "
              "No extraction method was rerun, and the original predictions and scores were not changed.", "",
              "| Cohort | Cropped BET Dice mean ± SD | Remaining failures | U-Net minus cropped BET, mean [95% CI] | Wins / ties / losses |",
              "|---|---:|---:|---:|---:|"]
