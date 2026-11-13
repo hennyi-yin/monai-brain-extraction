@@ -90,7 +90,7 @@ This independent post-hoc comparison uses the default watershed step in `recon-a
 
 Two FreeSurfer masks fell below Dice 0.8 despite successful processing. [Native overlays](results/supplementary/freesurfer_autorecon1/figures/low_dice_qc.png) show extensive extra foreground outside the brain in both cases.
 
-[Protocol](docs/protocol.md#addendum-2026-11-10-post-hoc-freesurfer-baseline) · [Full results and native QC](results/supplementary/freesurfer_autorecon1/summary.md) · [Run and audit instructions](docs/freesurfer.md)
+[Protocol](docs/protocol.md#addendum-2026-11-10-post-hoc-freesurfer-baseline) · [Full results and native QC](results/supplementary/freesurfer_autorecon1/summary.md) · [Run and audit instructions](docs/freesurfer.md) · [Download the 25 FreeSurfer masks](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.2.0)
 
 ## Reproduce
 

@@ -34,6 +34,14 @@ The first local training attempt produced a valid native mask but failed while w
 
 Run outputs and FreeSurfer subject directories are ignored in `results/freesurfer_autorecon1/`. Reports, scores, hashes and QC figures are written separately to `results/supplementary/freesurfer_autorecon1/`. Existing primary and robustfov reports are checked by SHA-256 before and after each stage. FreeSurfer is not required to reproduce the earlier U-Net and BET analyses.
 
-After the audit passes, `python -m scripts.package_freesurfer_predictions` writes a checksum and a verified archive of the 25 native masks under `artifacts/freesurfer/`. To audit the completed comparison in another checkout, restore the v1.1.1 inputs, extract this archive at the repository root, and run `python -m scripts.audit_freesurfer`. This does not use a FreeSurfer license or rerun scoring.
+The [v1.2.0 supplementary release](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.2.0) provides the 25 native masks and their SHA-256 checksum. To audit the completed comparison in another checkout, restore the v1.1.1 inputs and download both v1.2.0 assets into `artifacts/freesurfer/`. From the repository root:
+
+```bash
+python -m scripts.verify_release artifacts/freesurfer
+tar -xzf artifacts/freesurfer/freesurfer_predictions.tar.gz
+python -m scripts.audit_freesurfer
+```
+
+The audit does not use a FreeSurfer license or rerun scoring. `python -m scripts.package_freesurfer_predictions` recreates the archive and checksum from the verified masks.
 
 `python -m scripts.qc_freesurfer_low_dice` regenerates the focused overlays from the saved masks and scores. This diagnostic changes neither masks nor scores.
