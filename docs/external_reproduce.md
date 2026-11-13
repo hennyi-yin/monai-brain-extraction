@@ -18,6 +18,7 @@ python -m src.run_external synthstrip
 python -m src.evaluate_external --jobs 3
 python -m scripts.audit_external
 python -m scripts.external_geometry_sensitivity
+python -m scripts.audit_external_sensitivity
 ```
 
 The audit does not recompute Dice or HD95. Prediction masks and intermediate ROI files stay under ignored `results/external_work/`. The native volume and mask hashes, exact commands, failures, all subject-level scores and the confidence interval calculation are recorded in the repository. `python -m src.evaluate_external --report-only` redraws the primary report and figure from the locked score file without rescoring.

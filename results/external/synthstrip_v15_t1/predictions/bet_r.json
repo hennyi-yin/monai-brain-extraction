@@ -1,0 +1,2629 @@
+{
+  "signature": {
+    "method": "bet_r",
+    "protocol_commit": "b161e009b73567cabee339d97a252f0050ce1ad3",
+    "source_sha256": {
+      "src/run_external.py": "c77ceabe52e84f86233e918ef0aebfa04a7d0b00ef3ba3d1ac3c312df5585360",
+      "src/external_common.py": "45b34f3ad0465a363afac3f0ca3e9ca71696c96684e8efddffd37ea89ba52111",
+      "src/infer.py": "7b9600ebdd5e7dd96f975f46bb461a6bd41bbdb49025d729e8286788a2475db2",
+      "src/data.py": "4c6bd9b71026306cc257afa57bc8c748cfb0f20cbe726a288b7d035873fc535c",
+      "src/model.py": "54e5dd87e984534279c3fed4ff59130edfd53689814414296c1adaf4c456804c",
+      "src/run_bet_robustfov.py": "26c1042b5b150a66936af43ece2d1c4a3f06a70847f1492f2beb77c3c35990c7",
+      "src/common.py": "07717ba6e36b7bfe8c29d847ceae5f4f3cd17bd5beb00561df84393323826079"
+    },
+    "python": "3.12.3",
+    "numpy": "2.2.6",
+    "nibabel": "5.3.2",
+    "fsl": {
+      "executables": {
+        "fslreorient2std": "/home/hengyi/.venvs/fsl-bet/bin/fslreorient2std",
+        "robustfov": "/home/hengyi/.venvs/fsl-bet/bin/robustfov",
+        "bet": "/home/hengyi/.venvs/fsl-bet/bin/bet",
+        "bet2": "/home/hengyi/.venvs/fsl-bet/bin/bet2",
+        "convert_xfm": "/home/hengyi/.venvs/fsl-bet/bin/convert_xfm",
+        "flirt": "/home/hengyi/.venvs/fsl-bet/bin/flirt"
+      },
+      "executable_sha256": {
+        "fslreorient2std": "542fe146e069b00b0ce26bcf58b04dc098b4d41aa4933a3b96d7f4118cb24cbc",
+        "robustfov": "e778b853ca8e78f0f2ed9b38e599db304b890b14e33c9f8ec815d2ffd6651971",
+        "bet": "16b852dc6c5b256fc059c4dd46ecad16550742d80b13a1fac91ed8982ab275b1",
+        "bet2": "fe96ab306ef61349a87bab6ee0df19dc4b29f30a35911f622451220035a3123f",
+        "convert_xfm": "7c5b9930b094212183a30b5b20e25381d8fccd68e718c19de13e0b0dcb47760a",
+        "flirt": "36f248e35fda52012190f08606f5f53b5f3f5afd31f3ba837ef8bf5b23a4cb52"
+      },
+      "standard_orientation_reference": {
+        "path": "/home/hengyi/.venvs/fsl-bet/data/standard/MNI152_T1_2mm_brain.nii.gz",
+        "sha256": "09c925ad165dfbe6b41b572876d67e9bbf8c5e26517e7817f9b43a8256227f53"
+      },
+      "fsl_packages": [
+        {
+          "name": "fsl-avwutils",
+          "version": "2209.8",
+          "build": "h67d7eeb_2"
+        },
+        {
+          "name": "fsl-base",
+          "version": "2608.1",
+          "build": "pyh4616a5c_0"
+        },
+        {
+          "name": "fsl-basisfield",
+          "version": "2203.4",
+          "build": "h465c9ab_3"
+        },
+        {
+          "name": "fsl-bet2",
+          "version": "2111.9",
+          "build": "hcdb67c3_3"
+        },
+        {
+          "name": "fsl-cprob",
+          "version": "2111.0",
+          "build": "h9f0ab69_8"
+        },
+        {
+          "name": "fsl-data_standard",
+          "version": "2208.0",
+          "build": "0"
+        },
+        {
+          "name": "fsl-flirt",
+          "version": "2111.4",
+          "build": "h28ab0de_3"
+        },
+        {
+          "name": "fsl-installer",
+          "version": "3.21.0",
+          "build": "py_0"
+        },
+        {
+          "name": "fsl-meshclass",
+          "version": "2111.0",
+          "build": "h8c873e0_12"
+        },
+        {
+          "name": "fsl-misc_c",
+          "version": "2111.1",
+          "build": "h3986bbc_1"
+        },
+        {
+          "name": "fsl-misc_tcl",
+          "version": "2607.0",
+          "build": "0"
+        },
+        {
+          "name": "fsl-miscmaths",
+          "version": "2412.7",
+          "build": "hb1b1de1_0"
+        },
+        {
+          "name": "fsl-newimage",
+          "version": "2601.0",
+          "build": "h541c7df_0"
+        },
+        {
+          "name": "fsl-newnifti",
+          "version": "5.0.0",
+          "build": "h56e42e0_0"
+        },
+        {
+          "name": "fsl-sub",
+          "version": "2.11",
+          "build": "py_0"
+        },
+        {
+          "name": "fsl-utils",
+          "version": "2412.6",
+          "build": "hdf63e7b_1"
+        },
+        {
+          "name": "fsl-warpfns",
+          "version": "2501.1",
+          "build": "h49c61e4_0"
+        },
+        {
+          "name": "fsl-znzlib",
+          "version": "2511.3",
+          "build": "hcc786c9_101_zlib"
+        }
+      ]
+    }
+  },
+  "code_commit": "682d26a670af54a8327c3637ee7f504b83cda587",
+  "complete": true,
+  "subjects": [
+    {
+      "id": "asl_t1_101",
+      "method": "bet_r",
+      "source_sha256": "94a8d90daa1dcaa86b67fa4da13c49028516ee2d48e6870b87510ad0879faeb7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_101/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_101/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_101/native_mask.nii.gz",
+      "output_sha256": "384bd54fdb11aadf67f8d18936dc13aa5bede48036a2bca43df86fbe7e3301b5",
+      "foreground": 1282744,
+      "seconds": 17.831
+    },
+    {
+      "id": "asl_t1_105",
+      "method": "bet_r",
+      "source_sha256": "40abe55b8f4f199d3312e7bc2306fb76596760a59a6ba8a45229fafc41efde42",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_105/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_105/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_105/native_mask.nii.gz",
+      "output_sha256": "6917617316676b470f3bdd2f5498093c62b22a56c1c126a73a3998cfa4ab56b4",
+      "foreground": 1236344,
+      "seconds": 13.155
+    },
+    {
+      "id": "asl_t1_106",
+      "method": "bet_r",
+      "source_sha256": "13f39ae65edc62dc8e898fc6c816560ae897bf4c9a01a51246d879608e0194dd",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_106/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_106/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_106/native_mask.nii.gz",
+      "output_sha256": "9cbce00b50ae1db7cdd63e70139fdb955594c3facf686c58ec33310b3830ffaf",
+      "foreground": 1258272,
+      "seconds": 17.428
+    },
+    {
+      "id": "asl_t1_109",
+      "method": "bet_r",
+      "source_sha256": "d2192b83f889d383b4ba7cce42bea37e0136e5383ae802cfe66c10d2a245dec6",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_109/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_109/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_109/native_mask.nii.gz",
+      "output_sha256": "47ea11e4fd90480a7b0ae40e56ec281cfd0923b8d54a43156519e0cdec753fce",
+      "foreground": 1265181,
+      "seconds": 18.458
+    },
+    {
+      "id": "asl_t1_111",
+      "method": "bet_r",
+      "source_sha256": "1d24f27185863a694d4ca4d7e335aa29b51f5030dd95b0415ae46db876c84dc7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_111/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_111/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_111/native_mask.nii.gz",
+      "output_sha256": "25b3abbf78fd37aa3dca89b0fae2a50bf31b4faec501cabbe6c62db2705bb845",
+      "foreground": 1289945,
+      "seconds": 20.1
+    },
+    {
+      "id": "asl_t1_112",
+      "method": "bet_r",
+      "source_sha256": "53657f8a8c394698ef04a20f697e027e76efac2a5aa7fc8bbdc429a3c09563d5",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_112/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_112/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_112/native_mask.nii.gz",
+      "output_sha256": "c1232e5757663e7b37c91a471b8374726a2d89c19530f710cd4b638772b505b6",
+      "foreground": 1259064,
+      "seconds": 14.493
+    },
+    {
+      "id": "asl_t1_113",
+      "method": "bet_r",
+      "source_sha256": "20bc8856934df20744f212d87a7b6b7cb9e53fcb351ca9b706f35f8a1e6bef23",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_113/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_113/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_113/native_mask.nii.gz",
+      "output_sha256": "cc84002622aeeeba0b401b88d6ff77caa4605b6a093690729c70803ca8d59c9a",
+      "foreground": 1471778,
+      "seconds": 16.501
+    },
+    {
+      "id": "asl_t1_114",
+      "method": "bet_r",
+      "source_sha256": "a26427515482dacdd06163851553325351854db5f96ff8f8443b382594cc28e8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_114/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_114/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_114/native_mask.nii.gz",
+      "output_sha256": "0d727cf5eba9d458efe0a1fc1ae3d6666eba2041c7d73b53b03b989e7aaa7a63",
+      "foreground": 1258117,
+      "seconds": 20.47
+    },
+    {
+      "id": "asl_t1_115",
+      "method": "bet_r",
+      "source_sha256": "f54998dd7beb8b3943776da40d6db2fd05b109eda2a957ba3a86e294ac32c056",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_115/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_115/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_115/native_mask.nii.gz",
+      "output_sha256": "f502360c6f30550a1564cd719e844c9f5a4042cb5b720fa902d368f543f91f8f",
+      "foreground": 1205302,
+      "seconds": 14.153
+    },
+    {
+      "id": "asl_t1_116",
+      "method": "bet_r",
+      "source_sha256": "26da838157eeec50219b07cd28e8d24d5cd3ec892e6e835e609e0a6d9d5905e7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_116/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_116/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_116/native_mask.nii.gz",
+      "output_sha256": "1e93e92acaa0f136c095526ca850e51b9d7dcebe0498823f2993ddaa854a98cc",
+      "foreground": 1414294,
+      "seconds": 14.138
+    },
+    {
+      "id": "asl_t1_117",
+      "method": "bet_r",
+      "source_sha256": "ec58594d8835c11f527b4d02e3b6831f145bdfa4a122d27b612013d6c09166a9",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_117/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_117/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_117/native_mask.nii.gz",
+      "output_sha256": "9b310d93b0980e2f0eac552bb8c3bbe2fffeceb7041a46f1fa48a3d2adf49032",
+      "foreground": 1401840,
+      "seconds": 16.164
+    },
+    {
+      "id": "asl_t1_118",
+      "method": "bet_r",
+      "source_sha256": "9d59d0a48c39cebf9e57f74e072664a19dd5b9e9fbb97c1a4aaf9297f29b2470",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_118/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_118/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_118/native_mask.nii.gz",
+      "output_sha256": "c11d24b28c3abd27f07eb761169851b956b6e56f94b92fe195cc9de5da7c5581",
+      "foreground": 1184221,
+      "seconds": 13.153
+    },
+    {
+      "id": "asl_t1_119",
+      "method": "bet_r",
+      "source_sha256": "dcd0158b6d9706a8e7f40000ebdbee04153c3c1123d369bf6ec0d9a2c3af0866",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_119/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_119/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_119/native_mask.nii.gz",
+      "output_sha256": "0bf79f25039e8655c75e37a4ad8c74186922917094b95f073d1f94573a7ab011",
+      "foreground": 1326550,
+      "seconds": 20.297
+    },
+    {
+      "id": "asl_t1_121",
+      "method": "bet_r",
+      "source_sha256": "49ae404220445fef4c36f17fc42dcbdfb9792ec923c1d6c662e3f30ea8a24531",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_121/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_121/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_121/native_mask.nii.gz",
+      "output_sha256": "d851e56842cf0fe3dfedb2a720af3caf51407abaf4fe2cb0224c8d18403e0e95",
+      "foreground": 1276844,
+      "seconds": 14.523
+    },
+    {
+      "id": "asl_t1_122",
+      "method": "bet_r",
+      "source_sha256": "0c861462b6ef7bca5e1c5ede87727e84366533476fde300905c516395f6dc1e3",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_122/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_122/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_122/native_mask.nii.gz",
+      "output_sha256": "b0f0f3f7f45337430b851243f0e706839fc645971eddfde2050dcaa31eb38ca1",
+      "foreground": 1179347,
+      "seconds": 13.365
+    },
+    {
+      "id": "asl_t1_123",
+      "method": "bet_r",
+      "source_sha256": "e35b9c00e5bbc66c5589578637fc49af00e7a5ee069ab21ad3b3012012d7c93f",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_123/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_123/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_123/native_mask.nii.gz",
+      "output_sha256": "6066095e4df0180aa1ae61bdb2d9f4b15ca877094528c34f1ecbf59f8139046d",
+      "foreground": 1241620,
+      "seconds": 14.266
+    },
+    {
+      "id": "asl_t1_124",
+      "method": "bet_r",
+      "source_sha256": "127e429fd6102e15bf058077108a9ea8bbad28c466b86298da4fb9ae4b00c655",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_124/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_124/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_124/native_mask.nii.gz",
+      "output_sha256": "98bafe0a184fdde3b961a8a6658eec3823853d9b5d94f69367bc6c1acd2fcb29",
+      "foreground": 1463614,
+      "seconds": 14.328
+    },
+    {
+      "id": "asl_t1_125",
+      "method": "bet_r",
+      "source_sha256": "6c946415db8a28221f0f0e2d2ecca3def4540425f0fe508d8e80b3f755db2af9",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_125/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_125/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_125/native_mask.nii.gz",
+      "output_sha256": "e4ccda310842e5ee54fab81f3096e02072ba4a3257d3c3dee741b6f1a89a1cef",
+      "foreground": 1421145,
+      "seconds": 21.269
+    },
+    {
+      "id": "asl_t1_126",
+      "method": "bet_r",
+      "source_sha256": "e6a2aa08668fd40d60dc34b843b278d7977e83a7510cdcbc32a3f4a6700fed55",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_126/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_126/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_126/native_mask.nii.gz",
+      "output_sha256": "4018fbb19faad6a0290a81d04e7be4cbced28aea3a6825f37373cb4e523f4364",
+      "foreground": 1210893,
+      "seconds": 14.254
+    },
+    {
+      "id": "asl_t1_127",
+      "method": "bet_r",
+      "source_sha256": "c5271e9d7cdcf60fc834dd97bc546c3fcf59e9fe45d21ff729d061f344ec1a98",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_127/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_127/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_127/native_mask.nii.gz",
+      "output_sha256": "75a7aa894f72fc969cff8581d28cb80aef8ed784494bddebaf79a66bc9d351c3",
+      "foreground": 1471679,
+      "seconds": 14.813
+    },
+    {
+      "id": "asl_t1_128",
+      "method": "bet_r",
+      "source_sha256": "9d19f6cbfbf32dfc65568b0344d55818af6b799c1271bef3faef0446ffa88fd8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_128/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_128/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_128/native_mask.nii.gz",
+      "output_sha256": "eff59f98eb4063ab8ca1f221dcb5facbc356b7296ab652ddfe1a67fc1aca4607",
+      "foreground": 1379101,
+      "seconds": 14.656
+    },
+    {
+      "id": "asl_t1_129",
+      "method": "bet_r",
+      "source_sha256": "d8a33755bab45a13087ce74eac9b2b0e0b985200056f800343f140a3886d53ca",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_129/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_129/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_129/native_mask.nii.gz",
+      "output_sha256": "6ea5deed2a34457fc38bf4e0b8f1fc05f0400ed62cd58169a5e0292b94bb4885",
+      "foreground": 1388177,
+      "seconds": 15.562
+    },
+    {
+      "id": "asl_t1_130",
+      "method": "bet_r",
+      "source_sha256": "e9937043e022e0dd61b228dc44221f84a8a3629dcd6fbb83e003588357b1f92d",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_130/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_130/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_130/native_mask.nii.gz",
+      "output_sha256": "9a197283341195c1cda6e88ecdefcd88434dfe8bb61b991d9892a1e135293d67",
+      "foreground": 1196056,
+      "seconds": 15.351
+    },
+    {
+      "id": "asl_t1_131",
+      "method": "bet_r",
+      "source_sha256": "a315ff97bace1776385cb5a1f9b250d6cf84dd4f6452ed519a7c69f03e00561a",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_131/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_131/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_131/native_mask.nii.gz",
+      "output_sha256": "8f37eff69aafe1ce23b28c1006548b6538c948ebe45b9777633e441c377da3fb",
+      "foreground": 1265078,
+      "seconds": 14.735
+    },
+    {
+      "id": "asl_t1_132",
+      "method": "bet_r",
+      "source_sha256": "26f14756377e780dbd2facc6c270c91eb139af82d3856851252f040df9003993",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_132/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_132/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_132/native_mask.nii.gz",
+      "output_sha256": "446de701936b19991cbc0c161174eaff92c91bfda34aa5fa09a0f06315616d86",
+      "foreground": 1262908,
+      "seconds": 13.435
+    },
+    {
+      "id": "asl_t1_134",
+      "method": "bet_r",
+      "source_sha256": "e044669d370431697e0e73ce368c4aa6797f45aa0702ee80fee3ea401b07d8ce",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_134/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_134/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_134/native_mask.nii.gz",
+      "output_sha256": "41e9a1a86bf19b8769f5194a58a3c7d6256a3825b7097e21a52459b172885c53",
+      "foreground": 1392094,
+      "seconds": 13.948
+    },
+    {
+      "id": "asl_t1_135",
+      "method": "bet_r",
+      "source_sha256": "e02977a547860b16a472a6f03cf354f3221b2e635a10334e6bc2b38ba425a04b",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_135/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_135/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_135/native_mask.nii.gz",
+      "output_sha256": "6a8181bc69762ce989cad85444dad45dc8e7b69703356e5713cc9b1d9a251d8b",
+      "foreground": 1174495,
+      "seconds": 14.789
+    },
+    {
+      "id": "asl_t1_137",
+      "method": "bet_r",
+      "source_sha256": "c3637a00d03bab77e97794e8342f66b57ce27c50c90e77f5da53dd400e233c96",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_137/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_137/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_137/native_mask.nii.gz",
+      "output_sha256": "11845df96835b0e615b0d9c90905a599bbfa2db48739f1abee4b497c056abfd8",
+      "foreground": 1262251,
+      "seconds": 13.025
+    },
+    {
+      "id": "asl_t1_138",
+      "method": "bet_r",
+      "source_sha256": "30a24c558c0b44579ad1b9f65556b12d17c74fcaccd09f17b1727cde45689571",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_138/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_138/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_138/native_mask.nii.gz",
+      "output_sha256": "28b3f08c0adc9aef7ca982a16d1c3a82d1c0db74534d9d5b458b00e8cafa560d",
+      "foreground": 1048851,
+      "seconds": 20.105
+    },
+    {
+      "id": "asl_t1_139",
+      "method": "bet_r",
+      "source_sha256": "7c226fd9301b155dd3fae7110c480d8604cac589e8eadd3aea173f96098f2d96",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_139/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_139/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_139/native_mask.nii.gz",
+      "output_sha256": "6faeda7532fbac421a78c4d4cfd0c022e8280e35566b7d1448b5893106436f8d",
+      "foreground": 1421060,
+      "seconds": 16.438
+    },
+    {
+      "id": "asl_t1_140",
+      "method": "bet_r",
+      "source_sha256": "d8e3da6c969e41312bed063b347fdc96ebb83806fa3dad562c7a70a3db6b2f30",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_140/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_140/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_140/native_mask.nii.gz",
+      "output_sha256": "c564022d7a78cba28d418accba5d56eb5ebc680c539cdcb2568d5597a91a6c9c",
+      "foreground": 1321922,
+      "seconds": 19.584
+    },
+    {
+      "id": "asl_t1_142",
+      "method": "bet_r",
+      "source_sha256": "0c588a14859d4d2fa5cae79e1deffe214e91a678453941fe85e2fcbddcbee227",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_142/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_142/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_142/native_mask.nii.gz",
+      "output_sha256": "afe152d62de3d950cf2c41cfc3d97287ae7409ca90557ca0cad9ba25dc4c763e",
+      "foreground": 1356507,
+      "seconds": 16.307
+    },
+    {
+      "id": "asl_t1_143",
+      "method": "bet_r",
+      "source_sha256": "f3f925e87e7e45de82540e30da23a35e625af5727b585849634ddb243bbb04b2",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_143/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_143/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_143/native_mask.nii.gz",
+      "output_sha256": "1ff586c923b4ad2e7c8d55de75c0cd5f367eac7b041be98ab938a2f8f6130b46",
+      "foreground": 1213074,
+      "seconds": 19.705
+    },
+    {
+      "id": "asl_t1_144",
+      "method": "bet_r",
+      "source_sha256": "0e0758eaa2fa73acf830265e5f4b4c59995613024ed7410dedca635dbd73a1b0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_144/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_144/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_144/native_mask.nii.gz",
+      "output_sha256": "a87869a09afdbcd278caa78b187e3d3901491592ffb3090ddfec6b86ce08eacb",
+      "foreground": 1170246,
+      "seconds": 78.668
+    },
+    {
+      "id": "asl_t1_145",
+      "method": "bet_r",
+      "source_sha256": "228757a596085b0726bbbeb17e986a35ab1a071b1892a2d82851297432a16bc8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_145/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_145/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_145/native_mask.nii.gz",
+      "output_sha256": "ad52264195b32e5ba36ef43ea351af27f49755ef6b6f089397c3f9c3f20094b9",
+      "foreground": 1688674,
+      "seconds": 17.192
+    },
+    {
+      "id": "asl_t1_146",
+      "method": "bet_r",
+      "source_sha256": "27d3052c8b80ebf106b359541a85b0b75115f635f6c136c990bdc283dc9d1bf8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_146/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_146/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_146/native_mask.nii.gz",
+      "output_sha256": "7c79056c09dd9b01fb85a2d606e62e67128d1bbe3bb281b5dde4c992d78c4028",
+      "foreground": 1313825,
+      "seconds": 19.484
+    },
+    {
+      "id": "asl_t1_147",
+      "method": "bet_r",
+      "source_sha256": "5e13bac48b4e47a62f056a66b05eaf3097f4dd42e622a66a9a6f3f08b19a44b8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_147/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_147/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_147/native_mask.nii.gz",
+      "output_sha256": "dde5b15bdf695780523f5a909e6bbd5cc190bf19d9afd3243fa58b52c46cf75b",
+      "foreground": 1383396,
+      "seconds": 16.676
+    },
+    {
+      "id": "asl_t1_149",
+      "method": "bet_r",
+      "source_sha256": "b8f6c49e013410c4a23817980050307e3b4ca06c0286bf2e9e202840d4b934bc",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_149/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_149/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_149/native_mask.nii.gz",
+      "output_sha256": "a1a66e00fa9c3a76140db732cc3b883ae6185ed232855f9e1fdc0a82241f1bb5",
+      "foreground": 1420911,
+      "seconds": 16.665
+    },
+    {
+      "id": "asl_t1_150",
+      "method": "bet_r",
+      "source_sha256": "8f9b153839d0308daa24244c36d89e366b99338e800f4a6aae087ac4ed2bfefb",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_150/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_150/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_150/native_mask.nii.gz",
+      "output_sha256": "7927936d881853950a7bfd8fb43b0c60d2c682b681f993038e5118f42e40ee4b",
+      "foreground": 1202192,
+      "seconds": 25.389
+    },
+    {
+      "id": "asl_t1_151",
+      "method": "bet_r",
+      "source_sha256": "a29f5123090e2a18b1180a0915b10cdf882b643a3f96d4e08462ab21f9b7f06a",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_151/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_151/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_151/native_mask.nii.gz",
+      "output_sha256": "f6a0d7c9f765c92f6f3de89a89bd38b4be7b7ef7188c529d82e9c56ac7b3ce06",
+      "foreground": 1417381,
+      "seconds": 18.841
+    },
+    {
+      "id": "asl_t1_152",
+      "method": "bet_r",
+      "source_sha256": "56fa396e6e138ca2f0163fb3b86a70ef3f4c5dcf0ec7acb10064f28df7a02d52",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_152/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_152/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/asl_t1_152/native_mask.nii.gz",
+      "output_sha256": "b377e171a790a53225f911b7af634454c22c78c05b673f902b9ce659f4aaaa12",
+      "foreground": 1073955,
+      "seconds": 18.733
+    },
+    {
+      "id": "ixi_t1_002",
+      "method": "bet_r",
+      "source_sha256": "71c5d110a352f943c96e08f75f5087066b608da6f8d203eb15d8d596d1f80f47",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_002/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_002/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_002/native_mask.nii.gz",
+      "output_sha256": "7278f25fd43ed7f6fa5a1df358a1dc2fbc2391288e1b839a82015dd8bd8fda05",
+      "foreground": 1300599,
+      "seconds": 16.917
+    },
+    {
+      "id": "ixi_t1_012",
+      "method": "bet_r",
+      "source_sha256": "073461dcd7bdec3324c5624bade7f31e75d580c67d22cb24f2de4f1389800c0e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_012/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_012/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_012/native_mask.nii.gz",
+      "output_sha256": "1d4d13aaefd14c537893e62dc2c2e32f8eda64e1f984abcd1f9f3f940c83793e",
+      "foreground": 1574699,
+      "seconds": 15.153
+    },
+    {
+      "id": "ixi_t1_013",
+      "method": "bet_r",
+      "source_sha256": "eda65d2111c9f3a7e2a766471bb29cc442b668d2101489871ef3f3ecde6e0530",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_013/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_013/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_013/native_mask.nii.gz",
+      "output_sha256": "4969b8f3b825f612f4f2fa1e85f80979593f9fe1f9b3777ffdb791df71a6e76a",
+      "foreground": 1482708,
+      "seconds": 24.259
+    },
+    {
+      "id": "ixi_t1_015",
+      "method": "bet_r",
+      "source_sha256": "8b81b5bae85a26d3ac073c6d5c13a2d0980abcba0cf7fd5cbded4f425cd9fc95",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_015/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_015/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_015/native_mask.nii.gz",
+      "output_sha256": "a8e68d87b41d6fd2a7553c297fc730602d2cee0f52cc5fd5f2648f981ffb48cf",
+      "foreground": 1440111,
+      "seconds": 14.02
+    },
+    {
+      "id": "ixi_t1_019",
+      "method": "bet_r",
+      "source_sha256": "4e4c0059e65e211a305b2f3fd2965ef68f1cbc077ce06f360e82ab2a7376aee3",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_019/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_019/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_019/native_mask.nii.gz",
+      "output_sha256": "52fb3b948ac4ab961acd004180d1dea66d8270b1066eed26babe698f2aa7dfce",
+      "foreground": 1424810,
+      "seconds": 31.033
+    },
+    {
+      "id": "ixi_t1_020",
+      "method": "bet_r",
+      "source_sha256": "78960a0b46e79b3f47774e7c64da6758a583eac08bc6ae700142d7e113320b57",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_020/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_020/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_020/native_mask.nii.gz",
+      "output_sha256": "d9fe0ddb41882890d8cb399e2c0722e1f500a508c06f36844a0f39b457bd8885",
+      "foreground": 1418601,
+      "seconds": 14.653
+    },
+    {
+      "id": "ixi_t1_021",
+      "method": "bet_r",
+      "source_sha256": "f98713adb81e0bcf90d7412198c4aecbc3d76ee626597a94a8228ea6e9a3a58e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_021/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_021/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_021/native_mask.nii.gz",
+      "output_sha256": "2f099d0efdbc235739a6add51becab275a6fb22b69d92aadd6d0e0b686d6bf7d",
+      "foreground": 1460241,
+      "seconds": 14.78
+    },
+    {
+      "id": "ixi_t1_022",
+      "method": "bet_r",
+      "source_sha256": "c0ff5dbf0614d97af48c23c79f130aa8fbc874c0b39f72e1dd61b898b9c15310",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_022/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_022/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_022/native_mask.nii.gz",
+      "output_sha256": "307959a79f5f3ef82deeee6c3dbaee318215df262085d88afc01c9068ae710c2",
+      "foreground": 1534682,
+      "seconds": 20.115
+    },
+    {
+      "id": "ixi_t1_134",
+      "method": "bet_r",
+      "source_sha256": "2bf018166b5e0fde738a2f160e44fc2d71b96ddb1fbad70c02c8592c59c73071",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_134/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_134/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_134/native_mask.nii.gz",
+      "output_sha256": "fa2d69f3702fe7147dd9af9ecd0b3818f31fbc527f4a318d8370d605ac7ddbcb",
+      "foreground": 1454458,
+      "seconds": 14.751
+    },
+    {
+      "id": "ixi_t1_135",
+      "method": "bet_r",
+      "source_sha256": "b3bd87e1c9be0e97807f007022ddbbb5d1fd101fb6cf00f15fdc309df1cb8f1c",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_135/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_135/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_135/native_mask.nii.gz",
+      "output_sha256": "a9b4c768f329baffec349e627bfbdd38c1eeff77244fbd485200e9acea0c6d81",
+      "foreground": 1305210,
+      "seconds": 30.601
+    },
+    {
+      "id": "ixi_t1_136",
+      "method": "bet_r",
+      "source_sha256": "c3977d3afbb9498c8ffd2ad75770fdc0bfae1e9bbd8113dbf6dde8032f496056",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_136/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_136/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_136/native_mask.nii.gz",
+      "output_sha256": "4d98d7bfd07c6f22adae7d3c1d74be46c5c98e8da84f1a705ece75887fc02e91",
+      "foreground": 1537419,
+      "seconds": 22.963
+    },
+    {
+      "id": "ixi_t1_137",
+      "method": "bet_r",
+      "source_sha256": "99d7c08748675db779f870192ba3c728e74ea2ce1d6aaf5dd0b0f78ab4b70ef9",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_137/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_137/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_137/native_mask.nii.gz",
+      "output_sha256": "0b94b9dff1a3bf2cfca4a6be9e72a9c1187cabbe8dfad8222448039a4a4c6d66",
+      "foreground": 1435065,
+      "seconds": 15.807
+    },
+    {
+      "id": "ixi_t1_138",
+      "method": "bet_r",
+      "source_sha256": "95895d7aa6d61a844853d3cbfc3312238b4c436d6a7e2d81c1e27ab47ec335a4",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_138/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_138/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_138/native_mask.nii.gz",
+      "output_sha256": "2fe77447313fe548283b9c8457a9f5b66bc4475067f1c4ef1125f8e6156e8ef7",
+      "foreground": 1471250,
+      "seconds": 15.634
+    },
+    {
+      "id": "ixi_t1_139",
+      "method": "bet_r",
+      "source_sha256": "d00f0edd926cce50405b8fc8ff9a6bcdbfbeed683a86da0656783ff9e35bb0ba",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_139/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_139/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_139/native_mask.nii.gz",
+      "output_sha256": "d8ec4219bef046c4820d7a5a16d5210248d98606f85e8ed8b13c8f85d2bcc3e7",
+      "foreground": 1424509,
+      "seconds": 14.83
+    },
+    {
+      "id": "ixi_t1_140",
+      "method": "bet_r",
+      "source_sha256": "df6c333e699f8ccda35d5c669f03d5e73ccb0ce29b7cc0e1a81eb6c407b758a8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_140/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_140/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_140/native_mask.nii.gz",
+      "output_sha256": "2f5f3febd6d94d5ff3f7e85cd9d745a8a0d9b4509a803b2ee9d5ea75781aa010",
+      "foreground": 1278971,
+      "seconds": 14.466
+    },
+    {
+      "id": "ixi_t1_141",
+      "method": "bet_r",
+      "source_sha256": "67f172fdfe9ed6ce6af18d94132eabc7affba09d02dc629f68029407657479f8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_141/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_141/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_141/native_mask.nii.gz",
+      "output_sha256": "43062cc57208d7d8abe3d2f7bf95e69bec81b9b6bd2cf6132cfc731d6a1598a0",
+      "foreground": 1227707,
+      "seconds": 14.713
+    },
+    {
+      "id": "ixi_t1_142",
+      "method": "bet_r",
+      "source_sha256": "969273a9dd4cd62e8f31f82dac6ca80d96100a1c835846bd51fb52b83eff5cbf",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_142/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_142/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_142/native_mask.nii.gz",
+      "output_sha256": "e89e09adac866ac5dd59c724cf3590735039e04a957a9804e342026c7e4626ef",
+      "foreground": 1262927,
+      "seconds": 21.501
+    },
+    {
+      "id": "ixi_t1_143",
+      "method": "bet_r",
+      "source_sha256": "611392a9c94545881a74c00368df84660c752c30b4b9b893be59288ece943fee",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_143/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_143/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_143/native_mask.nii.gz",
+      "output_sha256": "37be839614db8a212d53a969c4037064e60826a0324f8a82ab526296db2b3459",
+      "foreground": 1207170,
+      "seconds": 14.494
+    },
+    {
+      "id": "ixi_t1_230",
+      "method": "bet_r",
+      "source_sha256": "638c71c63cc4428ebaf1193b12c46524d1717259449e1e646b51abef336fd481",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_230/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_230/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_230/native_mask.nii.gz",
+      "output_sha256": "fdc8e4f7c8f125610fcb14081662e55ad98ca184ba903ba80a3a0a04be6237e7",
+      "foreground": 1284527,
+      "seconds": 9.597
+    },
+    {
+      "id": "ixi_t1_231",
+      "method": "bet_r",
+      "source_sha256": "d0a23bd48f40c9879ceacfddac625a67ac43bf308924fb234787e237604476a0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_231/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_231/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_231/native_mask.nii.gz",
+      "output_sha256": "f366ef6d9155c80aad9f5f7ad78242326e92a4ecde3928ceedff48edb1f74be4",
+      "foreground": 1396962,
+      "seconds": 15.557
+    },
+    {
+      "id": "ixi_t1_232",
+      "method": "bet_r",
+      "source_sha256": "c2250bf42581e6703cff0d6853012bf88b291950d154181b408eb2569854aa6c",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_232/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_232/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_232/native_mask.nii.gz",
+      "output_sha256": "df172cf32fd1d6f7dc8b9fc6cabaecd03e80f5dd94ce1472d3f6589fb122555e",
+      "foreground": 1316085,
+      "seconds": 14.751
+    },
+    {
+      "id": "ixi_t1_234",
+      "method": "bet_r",
+      "source_sha256": "6f6a0c1eb63ca873ce0c0bed5233b43a3780c5c146d01b57a7bfb93998710af0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_234/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_234/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_234/native_mask.nii.gz",
+      "output_sha256": "7447a8e8c6026ca8edb505bedf5725b9e823563d592df8319b3f1bcb8810be61",
+      "foreground": 1350457,
+      "seconds": 14.587
+    },
+    {
+      "id": "ixi_t1_266",
+      "method": "bet_r",
+      "source_sha256": "33af03d76ccba4d04bb3164ffcf494a12dcb1a6f0659a54796eed49478e4d966",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_266/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_266/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_266/native_mask.nii.gz",
+      "output_sha256": "9db76a9901431b023726b995818657193c906218c5668894f0904b27745041a4",
+      "foreground": 1188013,
+      "seconds": 79.776
+    },
+    {
+      "id": "ixi_t1_267",
+      "method": "bet_r",
+      "source_sha256": "0969cdd8a2c402ac66a4929ca2d48f182534bb1ca8c33cbb94da82c6d9dd9b63",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_267/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_267/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_267/native_mask.nii.gz",
+      "output_sha256": "49819ad9ba9ac997e5392d9352bae17f0045dbed2079a68e630b42cc6ab5d44c",
+      "foreground": 1449319,
+      "seconds": 20.199
+    },
+    {
+      "id": "ixi_t1_268",
+      "method": "bet_r",
+      "source_sha256": "255dca86830e70791ee4732eaa2d0ab7b242e504bd52f6e09db90429670a52a0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_268/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_268/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_268/native_mask.nii.gz",
+      "output_sha256": "fbcb90c58b1144121c844d38eb517448a5ffcb47f00e15cbe2e51a802c1974dd",
+      "foreground": 1421777,
+      "seconds": 14.533
+    },
+    {
+      "id": "ixi_t1_269",
+      "method": "bet_r",
+      "source_sha256": "43efb78b453b00c7a376758cc04bfd3050d24df4e06a7f038bea8ad4a6c0d5fb",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_269/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_269/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_269/native_mask.nii.gz",
+      "output_sha256": "19e6e05b2062f98e96cddc62564133db545609231948df9260122bffb5425a35",
+      "foreground": 1471293,
+      "seconds": 16.001
+    },
+    {
+      "id": "ixi_t1_270",
+      "method": "bet_r",
+      "source_sha256": "12db922395177c67b44d70ddb269604c013c6bf8cba5ff3489d0e328e7be834a",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_270/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_270/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_270/native_mask.nii.gz",
+      "output_sha256": "b42326226a695856d74bb693374072b10d87bad0f7e3a3ba3ab35c1ed1dfffc9",
+      "foreground": 1341002,
+      "seconds": 16.435
+    },
+    {
+      "id": "ixi_t1_274",
+      "method": "bet_r",
+      "source_sha256": "3d4a391b76255b494050f3f8192a9a6ecf668579aa53fe4056b7e57982209b8b",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_274/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_274/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_274/native_mask.nii.gz",
+      "output_sha256": "5e9c762781e8e66de616ce8cd800733488ee30f6834bd68c3c3bba1e58f5d11d",
+      "foreground": 1194446,
+      "seconds": 21.094
+    },
+    {
+      "id": "ixi_t1_275",
+      "method": "bet_r",
+      "source_sha256": "fc80611d59f86b9c1554450b23c605eeeb43ee459e179db1b159c04635cc2a1e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_275/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_275/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_275/native_mask.nii.gz",
+      "output_sha256": "7c54ace39ce84cf5663adfa27e9694c262a37c7f8e9e5140bf123edf9c5a526d",
+      "foreground": 1511172,
+      "seconds": 16.701
+    },
+    {
+      "id": "ixi_t1_276",
+      "method": "bet_r",
+      "source_sha256": "0ae8d42ca0cdcb73f3757fd33958f13c98e6aa0b1b1ffc506b9f4e937a209b2e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_276/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_276/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_276/native_mask.nii.gz",
+      "output_sha256": "815597811fe403af8b9f5a3a8590e45de33caa76b5bb5b0a1aa10909cc95d1a9",
+      "foreground": 1450979,
+      "seconds": 15.574
+    },
+    {
+      "id": "ixi_t1_277",
+      "method": "bet_r",
+      "source_sha256": "0aaefe8efd19e8361843481528d659f001669a24252ef59a32e7a0de7df0a333",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_277/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_277/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_277/native_mask.nii.gz",
+      "output_sha256": "e0360f0abb013831ecdbced2567b432705644acbb46fe2d90630c0e5b70ccd0e",
+      "foreground": 1378629,
+      "seconds": 26.231
+    },
+    {
+      "id": "ixi_t1_278",
+      "method": "bet_r",
+      "source_sha256": "46125f606b7db71580aa19f15e5dbe4a1d5b1624cc433414e90056cd39794054",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_278/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_278/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_278/native_mask.nii.gz",
+      "output_sha256": "43483cb2b82e1b4f5f38c811cdb8a65e6ebfbf1c8a9e3ba961be003f24aae3f9",
+      "foreground": 1537813,
+      "seconds": 16.642
+    },
+    {
+      "id": "ixi_t1_397",
+      "method": "bet_r",
+      "source_sha256": "7f6ae01e19866f64cadc39ac735ea18af3fdd60e92b4759245477bb596530199",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_397/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_397/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_397/native_mask.nii.gz",
+      "output_sha256": "0b54eb617efd6371294db2833d08684168ae6372baffda628a2d380556695509",
+      "foreground": 1168429,
+      "seconds": 20.674
+    },
+    {
+      "id": "ixi_t1_398",
+      "method": "bet_r",
+      "source_sha256": "44cb6e37f6c64c9512004c357d1635d32b430bd08d91fef2155ba974937c0657",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_398/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_398/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_398/native_mask.nii.gz",
+      "output_sha256": "dd112eebbd2112090f2a5f21fff9b8127eeb19c11f288cf68638821b6e58cbc7",
+      "foreground": 1216695,
+      "seconds": 16.238
+    },
+    {
+      "id": "ixi_t1_399",
+      "method": "bet_r",
+      "source_sha256": "9dabadddb487b41a6dc6b51449b82815f46faa2624155fe1e6fc67fa1c0be1a7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_399/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_399/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_399/native_mask.nii.gz",
+      "output_sha256": "b0e26fbe4dabde5c78ed59800ee436ec1286bbbe3d20b7d689d67911a48f9686",
+      "foreground": 1234428,
+      "seconds": 14.195
+    },
+    {
+      "id": "ixi_t1_400",
+      "method": "bet_r",
+      "source_sha256": "6274d438a5ab5c9537899bc77753900648e5ba9507e5f334c73450d8ad19f974",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_400/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_400/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_400/native_mask.nii.gz",
+      "output_sha256": "89b27d4c708fed3cebb81ac054c0a4890491c8a569811271b5cebaaa80613d40",
+      "foreground": 1271458,
+      "seconds": 14.29
+    },
+    {
+      "id": "ixi_t1_401",
+      "method": "bet_r",
+      "source_sha256": "a7c8f82657a3ec13bea957a3805cc1944dc007957b02ffbb99e925db00c2dbd6",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_401/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_401/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_401/native_mask.nii.gz",
+      "output_sha256": "94a451a3413f0c4657ff90ced7a9a41176873b701becf71c0f048fec80676a38",
+      "foreground": 1162754,
+      "seconds": 19.754
+    },
+    {
+      "id": "ixi_t1_518",
+      "method": "bet_r",
+      "source_sha256": "661febc478dea90601bca0fe524820904b78ee45e8e600fb36b8e0be3a76ddc7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_518/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_518/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_518/native_mask.nii.gz",
+      "output_sha256": "e5c0b8caf19485300df197289b6a4cccbf7d82401b5db8033e658498745b9ffd",
+      "foreground": 1303427,
+      "seconds": 13.67
+    },
+    {
+      "id": "ixi_t1_519",
+      "method": "bet_r",
+      "source_sha256": "5b8f55f15315b1b036cca0479de569fe5ae1205e444e5e94f179a8e72a2581fd",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_519/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_519/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_519/native_mask.nii.gz",
+      "output_sha256": "e83f9b8755f80824858aac6177d69a3f6c9dbb0ecd514d09693247bf9c26e754",
+      "foreground": 1507629,
+      "seconds": 14.299
+    },
+    {
+      "id": "ixi_t1_521",
+      "method": "bet_r",
+      "source_sha256": "0cd63fa662d261afcd58fe81452da4216a4f397f8cd9260ef1d202d5e7898f50",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_521/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_521/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_521/native_mask.nii.gz",
+      "output_sha256": "d790867415d17554dcefc3cdcbd7d1c9134658e5e5f1fba89c63498f712244b0",
+      "foreground": 1297082,
+      "seconds": 15.528
+    },
+    {
+      "id": "ixi_t1_522",
+      "method": "bet_r",
+      "source_sha256": "b14db4ea9d5c13e7712c880efecd4ecbb0cae49b84124e59a0ab044c11108c86",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_522/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_522/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_522/native_mask.nii.gz",
+      "output_sha256": "b44d78552576def5a37eacfd756355245f8c0dcaeb3cdb9aec6da316e7259b4d",
+      "foreground": 1406546,
+      "seconds": 16.162
+    },
+    {
+      "id": "ixi_t1_523",
+      "method": "bet_r",
+      "source_sha256": "916ad86bcd88bddfb4e436f5653b1c84e52a5ab5c0929f3769d0895c2cd36eb4",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_523/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_523/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_523/native_mask.nii.gz",
+      "output_sha256": "047a4fdcbad2c5f309d7708d18956ebebdb4066091c558860351306501da9cbc",
+      "foreground": 1252411,
+      "seconds": 14.837
+    },
+    {
+      "id": "ixi_t1_524",
+      "method": "bet_r",
+      "source_sha256": "7a4960629e923692cad66dc9cf21f78c8383d1f36082c52b16418d2b2058df14",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_524/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_524/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_524/native_mask.nii.gz",
+      "output_sha256": "1412b73c1a96bb1bbfd662cd10e811397ad0fc798560bcba67076b6ee600db61",
+      "foreground": 1340234,
+      "seconds": 16.308
+    },
+    {
+      "id": "ixi_t1_525",
+      "method": "bet_r",
+      "source_sha256": "d6528d4e136a8c041be8cc6b7ba97f915b11eda9d606e7eb86e38be87f310917",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_525/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_525/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_525/native_mask.nii.gz",
+      "output_sha256": "5b5a4b6f1ffc01078f3d0c22e462a967f18684c0758710f3b3f369aeea5644be",
+      "foreground": 1417523,
+      "seconds": 22.672
+    },
+    {
+      "id": "ixi_t1_526",
+      "method": "bet_r",
+      "source_sha256": "9cca68a17b5c6c20ab188111281a6d32206b0406aee5a8c5c6d25e109dd7b707",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_526/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_526/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_526/native_mask.nii.gz",
+      "output_sha256": "9a9a26f1a0d2518038048fe18d72aa21d4e5d8c8ba727bdaf51518d45663ea07",
+      "foreground": 1032339,
+      "seconds": 19.089
+    },
+    {
+      "id": "ixi_t1_527",
+      "method": "bet_r",
+      "source_sha256": "ee16d8cf50a95f2bfb73c133e4826f4af2f0fa7ac659abb879287912224f4abe",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_527/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_527/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_527/native_mask.nii.gz",
+      "output_sha256": "3ca337ff211f1b6f512f89adfdd8ce3bdf6bf406c2110a330dc40da37180cc4b",
+      "foreground": 1760314,
+      "seconds": 14.632
+    },
+    {
+      "id": "ixi_t1_528",
+      "method": "bet_r",
+      "source_sha256": "85a96bc2acef7328bc66d9c2718e2a0b4ba73b1d16a30d8a4674eecc9dd515f6",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_528/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_528/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_528/native_mask.nii.gz",
+      "output_sha256": "6317e5b10783cea29c795c518454b04b9ad0ed7b07fb48829b5045e23748391a",
+      "foreground": 1587745,
+      "seconds": 15.42
+    },
+    {
+      "id": "ixi_t1_553",
+      "method": "bet_r",
+      "source_sha256": "a6a48786b98aa8fb193b271b42a8e2c36eb8e66ff6b0d262124b2a56356caaf2",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/fsl-bet/bin/bet",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_553/image.nii.gz",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_553/bet",
+            "-f",
+            "0.5",
+            "-R",
+            "-m",
+            "-n"
+          ],
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/bet_r/ixi_t1_553/native_mask.nii.gz",
+      "output_sha256": "7dbc3523bb9e5da8fbbb10d1bee108bd86d7cb6be1c87f0d1e21fbbd78b9f3ea",
+      "foreground": 1588695,
+      "seconds": 9.392
+    }
+  ],
+  "dataset_sha256": "992660b51013059d7ee332b0fb0343768fc1066c2eee84a9446679a5f183c31a"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "dataset_sha256": "992660b51013059d7ee332b0fb0343768fc1066c2eee84a9446679a5f183c31a",
+  "prediction_manifest_sha256": {
+    "unet": "bef9b4da6c706925b740ccf60bbe98d002ccd797181fc748fb759ec4e5c0f389",
+    "bet_r": "2e6846a6bb1624cdada8700b5160cf5b0f11b945d1f2c4dafbd5d8bb7d1e52cd",
+    "bet_crop": "6b4077810730282eac2b2dcce4b2c4683b004ac46dbf3c383293906e9047b8bb",
+    "synthstrip": "0d0cac3afb01ac897cd5b62d8645462a452ca2df7820e859b333905e928efbfe"
+  },
+  "scoring_code_commit": "ddea422d254004a53e2c530b109a009d95cc48ab",
+  "scoring_source_sha256": "15e43f58a4daae7f73ede5fd22d34278ecbe1a7960502cf4411392dd544b04aa",
+  "scoring_passes": 1,
+  "rows": 356,
+  "csv_sha256": "f917a70a9aa5710e14d51bb9ee36bd6390ec8d14a0ff9ff4c1e1bb437b226d77"
+}

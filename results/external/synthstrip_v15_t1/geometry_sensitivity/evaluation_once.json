@@ -1,0 +1,1628 @@
+{
+  "status": "complete",
+  "primary_csv_sha256": "f917a70a9aa5710e14d51bb9ee36bd6390ec8d14a0ff9ff4c1e1bb437b226d77",
+  "code_commit": "ddea422d254004a53e2c530b109a009d95cc48ab",
+  "subjects": [
+    {
+      "id": "asl_t1_101",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1261381, 'mask_voxels_native': 1261381, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "426434af78107d603826c0451a3dacac7dc09d57b637e66cdd4605aa95648aa5",
+        "bet_mask.nii.gz": "456f12998e00c8b3a898d3ff5b4ab1616ed57bb142a6480585db127f1afd2ff0"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.993511484168266e-06,
+        "native_start": [
+          0,
+          26,
+          0
+        ],
+        "native_stop": [
+          256,
+          196,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1261381
+      },
+      "output_sha256": "70398f928c783f92e52c375345310ea32a3834803cabfe2cbe7f57318d3fdc0b",
+      "dice": 0.9503149762857586,
+      "hd95_mm": 6.0,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_105",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1220761, 'mask_voxels_native': 1220761, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "f44236ef668d99af4fa70ab8196aae2f5e2e4aaf367d5d0defaf0ed03bdb0a50",
+        "bet_mask.nii.gz": "c3cdff38e7c9eba07be9449d06f4a39869ce6bd2a4ed22e0752b3e28cb875279"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.4437907484298194e-06,
+        "native_start": [
+          0,
+          46,
+          0
+        ],
+        "native_stop": [
+          256,
+          216,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1220761
+      },
+      "output_sha256": "953fb6bbe9ef32899f5cf91c7fe7e806af1938d0ae00de37479359f374d9c210",
+      "dice": 0.9569642636111259,
+      "hd95_mm": 5.385164807134504,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_106",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1215675, 'mask_voxels_native': 1215675, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "0937dd4529f60a5617b1a3dff466a2699935a705c54d54d0718587a461944495",
+        "bet_mask.nii.gz": "a21b45e0165d8ed52c676183562dc8026953faecf9984c9073ae803c8151921f"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.86781225770028e-06,
+        "native_start": [
+          0,
+          25,
+          0
+        ],
+        "native_stop": [
+          256,
+          195,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1215675
+      },
+      "output_sha256": "cdde11ac2e87000133d6471c4dec499a2f0e3d00363aaf3c4afde988d17d6eff",
+      "dice": 0.946612923689527,
+      "hd95_mm": 6.164414002968976,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_109",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1001188, 'mask_voxels_native': 1001188, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "488b5a14dc97576efc586a5ef3012b4673c57304e96af567bfdec1ba983e48ef",
+        "bet_mask.nii.gz": "39add7ed8d56048c6609c2c73bd983ae7cd6b883ad64f9daa0b4dd1ef1accdfe"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.6226042564303498e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1001188
+      },
+      "output_sha256": "c3636d0b742719530af9be98d16acdb2672475ce1ab67a77377c880b61c89373",
+      "dice": 0.8264531432409723,
+      "hd95_mm": 40.0,
+      "crop_reference_retention": 0.8204842447852458
+    },
+    {
+      "id": "asl_t1_111",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1040227, 'mask_voxels_native': 1040227, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "8301f8f378c10ca3ca1fc040cee22b03029083c17c77a55123532fbf521ef2d3",
+        "bet_mask.nii.gz": "f7cebdd496944cd78b5213e96f524860b19a6f433532f375ae13336d351da072"
+      },
+      "geometry": {
+        "corner_error_voxels": 5.01703479471872e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1040227
+      },
+      "output_sha256": "a2c650e04be3e2bdc849a14e57d580c7440f9adedb13457f7d735f9a29fb4f71",
+      "dice": 0.8210321127445542,
+      "hd95_mm": 29.0,
+      "crop_reference_retention": 0.8816192053068846
+    },
+    {
+      "id": "asl_t1_112",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11097600, 'mask_voxels_original': 1092021, 'mask_voxels_native': 1092021, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "fcb3dd21072e32ca5fe0a00296cf534359f760fcfa5252875d65833d1186954b",
+        "bet_mask.nii.gz": "308f2dde559bc4b42670735f9cac718e4e934fb6b1d6950e07f339df12fefe46"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.629394701780257e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1092021
+      },
+      "output_sha256": "c400bf4a05723933682589c47ffeb563bd111e87127576e7e9be355b77273774",
+      "dice": 0.8943180066954991,
+      "hd95_mm": 25.0,
+      "crop_reference_retention": 0.9008693252175539
+    },
+    {
+      "id": "asl_t1_114",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 10989225, 'mask_voxels_original': 1016644, 'mask_voxels_native': 1016644, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "8a09fa16b6e4adeb4e922b4d336080ba737bd9c5128ad523aa65bbc1c47f670f",
+        "bet_mask.nii.gz": "db4b104b3963b69883e2fabca200fa8165fb09b4459af57383cadf83a7c03f83"
+      },
+      "geometry": {
+        "corner_error_voxels": 1.0132790180250595e-05,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1016644
+      },
+      "output_sha256": "e746951b8a7a798beab9e8c5639368b590201f07a0a46b3bb51ff4402a6c3ab2",
+      "dice": 0.844251978316406,
+      "hd95_mm": 31.0,
+      "crop_reference_retention": 0.8646335026957531
+    },
+    {
+      "id": "asl_t1_115",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11097600, 'mask_voxels_original': 1007216, 'mask_voxels_native': 1007216, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "b1b6f32f471af5eac667ebcddc404c50a67a6d322a6efbf9da97166ff2959746",
+        "bet_mask.nii.gz": "191c55de93d984d5524ce3f365154dce2597e86b7b2bbb29eccea838efcdac00"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.680587392862448e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1007216
+      },
+      "output_sha256": "4602fd52a68d23e43f1567a748e44035c99fde0de3074b7d5a1c4320ac3280d9",
+      "dice": 0.8502058916024509,
+      "hd95_mm": 27.313000567495326,
+      "crop_reference_retention": 0.9247129977697799
+    },
+    {
+      "id": "asl_t1_117",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1146129, 'mask_voxels_native': 1146129, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "31003fbb261047eb6c900e9c828a9a904c181b0c34b9d95878a41b24e8a14283",
+        "bet_mask.nii.gz": "2be3567c3bca731f685cba598285f78b62e92288a9b5a3c90923269590e39d09"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.652406952078001e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1146129
+      },
+      "output_sha256": "5119f9b89ab1ed6b76ae699b75e4ec15d5225a901ff64fb66f4a3bd294395c04",
+      "dice": 0.8557745898026301,
+      "hd95_mm": 32.0,
+      "crop_reference_retention": 0.864279578672328
+    },
+    {
+      "id": "asl_t1_119",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1130803, 'mask_voxels_native': 1130803, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "ee7673fe3ce8e68cd6ade9d211317bd6851e63843c17188c3973e7f343e5eaa0",
+        "bet_mask.nii.gz": "9547c3a7da30733230100f747522ef684ddde186369fdeaeb0e1d2217090f300"
+      },
+      "geometry": {
+        "corner_error_voxels": 1.1920926965558465e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1130803
+      },
+      "output_sha256": "b75d9cb6ca2abb5618280e29542c03547b7865346f86931c5599567eb1f6e43d",
+      "dice": 0.8701252586125887,
+      "hd95_mm": 28.089143810376278,
+      "crop_reference_retention": 0.8857250067371882
+    },
+    {
+      "id": "asl_t1_121",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1263118, 'mask_voxels_native': 1263118, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "2481345530f5237f0619c57d89ca497df4233c93f4a308bd777c19906a024626",
+        "bet_mask.nii.gz": "5e2fc29cfcf17d766328330cb62a3e21ca1337b3f68c5ef88ef276ccf8a3148a"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.031454468782613e-06,
+        "native_start": [
+          0,
+          41,
+          0
+        ],
+        "native_stop": [
+          256,
+          211,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1263118
+      },
+      "output_sha256": "e487713fa321c7285948e221c5b336ad9fcf9a5c997c1a08347b20545ea08995",
+      "dice": 0.9522323372194272,
+      "hd95_mm": 5.830951894845301,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_122",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1154385, 'mask_voxels_native': 1154385, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "dce077a10deb136abdda50e30edeb9eb959b995c1f2a75e7cc74dfb1eee46c4d",
+        "bet_mask.nii.gz": "1bab26e6a5bbcbf0cafa14c659f844e9cee4e26f563f9ab32ca2197ea7a50ffe"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.822146999086939e-06,
+        "native_start": [
+          0,
+          28,
+          0
+        ],
+        "native_stop": [
+          256,
+          198,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1154385
+      },
+      "output_sha256": "b0cd20ee5ba423f982fc8a5af593d973764c092109b2a958506a015a90e59219",
+      "dice": 0.9308608570359901,
+      "hd95_mm": 8.306623862918075,
+      "crop_reference_retention": 0.999423713400514
+    },
+    {
+      "id": "asl_t1_125",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1404119, 'mask_voxels_native': 1404119, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "6b1977d12d051bf27544e0f29dce5536605f50cde77567d35030e3e9d0a61fb1",
+        "bet_mask.nii.gz": "ff8592080294876f421ab874660c369af6d1b9984aac53f5282b2fab570df7c6"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.2186500220632297e-06,
+        "native_start": [
+          0,
+          50,
+          0
+        ],
+        "native_stop": [
+          256,
+          220,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1404119
+      },
+      "output_sha256": "6ec8da37f02c5d7101968768aba96efcf0b7bef2d6ab7d2a23cc20616fda9ac4",
+      "dice": 0.9638857663445691,
+      "hd95_mm": 4.47213595499958,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_127",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1231561, 'mask_voxels_native': 1231561, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "8e6c06fbcbe0b1fd4d2af750d86ecaab2400f2b0970d795da50ec577759d3f61",
+        "bet_mask.nii.gz": "fc49db901a183502faaa12deaa0d8f667d27f4189872e8ec955c730d3cefd4d7"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.1366942614408144e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1231561
+      },
+      "output_sha256": "335727f6fc781842fcadeda0998fe5210bc6980df585cac3345f722eafc6c02a",
+      "dice": 0.8545363743225051,
+      "hd95_mm": 28.0,
+      "crop_reference_retention": 0.88553156514687
+    },
+    {
+      "id": "asl_t1_128",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11097600, 'mask_voxels_original': 1225516, 'mask_voxels_native': 1225516, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "2e09c731bc155176c61d6214f56fc071197646ff67626a792d8d4e33fee2ce9c",
+        "bet_mask.nii.gz": "2c697dc6ce6efaaf4d951c5f69d9d8f682195b3aeb9b6323547cc759684a9298"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.62939455967171e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1225516
+      },
+      "output_sha256": "20102de7fb0deef3f02f770801036655c5b87bf28381041205b4bba9be7c6636",
+      "dice": 0.9058182401974456,
+      "hd95_mm": 24.166091947189145,
+      "crop_reference_retention": 0.9078873468172498
+    },
+    {
+      "id": "asl_t1_129",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11097600, 'mask_voxels_original': 1364259, 'mask_voxels_native': 1364259, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "3fc62a117012d334e9b24a59fb57d7a5b1f0c98d274700203b0a8607d4e95a5a",
+        "bet_mask.nii.gz": "f96d7bae6713adb738741cb62243e2f40661e6d7e1e0262e6629ecf60f09ecaa"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.8163191377745107e-06,
+        "native_start": [
+          0,
+          47,
+          0
+        ],
+        "native_stop": [
+          256,
+          217,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1364259
+      },
+      "output_sha256": "b4681222765770a37e436ac396f5d532195d63787275a9d4b6187b9a6efce668",
+      "dice": 0.9539393154026523,
+      "hd95_mm": 5.744562646538029,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_130",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11054250, 'mask_voxels_original': 1039380, 'mask_voxels_native': 1039380, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "5d032a19d2adf638a6fd607c293d4ff2757ff112b15e797a15417a4aa8093d5e",
+        "bet_mask.nii.gz": "463ebeb24d45ff8e0895aee7a5120f69b15a84741bf41246555a972071ba7cb6"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.9783697414242805e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1039380
+      },
+      "output_sha256": "ffb545dfecfdc45faec1d32c62884d42461a473a6e6a05cd568a2d25a0d38cc6",
+      "dice": 0.8848965737329194,
+      "hd95_mm": 23.0,
+      "crop_reference_retention": 0.9032941053819359
+    },
+    {
+      "id": "asl_t1_131",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1246030, 'mask_voxels_native': 1246030, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "b8439ef092e40cdd9b05d0531c97192eb2724988f3f2a243ab435d803a5495c7",
+        "bet_mask.nii.gz": "6e74ead89c7af2a660db096986aefaedb946b20a8730d7ced2f607e09727a64e"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.465483577107079e-06,
+        "native_start": [
+          0,
+          52,
+          0
+        ],
+        "native_stop": [
+          256,
+          222,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1246030
+      },
+      "output_sha256": "1b50889540e06af2f79c517447cea66ca3e0b86cabf24a54c548d24cb4004f3d",
+      "dice": 0.9517085441554839,
+      "hd95_mm": 5.830951894845301,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_132",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1137703, 'mask_voxels_native': 1137703, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "28f0a24bfc3fc877796b12bccf652c9968a2891239862743ba00c7049ac3a33d",
+        "bet_mask.nii.gz": "72b2319d67cfca08b1773e8bb46ddd7a77cdd6b4d71646e5aa2e85ccd3be33af"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.0079318403531943e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1137703
+      },
+      "output_sha256": "4874fb5ba8645444342e3d0afe74f7ee8708966c6adcdd02f7254597312f110d",
+      "dice": 0.9098340350755029,
+      "hd95_mm": 21.0,
+      "crop_reference_retention": 0.9237045929770373
+    },
+    {
+      "id": "asl_t1_134",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11097600, 'mask_voxels_original': 1374868, 'mask_voxels_native': 1374868, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "d25b082c828a344b828891c21553f7dc85240f5576ed75ce061cfdf416a340ba",
+        "bet_mask.nii.gz": "ca162385f0777ba57923de3f3af1670024c787d5701a5c1003741ba9c9ff2e3d"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.0535740166842777e-06,
+        "native_start": [
+          0,
+          46,
+          0
+        ],
+        "native_stop": [
+          256,
+          216,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1374868
+      },
+      "output_sha256": "c8ffb1a95085bff862216741bdbcc0e21d61885c74385fb02991af4a472dd04f",
+      "dice": 0.9605558630588463,
+      "hd95_mm": 4.898979485566356,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_140",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1051360, 'mask_voxels_native': 1051360, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "26b2e126598e8bf8115f26b4a0ed8e9a9004271aa77664475c07fd9db4b3f19f",
+        "bet_mask.nii.gz": "b1df9d99490e005c6292bd9045c468ff2095601fcd0b12f85f754ed323195abf"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.622604003965634e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1051360
+      },
+      "output_sha256": "70bc778080dc0b777f52d882fd20f35818291add6688168582265545b0c8d815",
+      "dice": 0.8516053793997145,
+      "hd95_mm": 31.0,
+      "crop_reference_retention": 0.8734259607666507
+    },
+    {
+      "id": "asl_t1_142",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1181580, 'mask_voxels_native': 1181580, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "7c7b0e0a8c620ea2135814158e2bed8f12cddf7fd93bd3da4e55ea068579a1a7",
+        "bet_mask.nii.gz": "52f5eb3ea15311a8891053ea0c145778e3e6b1f38b5d86c8e471f23333c19571"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.659195773612737e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1181580
+      },
+      "output_sha256": "0e071cbcf95c7830c707981b5c894878c7e84f1bc187927e6a3933229664d1eb",
+      "dice": 0.8861655246389205,
+      "hd95_mm": 28.0,
+      "crop_reference_retention": 0.8930101769345268
+    },
+    {
+      "id": "asl_t1_143",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1211194, 'mask_voxels_native': 1211194, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "4f11d16eb2f473fdea91697983ca077cf0647d3c92b4bb656ee3f36477ae75b4",
+        "bet_mask.nii.gz": "47eb4508fc0ba99f6603caca8f6f0898e5723e66ff1e9e8cd53c410b00e149a2"
+      },
+      "geometry": {
+        "corner_error_voxels": 5.185604585733472e-06,
+        "native_start": [
+          0,
+          46,
+          0
+        ],
+        "native_stop": [
+          256,
+          216,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1211194
+      },
+      "output_sha256": "c7f700ccebac6f57977f356796b8bad30afd556e61607003616a933f1f89cac3",
+      "dice": 0.9415218490072842,
+      "hd95_mm": 7.0710678118654755,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_144",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11097600, 'mask_voxels_original': 856099, 'mask_voxels_native': 856099, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "bb36ac5ca9fedbc9240a21cd17a657eea45d4ce192216533ae5476fa3665021d",
+        "bet_mask.nii.gz": "cdeae5a70bc3f2ab6a89fee66024e7665bea726a292ab9b3feeb07426313163f"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.0582228899002075e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 856099
+      },
+      "output_sha256": "972a80c1108eab22a81d8dd141dc19071b9eb02dd6557c69eed5fce36b9c485a",
+      "dice": 0.7737969973748725,
+      "hd95_mm": 30.166206257996713,
+      "crop_reference_retention": 0.8696029461096386
+    },
+    {
+      "id": "asl_t1_146",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1309462, 'mask_voxels_native': 1309462, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "d1fb574fddaa408c23e6ee194ecc282e70034a80d5c4a134d6f1f6f63e034740",
+        "bet_mask.nii.gz": "21571ce985160e3c4fb8116967b3bc454a38726f7baa7ec83041e7df5a3e3e62"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.643334366643103e-06,
+        "native_start": [
+          0,
+          45,
+          0
+        ],
+        "native_stop": [
+          256,
+          215,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1309462
+      },
+      "output_sha256": "606b3d192008f423971f453dd186ccabd48503b67502a2ae4cd2d6d5b1514222",
+      "dice": 0.9652122193584967,
+      "hd95_mm": 4.47213595499958,
+      "crop_reference_retention": 0.9992210464326878
+    },
+    {
+      "id": "asl_t1_147",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1378110, 'mask_voxels_native': 1378110, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "4a172d632925758ac06d02eda4a438a6d37ee61454ae763509ddf2add9f25f15",
+        "bet_mask.nii.gz": "55c899c02d303fe5ec3433f1575012cf726d755c718ec4495282ae22972e76ce"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.552306052119093e-06,
+        "native_start": [
+          0,
+          45,
+          0
+        ],
+        "native_stop": [
+          256,
+          215,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1378110
+      },
+      "output_sha256": "f0ca3fe41e89d5667ced68f716624b792b310055e021c476ab28d5e9b800f4e4",
+      "dice": 0.9393165878768205,
+      "hd95_mm": 7.0710678118654755,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_149",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11032320, 'mask_voxels_original': 1251553, 'mask_voxels_native': 1251553, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "7a214bc49a13d66a2c61dad87f4c3bd324c7f8b83196bb68c74ef28977d60ea5",
+        "bet_mask.nii.gz": "7039984b74cdfee3b017ea7c7c510c4e8c631ae149f3b41ccdffcca36bb009b0"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.137385365585942e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1251553
+      },
+      "output_sha256": "b4c1639ff085667e2eb283c823c8adcb2bccbd687961d281231cd46285372bc9",
+      "dice": 0.8979055765722557,
+      "hd95_mm": 30.0,
+      "crop_reference_retention": 0.8747386152606199
+    },
+    {
+      "id": "asl_t1_150",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1155349, 'mask_voxels_native': 1155349, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "c1a75c6bf639e2ff378b9a94d739a11fabb36ce27d04b265b6b2a96ed68165f0",
+        "bet_mask.nii.gz": "747e8634c4df306224b748da52d7005e656167e99afa138c5de1af721514e1f4"
+      },
+      "geometry": {
+        "corner_error_voxels": 5.063133903656635e-06,
+        "native_start": [
+          0,
+          49,
+          0
+        ],
+        "native_stop": [
+          256,
+          219,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1155349
+      },
+      "output_sha256": "290da25f190f94fd2865dea87b42f7ea4a854c0dae646ce3cb3412f9f5117971",
+      "dice": 0.9316646072431327,
+      "hd95_mm": 7.810249675906654,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_151",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11075584, 'mask_voxels_original': 1402536, 'mask_voxels_native': 1402536, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "192f394451175b2a71eb9d73a5daf8b28fe6d106f597b0ea633a2335d849105a",
+        "bet_mask.nii.gz": "ddb9d89f4157e4618bdbe8c6373ba2374882b251b34fdc00a3cf13c7d9ccffd2"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.2649764588322796e-06,
+        "native_start": [
+          0,
+          49,
+          0
+        ],
+        "native_stop": [
+          256,
+          219,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1402536
+      },
+      "output_sha256": "c8fb37ff8290fb2db69fd0558d42b15ddfe99811f307c6caf9286c7a9e933aee",
+      "dice": 0.9554688953324653,
+      "hd95_mm": 5.916079783099616,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "asl_t1_152",
+      "cohort": "asl",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 11141120, 'roi_footprint_voxels_native': 11054250, 'mask_voxels_original': 853717, 'mask_voxels_native': 853717, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "fbef637c73488e91ff0b9aeff294006d921555edfbb22903229239ff018db1fc",
+        "bet_mask.nii.gz": "52e90cb749bb94f5f80e5dc7152a74bf6ce898588adf41b4e393c7cded432276"
+      },
+      "geometry": {
+        "corner_error_voxels": 1.266598786742179e-06,
+        "native_start": [
+          0,
+          1,
+          0
+        ],
+        "native_stop": [
+          256,
+          171,
+          256
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 853717
+      },
+      "output_sha256": "df9b006946481d4af19184bbeb071ed64a4c517d61d8eeb9e19ab4ae3f058ae1",
+      "dice": 0.8387403023447343,
+      "hd95_mm": 27.23967694375247,
+      "crop_reference_retention": 0.9065072618472189
+    },
+    {
+      "id": "ixi_t1_012",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0001220703125, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1524170, 'mask_voxels_native': 1524170, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "04c36a12cc914fe55a25b124478d91d98ff1ce3542a3125bdbdef60f644875a0",
+        "bet_mask.nii.gz": "e4aee3e99fcc0bc3520c10ee24f0ad730fd78bc2a635c93fe152685e313cee2e"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.620860195814203e-06,
+        "native_start": [
+          0,
+          74,
+          0
+        ],
+        "native_stop": [
+          256,
+          255,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1524170
+      },
+      "output_sha256": "9dfd0212c1d19842c5026968550bca4dc01ffa104b3bd1755411aea39b4f2870",
+      "dice": 0.9684749568116149,
+      "hd95_mm": 3.97747564417433,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_013",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0002257823944091797, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1427829, 'mask_voxels_native': 1427829, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "646747889890a7ac58c9d4e0e21c10741418e3c62eb698bc4de9d894989bc59a",
+        "bet_mask.nii.gz": "1ed55dfbf54bb0ca9ee187a8bb97ac3f4e52eb3912a0440c14e6f403f81fc284"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.480413602929545e-06,
+        "native_start": [
+          0,
+          64,
+          0
+        ],
+        "native_stop": [
+          256,
+          245,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1427829
+      },
+      "output_sha256": "2af437c101e9d3af6796f8184234a937f172f3c4d3902dd149b1f0f4bd5ceefa",
+      "dice": 0.9628717421371404,
+      "hd95_mm": 4.6875,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_015",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.00020742416381835938, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1356862, 'mask_voxels_native': 1356862, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "86022322a2379380df398bcf200a84f0884e40a0bb4264dea701961b495e883d",
+        "bet_mask.nii.gz": "36c8eaa826505e6070d552195c9a2d69926137ecac773b64618d735e1e7e5a1c"
+      },
+      "geometry": {
+        "corner_error_voxels": 5.212127435548379e-06,
+        "native_start": [
+          0,
+          74,
+          0
+        ],
+        "native_stop": [
+          256,
+          255,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1356862
+      },
+      "output_sha256": "91919c90f2fccf33e0950cf3fe8746b3605fd278fab793ded18dbbfca686ee7e",
+      "dice": 0.9522672770605634,
+      "hd95_mm": 6.678375218039336,
+      "crop_reference_retention": 0.980758618598587
+    },
+    {
+      "id": "ixi_t1_019",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0001220703125, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1363601, 'mask_voxels_native': 1363601, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "273672396af59bfac8881c51c476deb6db6294d40287db95b1bc453f331ade72",
+        "bet_mask.nii.gz": "99110d7605fd41a3f14dadf540040fc4cabc022ffdc23c019ee9749407a467fb"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.989937799080997e-06,
+        "native_start": [
+          0,
+          70,
+          0
+        ],
+        "native_stop": [
+          256,
+          251,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1363601
+      },
+      "output_sha256": "0f3b48e268e841d66a8db1df73c2d0cdd393672e03c6555ec470f942d6da0b9f",
+      "dice": 0.9292570631869416,
+      "hd95_mm": 9.54896728355351,
+      "crop_reference_retention": 0.9998793913667192
+    },
+    {
+      "id": "ixi_t1_020",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.00012159347534179688, 'roi_footprint_voxels_original': 6487040, 'roi_footprint_voxels_native': 6487040, 'mask_voxels_original': 1388070, 'mask_voxels_native': 1388070, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "2fa4a03133b71c3216d80f7befb951617cb073e53baa43bdcacd5549a85e0b0d",
+        "bet_mask.nii.gz": "5115344e8aefabac4ec5b4fbe660904d9deb05bd75941683a3f5dc1ae4905c29"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.570060292932075e-06,
+        "native_start": [
+          0,
+          62,
+          0
+        ],
+        "native_stop": [
+          256,
+          243,
+          140
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1388070
+      },
+      "output_sha256": "f1afe7b13d3bad2b9971a13dda00ec0a8b4f9c6dfd2857d048ab3af013d30239",
+      "dice": 0.9523171312023281,
+      "hd95_mm": 6.629126284358155,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_021",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0001220703125, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1417639, 'mask_voxels_native': 1417639, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "1cbd6ba292f86666b031eaae188bf4d4b7c9d77479b5118cecfbf91b3c924a51",
+        "bet_mask.nii.gz": "0a52b77b216d519979ec41c88c389023dd084d74769d26e19979f91ce814d448"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.916675806043713e-06,
+        "native_start": [
+          0,
+          70,
+          0
+        ],
+        "native_stop": [
+          256,
+          251,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1417639
+      },
+      "output_sha256": "845c84c792438b02a6eddee0e920914e2802428f989994492a262d42d8b63fe2",
+      "dice": 0.9600087425978997,
+      "hd95_mm": 5.984268586888667,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_022",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.00012135505676269531, 'roi_footprint_voxels_original': 6487040, 'roi_footprint_voxels_native': 6487040, 'mask_voxels_original': 1496683, 'mask_voxels_native': 1496683, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "65e19b551ef30c4fc0c0f6bc7c91eb4a0481a3198ee3ca376045c5e1fac8abd5",
+        "bet_mask.nii.gz": "c71a1bcde9b61bdda3a4b60b052bb6e31b87a19d49037acb10042f3520408769"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.8733742851727584e-06,
+        "native_start": [
+          0,
+          59,
+          0
+        ],
+        "native_stop": [
+          256,
+          240,
+          140
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1496683
+      },
+      "output_sha256": "9a0538110c60e4f85bba4e29cce1236f15dd7caf2580c8a2c8148f22af2df4f9",
+      "dice": 0.9501830326709021,
+      "hd95_mm": 6.396578442250947,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_134",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.00012159347534179688, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1415622, 'mask_voxels_native': 1415622, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "f3697d552bd122f34c1e92c073ebab9768de9faaa91c6f7f9053a7a4a80adb5c",
+        "bet_mask.nii.gz": "ea39c50bc5b5e0cab9582d828abba872c3c03b599dda23ae936a7c930c2092d8"
+      },
+      "geometry": {
+        "corner_error_voxels": 8.441172753510211e-06,
+        "native_start": [
+          0,
+          68,
+          0
+        ],
+        "native_stop": [
+          256,
+          249,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1415622
+      },
+      "output_sha256": "19722753b591e419424ce1ebaa1b543fd28a1947fa1c27fec8f80b39a3aab787",
+      "dice": 0.9515769186807689,
+      "hd95_mm": 6.409761217629251,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_135",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0001220703125, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6858000, 'mask_voxels_original': 1283055, 'mask_voxels_native': 1283055, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "1ac19ad85ad24a34908622a7c8ddae7a8dee7f4a8c91e3e5b4503a9dfaa70a56",
+        "bet_mask.nii.gz": "75f3dd634e9ff80a29c0d8b3a5e6f181d3da27749fc85b34f58f431aa8b03cce"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.53407139436567e-06,
+        "native_start": [
+          0,
+          58,
+          0
+        ],
+        "native_stop": [
+          256,
+          239,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1283055
+      },
+      "output_sha256": "6909d53dc453455a7b9ea6a0f94da5a9d93d64ff546374bcb5551e4084b27c26",
+      "dice": 0.9567335561150896,
+      "hd95_mm": 5.786327218093131,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_138",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0001220703125, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1428601, 'mask_voxels_native': 1428601, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "352a005e1974ff075a5cae4144c7f64e22b071ad7c088f25b2701748c55b431b",
+        "bet_mask.nii.gz": "5ad85300e918c06b396090b76708fbb82073de8c7b205db5b295ff86c5aa356d"
+      },
+      "geometry": {
+        "corner_error_voxels": 7.204091900803178e-06,
+        "native_start": [
+          0,
+          61,
+          0
+        ],
+        "native_stop": [
+          256,
+          242,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1428601
+      },
+      "output_sha256": "6dea7ac769417b57136f65c3adbe206ab8f1fcf6430b379a145e21016e20103c",
+      "dice": 0.9567363872222361,
+      "hd95_mm": 6.121694451529542,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_140",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0001220703125, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1245249, 'mask_voxels_native': 1245249, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "fa531694f23afc17b998738b6ab18dce0bdcccd92fd3cd594a835b11842ba6be",
+        "bet_mask.nii.gz": "6a4125e179e7a66d7e8fd88629425eb59bcddedf863a9fdcd58394112a6c4c4e"
+      },
+      "geometry": {
+        "corner_error_voxels": 9.60611425846783e-06,
+        "native_start": [
+          0,
+          46,
+          0
+        ],
+        "native_stop": [
+          256,
+          227,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1245249
+      },
+      "output_sha256": "a91d3dcc35dd999df4e01b31cccf48e08c39ad23da74540d5b83f7f3678e1b28",
+      "dice": 0.9621315623220249,
+      "hd95_mm": 5.590012643451639,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_141",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6858000, 'mask_voxels_original': 1190129, 'mask_voxels_native': 1190129, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "de3d192f1a24cf389dcf0cde5a9acc9ea2446358bfe61971a20584fd3d75b8b1",
+        "bet_mask.nii.gz": "0b879f09cffc1b58f591536a5c73a89442ec091da4dee9b3658f14d1ae2a4513"
+      },
+      "geometry": {
+        "corner_error_voxels": 1.0847737432189777e-05,
+        "native_start": [
+          0,
+          61,
+          0
+        ],
+        "native_stop": [
+          256,
+          242,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1190129
+      },
+      "output_sha256": "664590b92cde0992d46e7ddaf8b7c39bd34d46b421c5447c45c090e9582c5cb4",
+      "dice": 0.9461952589607429,
+      "hd95_mm": 7.137322060527313,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_142",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0001220703125, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1218462, 'mask_voxels_native': 1218462, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "9934aa74bdcd6ad15f27699d33ca5ba307da991b047778d129de97387b4ce7cd",
+        "bet_mask.nii.gz": "f4b973a84c52d24af56a743f5c72781929be2ea692e25895d021cc0b81132642"
+      },
+      "geometry": {
+        "corner_error_voxels": 5.912545447017692e-06,
+        "native_start": [
+          0,
+          64,
+          0
+        ],
+        "native_stop": [
+          256,
+          245,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1218462
+      },
+      "output_sha256": "d3511302363e376b7d786682cc2559c47a4baea5baf1c15ff0b1807b90fcc7da",
+      "dice": 0.9469116987758254,
+      "hd95_mm": 6.562499165534973,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_143",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.00012183189392089844, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6950400, 'mask_voxels_original': 1152464, 'mask_voxels_native': 1152464, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "391d7c9180cd971fdc10ae080df0485f1fb90b7435a9ad58c0cfe7c8b41ba005",
+        "bet_mask.nii.gz": "8ade0f5845a83d4b27ab0517124cf804f2a9ef12550a98773c150a5abb76ff7d"
+      },
+      "geometry": {
+        "corner_error_voxels": 8.925396485892634e-06,
+        "native_start": [
+          0,
+          67,
+          0
+        ],
+        "native_stop": [
+          256,
+          248,
+          150
+        ],
+        "roi_intensities_exact": false,
+        "roi_matches_after_native_float32_cast": true,
+        "foreground_voxels_preserved": 1152464
+      },
+      "output_sha256": "d61ab9472c584b2245596380df72237b8568452ced9ee11915bcddca15a83077",
+      "dice": 0.9496115662347611,
+      "hd95_mm": 6.866085035862502,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_231",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6765056, 'roi_footprint_voxels_native': 6727680, 'mask_voxels_original': 1339583, 'mask_voxels_native': 1339583, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "2237b7b441e73a51f665f93d285fef8c9f4e9ace2cf6ddde5f7f462ab4fb9dc7",
+        "bet_mask.nii.gz": "d36722a3b3779018d9572275d8445615cd1026df62f26d9f9bf2edc8bd1bd525"
+      },
+      "geometry": {
+        "corner_error_voxels": 2.416008420933772e-06,
+        "native_start": [
+          0,
+          46,
+          0
+        ],
+        "native_stop": [
+          256,
+          227,
+          146
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1339583
+      },
+      "output_sha256": "14073f4ba3423bf148ab2b2ddd37ad805eaafc8b2724022e83b016fda2df1f05",
+      "dice": 0.9692573024373654,
+      "hd95_mm": 4.145549547798085,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_266",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6904064, 'mask_voxels_original': 1148066, 'mask_voxels_native': 1148066, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "56eb8495672cd5a196968b31226878cde353873419e489cd8e542fae0bcba4b9",
+        "bet_mask.nii.gz": "c0b81e4864a20853dcce5a4d8b85ede14bc00ddf76761e8a31c703b177239c46"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.087221961689105e-06,
+        "native_start": [
+          0,
+          62,
+          0
+        ],
+        "native_stop": [
+          256,
+          243,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1148066
+      },
+      "output_sha256": "83d251d0df964ad986395baf46f0ccf3568f409934451f7df0cfdb66d6a374d8",
+      "dice": 0.9384898557061295,
+      "hd95_mm": 7.705404965739676,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_268",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6912000, 'mask_voxels_original': 1392998, 'mask_voxels_native': 1392998, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "be7d4f7983641c1e990d7a45de9a9bc6c97de3b09342d4acc68f69c582b2faac",
+        "bet_mask.nii.gz": "24aa8212597e1b3e3ded07ef5f185abad1d51e62a8a963dd8ec4ec0cfe01e4e7"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.5551967104984215e-06,
+        "native_start": [
+          0,
+          54,
+          0
+        ],
+        "native_stop": [
+          256,
+          235,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1392998
+      },
+      "output_sha256": "c7885a9b417cf5d6f238b90d07484cd95ca0b349b64c2827c68380e752e046ec",
+      "dice": 0.9517138072933002,
+      "hd95_mm": 6.121694985704021,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_270",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6896100, 'mask_voxels_original': 1291139, 'mask_voxels_native': 1291139, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "b19e282f704af3ab426809dfaad6d8f85b0699312eaedcf40e945f07f9228916",
+        "bet_mask.nii.gz": "4e3c20249fb624f9f2a455bca276785905f3a892888287b1cb295e21fa0b662b"
+      },
+      "geometry": {
+        "corner_error_voxels": 3.472954432481856e-06,
+        "native_start": [
+          0,
+          62,
+          0
+        ],
+        "native_stop": [
+          256,
+          243,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1291139
+      },
+      "output_sha256": "9039af3ed25a6696e440b7e5844e6a4da1f73f4e1432d0bd494cedeca5c998f8",
+      "dice": 0.9530945182375663,
+      "hd95_mm": 6.4649187059014785,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_274",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6912000, 'mask_voxels_original': 1130057, 'mask_voxels_native': 1130057, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "826f59925a5eb92999543e006906cb888250f3ef59fe55d92cb9428d0007c39e",
+        "bet_mask.nii.gz": "b0aa8839d7d47ca22c415b2d3c1bc8b7d69140fa2fd8612b9f4d0230558ec277"
+      },
+      "geometry": {
+        "corner_error_voxels": 6.59991513884961e-06,
+        "native_start": [
+          0,
+          63,
+          0
+        ],
+        "native_stop": [
+          256,
+          244,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1130057
+      },
+      "output_sha256": "7e702bdecd963a9d9db73b04b1f2100983826e50f3ef3eef6c815bb5b5af3529",
+      "dice": 0.9481518503410076,
+      "hd95_mm": 5.526129102336629,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_275",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6912000, 'mask_voxels_original': 1452680, 'mask_voxels_native': 1452680, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "4c8d99d1334bfc79ed84a704797be19f11ed30cd1be6926554e885c39968fa6f",
+        "bet_mask.nii.gz": "be39b3f11529adaecba1cf4d95b8027f813712110fda0a10cfe94923789d41d2"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.3969733951598755e-06,
+        "native_start": [
+          0,
+          67,
+          0
+        ],
+        "native_stop": [
+          256,
+          248,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1452680
+      },
+      "output_sha256": "1d8ec6954ff17a9d9a142c77fc6665d9a7b1e2ed0b82e0d0a7daec1c83e4a025",
+      "dice": 0.968892624382548,
+      "hd95_mm": 4.471164594167845,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_276",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6896100, 'mask_voxels_original': 1408642, 'mask_voxels_native': 1408642, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "d109c7292a5bda76da0216700d4647d3bf4fb45ea765d8ee20048ab8ea72c2ca",
+        "bet_mask.nii.gz": "ff90c50b21d341f9bc91db506045d2e4d5b86e06a1b39f37bd004506b4721455"
+      },
+      "geometry": {
+        "corner_error_voxels": 1.9579753427478863e-06,
+        "native_start": [
+          0,
+          68,
+          0
+        ],
+        "native_stop": [
+          256,
+          249,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1408642
+      },
+      "output_sha256": "908673357ce2fbe8db33aeaac89ed52a59616d218e743b8c613ed2c1a014449c",
+      "dice": 0.959856418441599,
+      "hd95_mm": 5.348978711628166,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_398",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6865920, 'mask_voxels_original': 1146481, 'mask_voxels_native': 1146481, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "a42778534af8fabc361fe6c10ca5a79704180b583bb340034aa3d191b329aa94",
+        "bet_mask.nii.gz": "d81d80a851d6facac82d94516f6e750550d3e41cac08e259f40f702330eb193e"
+      },
+      "geometry": {
+        "corner_error_voxels": 5.066313493069888e-06,
+        "native_start": [
+          0,
+          59,
+          0
+        ],
+        "native_stop": [
+          256,
+          240,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1146481
+      },
+      "output_sha256": "6208de0016fb43ad5210afd69caa3a256c50dee035da81cd137367ba7339a075",
+      "dice": 0.939559411820083,
+      "hd95_mm": 8.591413887042124,
+      "crop_reference_retention": 0.9791258436751579
+    },
+    {
+      "id": "ixi_t1_400",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6904064, 'mask_voxels_original': 1243283, 'mask_voxels_native': 1243283, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "16583347539cbbf45b78b9e27e069bdc609c81bffc245d224e15b71915728a1c",
+        "bet_mask.nii.gz": "ce3959b785ad921808c6bbb1136804b3e77a78c3f8a4c85f7fb5578e062957c0"
+      },
+      "geometry": {
+        "corner_error_voxels": 4.331045062144767e-06,
+        "native_start": [
+          0,
+          55,
+          0
+        ],
+        "native_stop": [
+          256,
+          236,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1243283
+      },
+      "output_sha256": "52cccd13a8137eb8905b94c291b574b97cb316177f6efe9b6b416116d2f5e9d9",
+      "dice": 0.9556808353541066,
+      "hd95_mm": 6.0728137191472795,
+      "crop_reference_retention": 1.0
+    },
+    {
+      "id": "ixi_t1_401",
+      "cohort": "ixi",
+      "primary_failure": "Native crop map-back failed: {'roi_t1w_max_abs_diff': 0.0, 'roi_footprint_voxels_original': 6950400, 'roi_footprint_voxels_native': 6896100, 'mask_voxels_original': 1129232, 'mask_voxels_native': 1129232, 'passed': False}",
+      "recovered": true,
+      "saved_input_sha256": {
+        "roi.nii.gz": "47eef91cc615bd4b17f048f06f1dbe3a49befd5cebc37aba3f5523d972659514",
+        "bet_mask.nii.gz": "92e565f558be0f60263b09ab022d5fd2c9edaf548fb040395a6809c07fb2c1e7"
+      },
+      "geometry": {
+        "corner_error_voxels": 5.11115597131282e-06,
+        "native_start": [
+          0,
+          65,
+          0
+        ],
+        "native_stop": [
+          256,
+          246,
+          150
+        ],
+        "roi_intensities_exact": true,
+        "roi_matches_after_native_float32_cast": false,
+        "foreground_voxels_preserved": 1129232
+      },
+      "output_sha256": "606d121b4e194cb6e66f49000654e982c45231054f441c8f166703ba530bc845",
+      "dice": 0.9531490844039159,
+      "hd95_mm": 5.929270612815711,
+      "crop_reference_retention": 1.0
+    }
+  ],
+  "csv_sha256": "7a46be9ca8390111022cbd5466bd0d3238bf8fac67f6a3ecd0cd57f4ae3bd869"
+}

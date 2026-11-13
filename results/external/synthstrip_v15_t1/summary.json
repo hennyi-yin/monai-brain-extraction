@@ -1,0 +1,702 @@
+{
+  "n": 89,
+  "primary_comparator": "bet_crop",
+  "bootstrap": {
+    "repetitions": 10000,
+    "seed": 42
+  },
+  "groups": {
+    "ixi": {
+      "n": 48,
+      "methods": {
+        "unet": {
+          "dice_mean": 0.9559987122426875,
+          "dice_sd": 0.006411205797603015,
+          "dice_median": 0.957268661109,
+          "dice_min": 0.941835815425,
+          "dice_below_0_8": 0,
+          "zero_overlap": 0,
+          "hd95_median_mm": 5.596679297895,
+          "hd95_iqr_bounds_mm": [
+            5.29402044719,
+            6.121670662285
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        },
+        "bet_r": {
+          "dice_mean": 0.9652434943859376,
+          "dice_sd": 0.010266735363055871,
+          "dice_median": 0.966450698787,
+          "dice_min": 0.911038831599,
+          "dice_below_0_8": 0,
+          "zero_overlap": 0,
+          "hd95_median_mm": 4.6875,
+          "hd95_iqr_bounds_mm": [
+            3.736829452785,
+            5.2754618518175
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        },
+        "bet_crop": {
+          "dice_mean": 0.479095776805375,
+          "dice_sd": 0.4842077634451082,
+          "dice_median": 0.4670671151435,
+          "dice_min": 0.0,
+          "dice_below_0_8": 24,
+          "zero_overlap": 24,
+          "hd95_median_mm": "inf",
+          "hd95_iqr_bounds_mm": [
+            5.274787403102501,
+            "inf"
+          ],
+          "hd95_infinite": 24,
+          "processing_failures": 24
+        },
+        "synthstrip": {
+          "dice_mean": 0.9700919858047085,
+          "dice_sd": 0.005330780585984088,
+          "dice_median": 0.9704761278885,
+          "dice_min": 0.958005179354,
+          "dice_below_0_8": 0,
+          "zero_overlap": 0,
+          "hd95_median_mm": 3.9373212119799996,
+          "hd95_iqr_bounds_mm": [
+            3.7368278915625,
+            4.549879196155
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        }
+      },
+      "unet_minus_comparator": {
+        "bet_crop": {
+          "mean_points": 47.69029354373125,
+          "median_points": 47.925976027199994,
+          "ci95_points": [
+            33.78069691436343,
+            61.62375540728313
+          ],
+          "wins": 33,
+          "ties": 0,
+          "losses": 15
+        },
+        "synthstrip": {
+          "mean_points": -1.4093273562020838,
+          "median_points": -1.4236781791999997,
+          "ci95_points": [
+            -1.5807464917075524,
+            -1.2398142264738548
+          ],
+          "wins": 0,
+          "ties": 0,
+          "losses": 48
+        },
+        "bet_r": {
+          "mean_points": -0.9244782143250007,
+          "median_points": -0.9961910545999986,
+          "ci95_points": [
+            -1.126453227766407,
+            -0.6849304753752091
+          ],
+          "wins": 1,
+          "ties": 0,
+          "losses": 47
+        }
+      }
+    },
+    "asl": {
+      "n": 41,
+      "methods": {
+        "unet": {
+          "dice_mean": 0.8950406964227073,
+          "dice_sd": 0.034266433463176725,
+          "dice_median": 0.90135489077,
+          "dice_min": 0.776060584085,
+          "dice_below_0_8": 1,
+          "zero_overlap": 0,
+          "hd95_median_mm": 18.7082869339,
+          "hd95_iqr_bounds_mm": [
+            14.2828568571,
+            25.8263431403
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        },
+        "bet_r": {
+          "dice_mean": 0.9488290560783659,
+          "dice_sd": 0.011553323109573299,
+          "dice_median": 0.950346796501,
+          "dice_min": 0.917184040638,
+          "dice_below_0_8": 0,
+          "zero_overlap": 0,
+          "hd95_median_mm": 6.16441400297,
+          "hd95_iqr_bounds_mm": [
+            5.09901951359,
+            7.81024967591
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        },
+        "bet_crop": {
+          "dice_mean": 0.24342425940024387,
+          "dice_sd": 0.40767651183107645,
+          "dice_median": 0.0,
+          "dice_min": 0.0,
+          "dice_below_0_8": 30,
+          "zero_overlap": 30,
+          "hd95_median_mm": "inf",
+          "hd95_iqr_bounds_mm": [
+            34.0470232609,
+            "inf"
+          ],
+          "hd95_infinite": 30,
+          "processing_failures": 30
+        },
+        "synthstrip": {
+          "dice_mean": 0.9730554098352195,
+          "dice_sd": 0.005370040218489788,
+          "dice_median": 0.973726371081,
+          "dice_min": 0.959249683099,
+          "dice_below_0_8": 0,
+          "zero_overlap": 0,
+          "hd95_median_mm": 3.74165738677,
+          "hd95_iqr_bounds_mm": [
+            3.0,
+            4.12310562562
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        }
+      },
+      "unet_minus_comparator": {
+        "bet_crop": {
+          "mean_points": 65.16164370224634,
+          "median_points": 88.8896783169,
+          "ci95_points": [
+            52.13780962074769,
+            76.67957057795748
+          ],
+          "wins": 33,
+          "ties": 0,
+          "losses": 8
+        },
+        "synthstrip": {
+          "mean_points": -7.8014713412512195,
+          "median_points": -6.967777720099999,
+          "ci95_points": [
+            -8.870357697729146,
+            -6.869616377116646
+          ],
+          "wins": 0,
+          "ties": 0,
+          "losses": 41
+        },
+        "bet_r": {
+          "mean_points": -5.3788359655658535,
+          "median_points": -4.705722275299995,
+          "ci95_points": [
+            -6.369265641384693,
+            -4.539610011931707
+          ],
+          "wins": 0,
+          "ties": 0,
+          "losses": 41
+        }
+      }
+    },
+    "pooled": {
+      "n": 89,
+      "methods": {
+        "unet": {
+          "dice_mean": 0.9279169296739325,
+          "dice_sd": 0.03859260904465674,
+          "dice_median": 0.944655674734,
+          "dice_min": 0.776060584085,
+          "dice_below_0_8": 1,
+          "zero_overlap": 0,
+          "hd95_median_mm": 7.1737846809,
+          "hd95_iqr_bounds_mm": [
+            5.59001778834,
+            18.4661853126
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        },
+        "bet_r": {
+          "dice_mean": 0.9576817868509886,
+          "dice_sd": 0.013589377079770638,
+          "dice_median": 0.960642578869,
+          "dice_min": 0.911038831599,
+          "dice_below_0_8": 0,
+          "zero_overlap": 0,
+          "hd95_median_mm": 5.26617565229,
+          "hd95_iqr_bounds_mm": [
+            4.58257569496,
+            6.28894118672
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        },
+        "bet_crop": {
+          "dice_mean": 0.3705279991243595,
+          "dice_sd": 0.463382278200056,
+          "dice_median": 0.0,
+          "dice_min": 0.0,
+          "dice_below_0_8": 54,
+          "zero_overlap": 54,
+          "hd95_median_mm": "inf",
+          "hd95_iqr_bounds_mm": [
+            6.7082039325,
+            "inf"
+          ],
+          "hd95_infinite": 54,
+          "processing_failures": 54
+        },
+        "synthstrip": {
+          "dice_mean": 0.9714571586726967,
+          "dice_sd": 0.005521950853113586,
+          "dice_median": 0.972441768343,
+          "dice_min": 0.958005179354,
+          "dice_below_0_8": 0,
+          "zero_overlap": 0,
+          "hd95_median_mm": 3.93732053984,
+          "hd95_iqr_bounds_mm": [
+            3.38020432075,
+            4.24264068712
+          ],
+          "hd95_infinite": 0,
+          "processing_failures": 0
+        }
+      },
+      "unet_minus_comparator": {
+        "bet_crop": {
+          "mean_points": 55.7388930549573,
+          "median_points": 88.8896783169,
+          "ci95_points": [
+            46.29101658106753,
+            64.92610522865391
+          ],
+          "wins": 66,
+          "ties": 0,
+          "losses": 23
+        },
+        "synthstrip": {
+          "mean_points": -4.354022899876405,
+          "median_points": -2.2993818286,
+          "ci95_points": [
+            -4.835715866826039,
+            -3.907074551436827
+          ],
+          "wins": 0,
+          "ties": 0,
+          "losses": 89
+        },
+        "bet_r": {
+          "mean_points": -2.9764857177056188,
+          "median_points": -1.587071419000008,
+          "ci95_points": [
+            -3.427502628340956,
+            -2.5674452657029785
+          ],
+          "wins": 1,
+          "ties": 0,
+          "losses": 88
+        }
+      }
+    }
+  },
+  "crop_retention": {
+    "available": 35,
+    "minimum": 0.838443397934,
+    "below_0_99": 5
+  },
+  "low_dice": [
+    {
+      "id": "asl_t1_101",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_105",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_106",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_109",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_111",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_112",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_114",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_115",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_117",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_119",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_121",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_122",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_125",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_127",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_128",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_129",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_130",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_131",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_132",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_134",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_140",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_142",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_143",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_144",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_146",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_147",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_149",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_150",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_151",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "asl_t1_152",
+      "cohort": "asl",
+      "method": "unet",
+      "dice": 0.776060584085,
+      "status": "ok"
+    },
+    {
+      "id": "asl_t1_152",
+      "cohort": "asl",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_012",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_013",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_015",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_019",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_020",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_021",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_022",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_134",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_135",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_138",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_140",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_141",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_142",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_143",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_231",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_266",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_268",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_270",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_274",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_275",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_276",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_398",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_400",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    },
+    {
+      "id": "ixi_t1_401",
+      "cohort": "ixi",
+      "method": "bet_crop",
+      "dice": 0.0,
+      "status": "failed"
+    }
+  ]
+}

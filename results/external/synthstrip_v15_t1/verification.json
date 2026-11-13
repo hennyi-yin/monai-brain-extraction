@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "primary_files_unchanged": 161,
+  "robustfov_files_unchanged": 41,
+  "readme_sections_unchanged": 3,
+  "freesurfer_files_unchanged": 38,
+  "external_subjects": 89,
+  "native_masks": 356,
+  "scoring_passes": 1,
+  "processing_failures": {
+    "unet": 0,
+    "bet_r": 0,
+    "bet_crop": 54,
+    "synthstrip": 0
+  }
+}

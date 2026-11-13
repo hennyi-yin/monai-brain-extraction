@@ -1,0 +1,2795 @@
+{
+  "signature": {
+    "method": "synthstrip",
+    "protocol_commit": "b161e009b73567cabee339d97a252f0050ce1ad3",
+    "source_sha256": {
+      "src/run_external.py": "c77ceabe52e84f86233e918ef0aebfa04a7d0b00ef3ba3d1ac3c312df5585360",
+      "src/external_common.py": "45b34f3ad0465a363afac3f0ca3e9ca71696c96684e8efddffd37ea89ba52111",
+      "src/infer.py": "7b9600ebdd5e7dd96f975f46bb461a6bd41bbdb49025d729e8286788a2475db2",
+      "src/data.py": "4c6bd9b71026306cc257afa57bc8c748cfb0f20cbe726a288b7d035873fc535c",
+      "src/model.py": "54e5dd87e984534279c3fed4ff59130edfd53689814414296c1adaf4c456804c",
+      "src/run_bet_robustfov.py": "26c1042b5b150a66936af43ece2d1c4a3f06a70847f1492f2beb77c3c35990c7",
+      "src/common.py": "07717ba6e36b7bfe8c29d847ceae5f4f3cd17bd5beb00561df84393323826079"
+    },
+    "python": "3.12.3",
+    "numpy": "2.2.6",
+    "nibabel": "5.3.2",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "synthstrip": {
+      "script": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+      "weights": "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+      "script_sha256": "d674926f56393e3ead4eeb4a53a3b41de16f822469d653e33cdfe9d69c3185a2",
+      "weights_sha256": "37417f802196186441aae3e7f385d94f8a98c64a88acaeaa2723af995c653e33",
+      "surfa": "0.6.3",
+      "backend": "CUDA",
+      "border_mm": 1,
+      "csf_inclusive": true
+    }
+  },
+  "code_commit": "89c942e98d84f3faa86ed1bf979bb17d2f84b29d",
+  "complete": true,
+  "subjects": [
+    {
+      "id": "asl_t1_101",
+      "method": "synthstrip",
+      "source_sha256": "94a8d90daa1dcaa86b67fa4da13c49028516ee2d48e6870b87510ad0879faeb7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_101/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_101/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_101/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_101/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_101/native_mask.nii.gz",
+      "output_sha256": "52e8c3a33ad011e938c2bfac5da8466aa465c2643a15c07429bb53dbfdd07dcf",
+      "foreground": 1407056,
+      "seconds": 11.656
+    },
+    {
+      "id": "asl_t1_105",
+      "method": "synthstrip",
+      "source_sha256": "40abe55b8f4f199d3312e7bc2306fb76596760a59a6ba8a45229fafc41efde42",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_105/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_105/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_105/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_105/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_105/native_mask.nii.gz",
+      "output_sha256": "6ab094e093f1892513041b5886cac704a7f6fa6bf5c809f01610a3a426f566f8",
+      "foreground": 1362263,
+      "seconds": 12.136
+    },
+    {
+      "id": "asl_t1_106",
+      "method": "synthstrip",
+      "source_sha256": "13f39ae65edc62dc8e898fc6c816560ae897bf4c9a01a51246d879608e0194dd",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_106/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_106/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_106/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_106/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_106/native_mask.nii.gz",
+      "output_sha256": "75c3f3b5d16a94822d24957d73aa1c14d5c6dda83ff4146f3d8db34dfb882d28",
+      "foreground": 1392531,
+      "seconds": 11.392
+    },
+    {
+      "id": "asl_t1_109",
+      "method": "synthstrip",
+      "source_sha256": "d2192b83f889d383b4ba7cce42bea37e0136e5383ae802cfe66c10d2a245dec6",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_109/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_109/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_109/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_109/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_109/native_mask.nii.gz",
+      "output_sha256": "4ff9b9c6782746c881702b4275ab6c8c04917d96a20737a6ed9f6cbf15476d72",
+      "foreground": 1469634,
+      "seconds": 11.618
+    },
+    {
+      "id": "asl_t1_111",
+      "method": "synthstrip",
+      "source_sha256": "1d24f27185863a694d4ca4d7e335aa29b51f5030dd95b0415ae46db876c84dc7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_111/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_111/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_111/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_111/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_111/native_mask.nii.gz",
+      "output_sha256": "37b7f2ec02516b0ec6aca3a49ca42338605a60365524cd1e38f19b3b69f4a544",
+      "foreground": 1570230,
+      "seconds": 10.823
+    },
+    {
+      "id": "asl_t1_112",
+      "method": "synthstrip",
+      "source_sha256": "53657f8a8c394698ef04a20f697e027e76efac2a5aa7fc8bbdc429a3c09563d5",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_112/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_112/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_112/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_112/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_112/native_mask.nii.gz",
+      "output_sha256": "32af6bba8d715725724658e8ef63957b1b39df68c99612b117f6974f0fff5d85",
+      "foreground": 1386209,
+      "seconds": 23.017
+    },
+    {
+      "id": "asl_t1_113",
+      "method": "synthstrip",
+      "source_sha256": "20bc8856934df20744f212d87a7b6b7cb9e53fcb351ca9b706f35f8a1e6bef23",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_113/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_113/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_113/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_113/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_113/native_mask.nii.gz",
+      "output_sha256": "3da8441bc003ea69200831fce1d0e879ad42bc69bb5604c3de263a2d14781239",
+      "foreground": 1650181,
+      "seconds": 10.025
+    },
+    {
+      "id": "asl_t1_114",
+      "method": "synthstrip",
+      "source_sha256": "a26427515482dacdd06163851553325351854db5f96ff8f8443b382594cc28e8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_114/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_114/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_114/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_114/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_114/native_mask.nii.gz",
+      "output_sha256": "6862ad90eeca5c1c05b25c6af6b441ff616871de4c6e0e41a018f2c1c832b38c",
+      "foreground": 1435285,
+      "seconds": 19.554
+    },
+    {
+      "id": "asl_t1_115",
+      "method": "synthstrip",
+      "source_sha256": "f54998dd7beb8b3943776da40d6db2fd05b109eda2a957ba3a86e294ac32c056",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_115/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_115/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_115/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_115/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_115/native_mask.nii.gz",
+      "output_sha256": "e5b918b11ac0ac80870095e8d43c0d62db1db463bbe42d876cc4ab1a49a44bd9",
+      "foreground": 1427719,
+      "seconds": 19.38
+    },
+    {
+      "id": "asl_t1_116",
+      "method": "synthstrip",
+      "source_sha256": "26da838157eeec50219b07cd28e8d24d5cd3ec892e6e835e609e0a6d9d5905e7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_116/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_116/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_116/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_116/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_116/native_mask.nii.gz",
+      "output_sha256": "fdda255d83426086636fc7c183b9139727b6cb01f9cb28eef202db933b445966",
+      "foreground": 1620951,
+      "seconds": 19.623
+    },
+    {
+      "id": "asl_t1_117",
+      "method": "synthstrip",
+      "source_sha256": "ec58594d8835c11f527b4d02e3b6831f145bdfa4a122d27b612013d6c09166a9",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_117/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_117/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_117/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_117/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_117/native_mask.nii.gz",
+      "output_sha256": "c9b996ee2fc3e9d58b51487c059ccd4d4e9f41036f86b250aef3b97150d848bd",
+      "foreground": 1578066,
+      "seconds": 19.29
+    },
+    {
+      "id": "asl_t1_118",
+      "method": "synthstrip",
+      "source_sha256": "9d59d0a48c39cebf9e57f74e072664a19dd5b9e9fbb97c1a4aaf9297f29b2470",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_118/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_118/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_118/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_118/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_118/native_mask.nii.gz",
+      "output_sha256": "c1b9f2229c0b624a4aaf23943973e322f5c823f1003f30c45a6919e674a88371",
+      "foreground": 1351216,
+      "seconds": 18.518
+    },
+    {
+      "id": "asl_t1_119",
+      "method": "synthstrip",
+      "source_sha256": "dcd0158b6d9706a8e7f40000ebdbee04153c3c1123d369bf6ec0d9a2c3af0866",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_119/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_119/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_119/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_119/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_119/native_mask.nii.gz",
+      "output_sha256": "9e5676262810cc45852a9895aeed10f35312ba03d3e5fbbe24ac2f23ab2ccb80",
+      "foreground": 1547991,
+      "seconds": 9.952
+    },
+    {
+      "id": "asl_t1_121",
+      "method": "synthstrip",
+      "source_sha256": "49ae404220445fef4c36f17fc42dcbdfb9792ec923c1d6c662e3f30ea8a24531",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_121/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_121/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_121/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_121/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_121/native_mask.nii.gz",
+      "output_sha256": "bbabaa9831b47b1d2b527c50feb8ebf417c5fc7767eb4083ac9b3f173ef5ec61",
+      "foreground": 1433139,
+      "seconds": 9.374
+    },
+    {
+      "id": "asl_t1_122",
+      "method": "synthstrip",
+      "source_sha256": "0c861462b6ef7bca5e1c5ede87727e84366533476fde300905c516395f6dc1e3",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_122/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_122/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_122/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_122/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_122/native_mask.nii.gz",
+      "output_sha256": "b82f0273d8fd433fbc17473a9abb87ad2ffa76e6b1c1c52f5ed98f5e9c057df7",
+      "foreground": 1389098,
+      "seconds": 9.349
+    },
+    {
+      "id": "asl_t1_123",
+      "method": "synthstrip",
+      "source_sha256": "e35b9c00e5bbc66c5589578637fc49af00e7a5ee069ab21ad3b3012012d7c93f",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_123/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_123/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_123/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_123/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_123/native_mask.nii.gz",
+      "output_sha256": "11f8802e3c93a396874f0c139ea58c0afb0f6b59bff36a93645d787445a863a2",
+      "foreground": 1384157,
+      "seconds": 18.369
+    },
+    {
+      "id": "asl_t1_124",
+      "method": "synthstrip",
+      "source_sha256": "127e429fd6102e15bf058077108a9ea8bbad28c466b86298da4fb9ae4b00c655",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_124/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_124/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_124/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_124/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_124/native_mask.nii.gz",
+      "output_sha256": "c506114e211060d00d12d46677ac25fe8e7ff0434825cdb36b761681377e156a",
+      "foreground": 1619668,
+      "seconds": 8.763
+    },
+    {
+      "id": "asl_t1_125",
+      "method": "synthstrip",
+      "source_sha256": "6c946415db8a28221f0f0e2d2ecca3def4540425f0fe508d8e80b3f755db2af9",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_125/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_125/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_125/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_125/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_125/native_mask.nii.gz",
+      "output_sha256": "86ae58fc71462485eaddec3a70472851dd99ada2a88215639b34245655c12e46",
+      "foreground": 1497779,
+      "seconds": 8.583
+    },
+    {
+      "id": "asl_t1_126",
+      "method": "synthstrip",
+      "source_sha256": "e6a2aa08668fd40d60dc34b843b278d7977e83a7510cdcbc32a3f4a6700fed55",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_126/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_126/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_126/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_126/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_126/native_mask.nii.gz",
+      "output_sha256": "6e666305b7c397d9ec531d449df0399d5aeda8b57110bf83dbbfbe6419fecfec",
+      "foreground": 1371212,
+      "seconds": 8.286
+    },
+    {
+      "id": "asl_t1_127",
+      "method": "synthstrip",
+      "source_sha256": "c5271e9d7cdcf60fc834dd97bc546c3fcf59e9fe45d21ff729d061f344ec1a98",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_127/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_127/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_127/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_127/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_127/native_mask.nii.gz",
+      "output_sha256": "b4205fb3e5512276e0bceafbca2b5ac01b2cd88c77c4d79ed9287ee1c8cb1468",
+      "foreground": 1763455,
+      "seconds": 8.111
+    },
+    {
+      "id": "asl_t1_128",
+      "method": "synthstrip",
+      "source_sha256": "9d19f6cbfbf32dfc65568b0344d55818af6b799c1271bef3faef0446ffa88fd8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_128/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_128/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_128/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_128/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_128/native_mask.nii.gz",
+      "output_sha256": "a895031c785a21aea3506343382cc865a366f39454f39490deb93e0ef579cf7f",
+      "foreground": 1534522,
+      "seconds": 8.21
+    },
+    {
+      "id": "asl_t1_129",
+      "method": "synthstrip",
+      "source_sha256": "d8a33755bab45a13087ce74eac9b2b0e0b985200056f800343f140a3886d53ca",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_129/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_129/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_129/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_129/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_129/native_mask.nii.gz",
+      "output_sha256": "d56648c1646f3d432bdb1e85d6d5ad5dafa62fd505aa65614bd7bf87a6ff261b",
+      "foreground": 1540285,
+      "seconds": 8.314
+    },
+    {
+      "id": "asl_t1_130",
+      "method": "synthstrip",
+      "source_sha256": "e9937043e022e0dd61b228dc44221f84a8a3629dcd6fbb83e003588357b1f92d",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_130/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_130/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_130/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_130/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_130/native_mask.nii.gz",
+      "output_sha256": "eae1eb4cb00cd756bcf2914ef6182e6386acc2cef39c03204042f915183f0cf6",
+      "foreground": 1368037,
+      "seconds": 8.144
+    },
+    {
+      "id": "asl_t1_131",
+      "method": "synthstrip",
+      "source_sha256": "a315ff97bace1776385cb5a1f9b250d6cf84dd4f6452ed519a7c69f03e00561a",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_131/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_131/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_131/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_131/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_131/native_mask.nii.gz",
+      "output_sha256": "391176ad6f6b6301e3d5811e6917147ceddc59b010df521f871b1380f1bfa46d",
+      "foreground": 1392311,
+      "seconds": 17.654
+    },
+    {
+      "id": "asl_t1_132",
+      "method": "synthstrip",
+      "source_sha256": "26f14756377e780dbd2facc6c270c91eb139af82d3856851252f040df9003993",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_132/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_132/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_132/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_132/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_132/native_mask.nii.gz",
+      "output_sha256": "162e439736692a1ce6dfbfd90f4c7f3c923d0199cb76e71462022bfd1aea72c8",
+      "foreground": 1378109,
+      "seconds": 8.229
+    },
+    {
+      "id": "asl_t1_134",
+      "method": "synthstrip",
+      "source_sha256": "e044669d370431697e0e73ce368c4aa6797f45aa0702ee80fee3ea401b07d8ce",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_134/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_134/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_134/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_134/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_134/native_mask.nii.gz",
+      "output_sha256": "0da6d2f2fab557c6f540f5b758b0c813bfaba8dedc69ce00489c1a17c44947af",
+      "foreground": 1521283,
+      "seconds": 17.143
+    },
+    {
+      "id": "asl_t1_135",
+      "method": "synthstrip",
+      "source_sha256": "e02977a547860b16a472a6f03cf354f3221b2e635a10334e6bc2b38ba425a04b",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_135/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_135/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_135/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_135/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_135/native_mask.nii.gz",
+      "output_sha256": "a072b326f29883054e054e8cc4fd0410d9634a8c02847f88403766e04a554984",
+      "foreground": 1430053,
+      "seconds": 17.362
+    },
+    {
+      "id": "asl_t1_137",
+      "method": "synthstrip",
+      "source_sha256": "c3637a00d03bab77e97794e8342f66b57ce27c50c90e77f5da53dd400e233c96",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_137/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_137/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_137/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_137/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_137/native_mask.nii.gz",
+      "output_sha256": "5b213ca1e9450c0713d65047a3dd966cef0696877c8716e3c583b168b72895b8",
+      "foreground": 1417524,
+      "seconds": 7.855
+    },
+    {
+      "id": "asl_t1_138",
+      "method": "synthstrip",
+      "source_sha256": "30a24c558c0b44579ad1b9f65556b12d17c74fcaccd09f17b1727cde45689571",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_138/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_138/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_138/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_138/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_138/native_mask.nii.gz",
+      "output_sha256": "dd255513d1b147b9ab7e96cb656765c1c89605dabe429f19eb71a30edc6af4a1",
+      "foreground": 1218503,
+      "seconds": 17.991
+    },
+    {
+      "id": "asl_t1_139",
+      "method": "synthstrip",
+      "source_sha256": "7c226fd9301b155dd3fae7110c480d8604cac589e8eadd3aea173f96098f2d96",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_139/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_139/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_139/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_139/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_139/native_mask.nii.gz",
+      "output_sha256": "788ae9fe2abcc8480ec3888e1503ab1df2cd4922b498fd0e6797aba24d0bef81",
+      "foreground": 1620340,
+      "seconds": 8.198
+    },
+    {
+      "id": "asl_t1_140",
+      "method": "synthstrip",
+      "source_sha256": "d8e3da6c969e41312bed063b347fdc96ebb83806fa3dad562c7a70a3db6b2f30",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_140/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_140/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_140/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_140/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_140/native_mask.nii.gz",
+      "output_sha256": "d83a45278da24d9c5f0d531038a065b0ef10ebd390a8202962b0ba33a1b5a1e4",
+      "foreground": 1471651,
+      "seconds": 8.204
+    },
+    {
+      "id": "asl_t1_142",
+      "method": "synthstrip",
+      "source_sha256": "0c588a14859d4d2fa5cae79e1deffe214e91a678453941fe85e2fcbddcbee227",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_142/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_142/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_142/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_142/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_142/native_mask.nii.gz",
+      "output_sha256": "c89c5dc5082a3e717c61c3fb4618903995ec59864438465dfea6b77fe585dd6e",
+      "foreground": 1510583,
+      "seconds": 8.292
+    },
+    {
+      "id": "asl_t1_143",
+      "method": "synthstrip",
+      "source_sha256": "f3f925e87e7e45de82540e30da23a35e625af5727b585849634ddb243bbb04b2",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_143/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_143/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_143/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_143/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_143/native_mask.nii.gz",
+      "output_sha256": "9c17b58b5f721a5e803e2e2102a87e732643122c4eed0bdbb31f8648bec1c9f3",
+      "foreground": 1422658,
+      "seconds": 17.347
+    },
+    {
+      "id": "asl_t1_144",
+      "method": "synthstrip",
+      "source_sha256": "0e0758eaa2fa73acf830265e5f4b4c59995613024ed7410dedca635dbd73a1b0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_144/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_144/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_144/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_144/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_144/native_mask.nii.gz",
+      "output_sha256": "3032842d063cc12e909fee9cfc29795d9bebab5b95b2dc11bbb40bffb78c7486",
+      "foreground": 1379557,
+      "seconds": 16.716
+    },
+    {
+      "id": "asl_t1_145",
+      "method": "synthstrip",
+      "source_sha256": "228757a596085b0726bbbeb17e986a35ab1a071b1892a2d82851297432a16bc8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_145/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_145/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_145/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_145/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_145/native_mask.nii.gz",
+      "output_sha256": "ede23b71588a7f520775afb8cbcfab7d9984d5a18635f7d11d727cf52add1105",
+      "foreground": 1791209,
+      "seconds": 8.221
+    },
+    {
+      "id": "asl_t1_146",
+      "method": "synthstrip",
+      "source_sha256": "27d3052c8b80ebf106b359541a85b0b75115f635f6c136c990bdc283dc9d1bf8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_146/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_146/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_146/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_146/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_146/native_mask.nii.gz",
+      "output_sha256": "f79bee30a9dd95e8862f70b5c112d0db6aebd7774a4f91520970cb2a3623be17",
+      "foreground": 1391009,
+      "seconds": 8.17
+    },
+    {
+      "id": "asl_t1_147",
+      "method": "synthstrip",
+      "source_sha256": "5e13bac48b4e47a62f056a66b05eaf3097f4dd42e622a66a9a6f3f08b19a44b8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_147/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_147/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_147/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_147/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_147/native_mask.nii.gz",
+      "output_sha256": "49e1bd1ee1e4fb061d88546047154e225bc86f89454da5a214865fd66f29979b",
+      "foreground": 1623677,
+      "seconds": 17.197
+    },
+    {
+      "id": "asl_t1_149",
+      "method": "synthstrip",
+      "source_sha256": "b8f6c49e013410c4a23817980050307e3b4ca06c0286bf2e9e202840d4b934bc",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_149/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_149/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_149/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_149/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_149/native_mask.nii.gz",
+      "output_sha256": "326e26abd010ecf82e381f9c30dea5ee405ec58dbf646efbddecb48f671aab94",
+      "foreground": 1569347,
+      "seconds": 7.951
+    },
+    {
+      "id": "asl_t1_150",
+      "method": "synthstrip",
+      "source_sha256": "8f9b153839d0308daa24244c36d89e366b99338e800f4a6aae087ac4ed2bfefb",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_150/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_150/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_150/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_150/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_150/native_mask.nii.gz",
+      "output_sha256": "15539c30dcb0148f22c18dbbd0c2440007bb90a21dba99ed02b92ef969507678",
+      "foreground": 1369199,
+      "seconds": 8.151
+    },
+    {
+      "id": "asl_t1_151",
+      "method": "synthstrip",
+      "source_sha256": "a29f5123090e2a18b1180a0915b10cdf882b643a3f96d4e08462ab21f9b7f06a",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_151/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_151/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_151/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_151/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_151/native_mask.nii.gz",
+      "output_sha256": "daf6ae8b5dfaa33f8f5f3d856e36f31f07a0aacb39f5fafc367a5f5d2f9a8d94",
+      "foreground": 1533359,
+      "seconds": 17.135
+    },
+    {
+      "id": "asl_t1_152",
+      "method": "synthstrip",
+      "source_sha256": "56fa396e6e138ca2f0163fb3b86a70ef3f4c5dcf0ec7acb10064f28df7a02d52",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_152/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_152/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/asl_t1_152/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_152/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/asl_t1_152/native_mask.nii.gz",
+      "output_sha256": "cfc0859f6f9817e29b3aa0c5c7e637f814e320a101698f570e8f22fb538055d9",
+      "foreground": 1267562,
+      "seconds": 17.015
+    },
+    {
+      "id": "ixi_t1_002",
+      "method": "synthstrip",
+      "source_sha256": "71c5d110a352f943c96e08f75f5087066b608da6f8d203eb15d8d596d1f80f47",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_002/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_002/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_002/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_002/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_002/native_mask.nii.gz",
+      "output_sha256": "b7f126c6e444eda1696df30175e608eb4a84be6e7fa52c7a44435eb77f2fc54a",
+      "foreground": 1402606,
+      "seconds": 7.797
+    },
+    {
+      "id": "ixi_t1_012",
+      "method": "synthstrip",
+      "source_sha256": "073461dcd7bdec3324c5624bade7f31e75d580c67d22cb24f2de4f1389800c0e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_012/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_012/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_012/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_012/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_012/native_mask.nii.gz",
+      "output_sha256": "90b6c483588c6516d6ec531578e386318d2ebf8d4cfee923d5e3b318df129e33",
+      "foreground": 1613971,
+      "seconds": 7.977
+    },
+    {
+      "id": "ixi_t1_013",
+      "method": "synthstrip",
+      "source_sha256": "eda65d2111c9f3a7e2a766471bb29cc442b668d2101489871ef3f3ecde6e0530",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_013/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_013/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_013/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_013/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_013/native_mask.nii.gz",
+      "output_sha256": "7fcaa22dc78981781f8b5d7e875f8979708f86ae26cfaa29119b548cfe350e29",
+      "foreground": 1563772,
+      "seconds": 8.017
+    },
+    {
+      "id": "ixi_t1_015",
+      "method": "synthstrip",
+      "source_sha256": "8b81b5bae85a26d3ac073c6d5c13a2d0980abcba0cf7fd5cbded4f425cd9fc95",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_015/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_015/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_015/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_015/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_015/native_mask.nii.gz",
+      "output_sha256": "4157ffcdc77e50578b1cfd69b376d4fc9b181a0e23319d24860eed3f757c178c",
+      "foreground": 1515504,
+      "seconds": 7.817
+    },
+    {
+      "id": "ixi_t1_019",
+      "method": "synthstrip",
+      "source_sha256": "4e4c0059e65e211a305b2f3fd2965ef68f1cbc077ce06f360e82ab2a7376aee3",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_019/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_019/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_019/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_019/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_019/native_mask.nii.gz",
+      "output_sha256": "e694463b9f2dcb17fe9343ded30b5909424d4b18dfebbfa7831f2d46f8ef388d",
+      "foreground": 1627196,
+      "seconds": 7.873
+    },
+    {
+      "id": "ixi_t1_020",
+      "method": "synthstrip",
+      "source_sha256": "78960a0b46e79b3f47774e7c64da6758a583eac08bc6ae700142d7e113320b57",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_020/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_020/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_020/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_020/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_020/native_mask.nii.gz",
+      "output_sha256": "9a44366e041ed4bcc634f9ab0bea6ad482a9376687ce5d0bd104af9e7b597bb1",
+      "foreground": 1617335,
+      "seconds": 7.902
+    },
+    {
+      "id": "ixi_t1_021",
+      "method": "synthstrip",
+      "source_sha256": "f98713adb81e0bcf90d7412198c4aecbc3d76ee626597a94a8228ea6e9a3a58e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_021/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_021/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_021/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_021/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_021/native_mask.nii.gz",
+      "output_sha256": "c05685c720d12bbb11f4b508d6552d63f433f68c84e3f0befd24e760595f1bb9",
+      "foreground": 1598023,
+      "seconds": 7.931
+    },
+    {
+      "id": "ixi_t1_022",
+      "method": "synthstrip",
+      "source_sha256": "c0ff5dbf0614d97af48c23c79f130aa8fbc874c0b39f72e1dd61b898b9c15310",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_022/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_022/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_022/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_022/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_022/native_mask.nii.gz",
+      "output_sha256": "14dc1f0b838756724982f7b691ab9d86be004f138526cae983d6f5b1ee81e9b6",
+      "foreground": 1749421,
+      "seconds": 7.447
+    },
+    {
+      "id": "ixi_t1_134",
+      "method": "synthstrip",
+      "source_sha256": "2bf018166b5e0fde738a2f160e44fc2d71b96ddb1fbad70c02c8592c59c73071",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_134/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_134/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_134/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_134/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_134/native_mask.nii.gz",
+      "output_sha256": "e276ff6c09319f853c6ebdf6f247635a4d2960c1e9e32669ffddf1b38f3002d1",
+      "foreground": 1536864,
+      "seconds": 7.942
+    },
+    {
+      "id": "ixi_t1_135",
+      "method": "synthstrip",
+      "source_sha256": "b3bd87e1c9be0e97807f007022ddbbb5d1fd101fb6cf00f15fdc309df1cb8f1c",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_135/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_135/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_135/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_135/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_135/native_mask.nii.gz",
+      "output_sha256": "031594f9c4a908792cadc8347292fe69b153c29f3f420bcadab0d66ecc1c3532",
+      "foreground": 1421993,
+      "seconds": 8.035
+    },
+    {
+      "id": "ixi_t1_136",
+      "method": "synthstrip",
+      "source_sha256": "c3977d3afbb9498c8ffd2ad75770fdc0bfae1e9bbd8113dbf6dde8032f496056",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_136/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_136/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_136/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_136/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_136/native_mask.nii.gz",
+      "output_sha256": "7c5dfc810eb0a259a622ac8909bdb5543a504c07ee87510f95f2ac2ca5537c36",
+      "foreground": 1606899,
+      "seconds": 8.138
+    },
+    {
+      "id": "ixi_t1_137",
+      "method": "synthstrip",
+      "source_sha256": "99d7c08748675db779f870192ba3c728e74ea2ce1d6aaf5dd0b0f78ab4b70ef9",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_137/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_137/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_137/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_137/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_137/native_mask.nii.gz",
+      "output_sha256": "fb5a1b3a53b20e85dd90be99aa5850698b5944e96d72bf7e386e813a955e8bd6",
+      "foreground": 1485531,
+      "seconds": 7.829
+    },
+    {
+      "id": "ixi_t1_138",
+      "method": "synthstrip",
+      "source_sha256": "95895d7aa6d61a844853d3cbfc3312238b4c436d6a7e2d81c1e27ab47ec335a4",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_138/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_138/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_138/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_138/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_138/native_mask.nii.gz",
+      "output_sha256": "b05b2358049e918e32538331b77ddebea32ed945b36b95061157587ff76859e8",
+      "foreground": 1622484,
+      "seconds": 7.96
+    },
+    {
+      "id": "ixi_t1_139",
+      "method": "synthstrip",
+      "source_sha256": "d00f0edd926cce50405b8fc8ff9a6bcdbfbeed683a86da0656783ff9e35bb0ba",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_139/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_139/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_139/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_139/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_139/native_mask.nii.gz",
+      "output_sha256": "33c963849d2b4e7662c67a8830c662d65a31c1e0999b1c5b296bbc308c34c7a9",
+      "foreground": 1525093,
+      "seconds": 7.892
+    },
+    {
+      "id": "ixi_t1_140",
+      "method": "synthstrip",
+      "source_sha256": "df6c333e699f8ccda35d5c669f03d5e73ccb0ce29b7cc0e1a81eb6c407b758a8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_140/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_140/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_140/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_140/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_140/native_mask.nii.gz",
+      "output_sha256": "1d0a26971a29020370bbc0964901914773609debe64642a9b74d5c1290b900ab",
+      "foreground": 1396649,
+      "seconds": 7.918
+    },
+    {
+      "id": "ixi_t1_141",
+      "method": "synthstrip",
+      "source_sha256": "67f172fdfe9ed6ce6af18d94132eabc7affba09d02dc629f68029407657479f8",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_141/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_141/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_141/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_141/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_141/native_mask.nii.gz",
+      "output_sha256": "b4f6fd7cba5378993c631b5ee9bc2dfea9bc855bf4b7ee412d36484b6ae1f22f",
+      "foreground": 1349575,
+      "seconds": 7.751
+    },
+    {
+      "id": "ixi_t1_142",
+      "method": "synthstrip",
+      "source_sha256": "969273a9dd4cd62e8f31f82dac6ca80d96100a1c835846bd51fb52b83eff5cbf",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_142/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_142/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_142/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_142/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_142/native_mask.nii.gz",
+      "output_sha256": "3655560038dc015866e7f476e224d60e519f22251bce12948014f538ed0c8195",
+      "foreground": 1440716,
+      "seconds": 7.817
+    },
+    {
+      "id": "ixi_t1_143",
+      "method": "synthstrip",
+      "source_sha256": "611392a9c94545881a74c00368df84660c752c30b4b9b893be59288ece943fee",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_143/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_143/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_143/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_143/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_143/native_mask.nii.gz",
+      "output_sha256": "1806e6608e3b1c4213445d68973fced0f72c9c3c1ef756204ebec284c7c9fcd2",
+      "foreground": 1359844,
+      "seconds": 7.983
+    },
+    {
+      "id": "ixi_t1_230",
+      "method": "synthstrip",
+      "source_sha256": "638c71c63cc4428ebaf1193b12c46524d1717259449e1e646b51abef336fd481",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_230/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_230/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_230/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_230/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_230/native_mask.nii.gz",
+      "output_sha256": "3f5bc1f5f21ae91e3e33571a91d9c4569e62635d296d318167958ad0ba2ddb28",
+      "foreground": 1376000,
+      "seconds": 7.973
+    },
+    {
+      "id": "ixi_t1_231",
+      "method": "synthstrip",
+      "source_sha256": "d0a23bd48f40c9879ceacfddac625a67ac43bf308924fb234787e237604476a0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_231/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_231/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_231/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_231/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_231/native_mask.nii.gz",
+      "output_sha256": "7043618819d6ad898940129267f179cdd88d05ba3d7635df3f8070adcf28b6f4",
+      "foreground": 1390018,
+      "seconds": 7.877
+    },
+    {
+      "id": "ixi_t1_232",
+      "method": "synthstrip",
+      "source_sha256": "c2250bf42581e6703cff0d6853012bf88b291950d154181b408eb2569854aa6c",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_232/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_232/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_232/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_232/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_232/native_mask.nii.gz",
+      "output_sha256": "9cedc9661c80462adb9246023c7551f88bbf7252e5d56c2ca164a9451377b3e5",
+      "foreground": 1344970,
+      "seconds": 7.845
+    },
+    {
+      "id": "ixi_t1_234",
+      "method": "synthstrip",
+      "source_sha256": "6f6a0c1eb63ca873ce0c0bed5233b43a3780c5c146d01b57a7bfb93998710af0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_234/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_234/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_234/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_234/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_234/native_mask.nii.gz",
+      "output_sha256": "69baa1c9d5bab5d45ba9297a8bcdf45f62893a73cb82d6927285a1b5421d436e",
+      "foreground": 1376640,
+      "seconds": 7.837
+    },
+    {
+      "id": "ixi_t1_266",
+      "method": "synthstrip",
+      "source_sha256": "33af03d76ccba4d04bb3164ffcf494a12dcb1a6f0659a54796eed49478e4d966",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_266/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_266/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_266/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_266/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_266/native_mask.nii.gz",
+      "output_sha256": "cd2229458a6bc4f750b0f45ac502833ed3aa47adbf8a25f40ff64a3caea0ec54",
+      "foreground": 1311316,
+      "seconds": 7.848
+    },
+    {
+      "id": "ixi_t1_267",
+      "method": "synthstrip",
+      "source_sha256": "0969cdd8a2c402ac66a4929ca2d48f182534bb1ca8c33cbb94da82c6d9dd9b63",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_267/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_267/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_267/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_267/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_267/native_mask.nii.gz",
+      "output_sha256": "737c8e563a7b6006f61f742b394acddd6370a2a4b90a0cb609273f1004148bb3",
+      "foreground": 1506060,
+      "seconds": 7.754
+    },
+    {
+      "id": "ixi_t1_268",
+      "method": "synthstrip",
+      "source_sha256": "255dca86830e70791ee4732eaa2d0ab7b242e504bd52f6e09db90429670a52a0",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_268/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_268/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_268/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_268/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_268/native_mask.nii.gz",
+      "output_sha256": "b46503888430f1b2aea508dde6d8d453c2ee4859e4cf8885db74af2dc37399e3",
+      "foreground": 1546154,
+      "seconds": 7.533
+    },
+    {
+      "id": "ixi_t1_269",
+      "method": "synthstrip",
+      "source_sha256": "43efb78b453b00c7a376758cc04bfd3050d24df4e06a7f038bea8ad4a6c0d5fb",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_269/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_269/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_269/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_269/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_269/native_mask.nii.gz",
+      "output_sha256": "9fad89b56cbdb7b2dbb2a1a26408f93d9292c47fe8a0cda39ab72627f9bc51be",
+      "foreground": 1570324,
+      "seconds": 7.868
+    },
+    {
+      "id": "ixi_t1_270",
+      "method": "synthstrip",
+      "source_sha256": "12db922395177c67b44d70ddb269604c013c6bf8cba5ff3489d0e328e7be834a",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_270/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_270/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_270/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_270/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_270/native_mask.nii.gz",
+      "output_sha256": "99875073f06e8018e1c524bc8f70ef88c95320d6b854053802ad1410644101eb",
+      "foreground": 1444182,
+      "seconds": 8.134
+    },
+    {
+      "id": "ixi_t1_274",
+      "method": "synthstrip",
+      "source_sha256": "3d4a391b76255b494050f3f8192a9a6ecf668579aa53fe4056b7e57982209b8b",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_274/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_274/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_274/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_274/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_274/native_mask.nii.gz",
+      "output_sha256": "21482e127f078522e04765e4a20960f2b100fb70c7ff8044bcee92815501ef9d",
+      "foreground": 1262124,
+      "seconds": 7.726
+    },
+    {
+      "id": "ixi_t1_275",
+      "method": "synthstrip",
+      "source_sha256": "fc80611d59f86b9c1554450b23c605eeeb43ee459e179db1b159c04635cc2a1e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_275/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_275/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_275/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_275/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_275/native_mask.nii.gz",
+      "output_sha256": "67841a197a6c3ad095c0cdf8d78650e38e6fdb106222033b2a3c32137096270f",
+      "foreground": 1529421,
+      "seconds": 7.544
+    },
+    {
+      "id": "ixi_t1_276",
+      "method": "synthstrip",
+      "source_sha256": "0ae8d42ca0cdcb73f3757fd33958f13c98e6aa0b1b1ffc506b9f4e937a209b2e",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_276/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_276/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_276/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_276/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_276/native_mask.nii.gz",
+      "output_sha256": "b08aac4d7799c52b2582207c5ec6f149e76b56185b69c5407c7483a7293cff1c",
+      "foreground": 1517962,
+      "seconds": 7.932
+    },
+    {
+      "id": "ixi_t1_277",
+      "method": "synthstrip",
+      "source_sha256": "0aaefe8efd19e8361843481528d659f001669a24252ef59a32e7a0de7df0a333",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_277/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_277/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_277/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_277/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_277/native_mask.nii.gz",
+      "output_sha256": "4f274a1214149b71fa2ce3c4cf3896a7c3b1ee12c2493201ebfc6b44c625af21",
+      "foreground": 1246938,
+      "seconds": 7.921
+    },
+    {
+      "id": "ixi_t1_278",
+      "method": "synthstrip",
+      "source_sha256": "46125f606b7db71580aa19f15e5dbe4a1d5b1624cc433414e90056cd39794054",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_278/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_278/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_278/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_278/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_278/native_mask.nii.gz",
+      "output_sha256": "aa1f877c5b48c5061848d7a3bb06ea2f3f19cc6c993cd57b1829232d41839a99",
+      "foreground": 1643675,
+      "seconds": 7.663
+    },
+    {
+      "id": "ixi_t1_397",
+      "method": "synthstrip",
+      "source_sha256": "7f6ae01e19866f64cadc39ac735ea18af3fdd60e92b4759245477bb596530199",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_397/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_397/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_397/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_397/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_397/native_mask.nii.gz",
+      "output_sha256": "a52f62f9634df1a93cece29cbb197cde1b7678c879f8b89f1483829b10ac46cf",
+      "foreground": 1288514,
+      "seconds": 7.496
+    },
+    {
+      "id": "ixi_t1_398",
+      "method": "synthstrip",
+      "source_sha256": "44cb6e37f6c64c9512004c357d1635d32b430bd08d91fef2155ba974937c0657",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_398/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_398/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_398/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_398/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_398/native_mask.nii.gz",
+      "output_sha256": "8805ff80bab0d71928cf78125bf4214d465b61403584c882932412d56f66765a",
+      "foreground": 1321173,
+      "seconds": 7.904
+    },
+    {
+      "id": "ixi_t1_399",
+      "method": "synthstrip",
+      "source_sha256": "9dabadddb487b41a6dc6b51449b82815f46faa2624155fe1e6fc67fa1c0be1a7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_399/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_399/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_399/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_399/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_399/native_mask.nii.gz",
+      "output_sha256": "c78d34951eacb7a0adeb9f44175c6d311474876daf1472b35e42509978e47c0c",
+      "foreground": 1409315,
+      "seconds": 8.036
+    },
+    {
+      "id": "ixi_t1_400",
+      "method": "synthstrip",
+      "source_sha256": "6274d438a5ab5c9537899bc77753900648e5ba9507e5f334c73450d8ad19f974",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_400/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_400/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_400/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_400/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_400/native_mask.nii.gz",
+      "output_sha256": "f7449b6aa0f5af95e2de1c7f8c06eaa5dd1ec4d7cf793689ea6086077cd0fb08",
+      "foreground": 1363475,
+      "seconds": 7.672
+    },
+    {
+      "id": "ixi_t1_401",
+      "method": "synthstrip",
+      "source_sha256": "a7c8f82657a3ec13bea957a3805cc1944dc007957b02ffbb99e925db00c2dbd6",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_401/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_401/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_401/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_401/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_401/native_mask.nii.gz",
+      "output_sha256": "37e9309d79269fcf06b8181b9a9a46cb987b8a0536fcf702638e1bc2f3823421",
+      "foreground": 1279590,
+      "seconds": 7.476
+    },
+    {
+      "id": "ixi_t1_518",
+      "method": "synthstrip",
+      "source_sha256": "661febc478dea90601bca0fe524820904b78ee45e8e600fb36b8e0be3a76ddc7",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_518/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_518/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_518/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_518/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_518/native_mask.nii.gz",
+      "output_sha256": "86256032d4935d57cdd8be23a0e5c32c901946722847c29e068285410590812a",
+      "foreground": 1357260,
+      "seconds": 7.746
+    },
+    {
+      "id": "ixi_t1_519",
+      "method": "synthstrip",
+      "source_sha256": "5b8f55f15315b1b036cca0479de569fe5ae1205e444e5e94f179a8e72a2581fd",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_519/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_519/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_519/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_519/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_519/native_mask.nii.gz",
+      "output_sha256": "ceccb0cd952db1bcfaea0909ccf4c9b97040434f35730ba877fc66c814325e43",
+      "foreground": 1608456,
+      "seconds": 7.951
+    },
+    {
+      "id": "ixi_t1_521",
+      "method": "synthstrip",
+      "source_sha256": "0cd63fa662d261afcd58fe81452da4216a4f397f8cd9260ef1d202d5e7898f50",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_521/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_521/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_521/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_521/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_521/native_mask.nii.gz",
+      "output_sha256": "4a22dae6e62b0d72135a9ff2de577e058add38e3a36f11cb9fb42ef8514e7190",
+      "foreground": 1371721,
+      "seconds": 7.73
+    },
+    {
+      "id": "ixi_t1_522",
+      "method": "synthstrip",
+      "source_sha256": "b14db4ea9d5c13e7712c880efecd4ecbb0cae49b84124e59a0ab044c11108c86",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_522/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_522/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_522/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_522/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_522/native_mask.nii.gz",
+      "output_sha256": "dcd3fb83f7af77b0d3aa7d9cf26fc99acec9d1a9ae62335f2d8e117f1bdf13f2",
+      "foreground": 1472274,
+      "seconds": 7.548
+    },
+    {
+      "id": "ixi_t1_523",
+      "method": "synthstrip",
+      "source_sha256": "916ad86bcd88bddfb4e436f5653b1c84e52a5ab5c0929f3769d0895c2cd36eb4",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_523/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_523/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_523/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_523/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_523/native_mask.nii.gz",
+      "output_sha256": "41fc63af95b38afa890c79b94ac486e63e462b58165c59f7f2d8c22907f9474e",
+      "foreground": 1422674,
+      "seconds": 7.607
+    },
+    {
+      "id": "ixi_t1_524",
+      "method": "synthstrip",
+      "source_sha256": "7a4960629e923692cad66dc9cf21f78c8383d1f36082c52b16418d2b2058df14",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_524/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_524/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_524/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_524/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_524/native_mask.nii.gz",
+      "output_sha256": "755ec299c477ee8a45323be62cb027668db50d8bd3b255552f390d64a6527e02",
+      "foreground": 1406795,
+      "seconds": 8.003
+    },
+    {
+      "id": "ixi_t1_525",
+      "method": "synthstrip",
+      "source_sha256": "d6528d4e136a8c041be8cc6b7ba97f915b11eda9d606e7eb86e38be87f310917",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_525/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_525/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_525/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_525/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_525/native_mask.nii.gz",
+      "output_sha256": "5f23e1b9a7b050384f2c8b0653d09af625782b05047dc8699c26bdae9080f8b8",
+      "foreground": 1507059,
+      "seconds": 7.862
+    },
+    {
+      "id": "ixi_t1_526",
+      "method": "synthstrip",
+      "source_sha256": "9cca68a17b5c6c20ab188111281a6d32206b0406aee5a8c5c6d25e109dd7b707",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_526/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_526/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_526/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_526/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_526/native_mask.nii.gz",
+      "output_sha256": "b6b55c6e7cb0bdd9e44501ed1aeec6acd147a396cf570e67ab55b26cc0591089",
+      "foreground": 1118364,
+      "seconds": 7.541
+    },
+    {
+      "id": "ixi_t1_527",
+      "method": "synthstrip",
+      "source_sha256": "ee16d8cf50a95f2bfb73c133e4826f4af2f0fa7ac659abb879287912224f4abe",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_527/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_527/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_527/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_527/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_527/native_mask.nii.gz",
+      "output_sha256": "49663a28d0217535c0acfc2d26d99c75c99223c4df5224fa59cc6ed3ad3db337",
+      "foreground": 1816566,
+      "seconds": 7.666
+    },
+    {
+      "id": "ixi_t1_528",
+      "method": "synthstrip",
+      "source_sha256": "85a96bc2acef7328bc66d9c2718e2a0b4ba73b1d16a30d8a4674eecc9dd515f6",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_528/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_528/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_528/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_528/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_528/native_mask.nii.gz",
+      "output_sha256": "df1eba28fd833020318140016ce70c6c70782eaa3adb5f7498e3a873553057e1",
+      "foreground": 1724215,
+      "seconds": 7.933
+    },
+    {
+      "id": "ixi_t1_553",
+      "method": "synthstrip",
+      "source_sha256": "a6a48786b98aa8fb193b271b42a8e2c36eb8e66ff6b0d262124b2a56356caaf2",
+      "commands": [
+        {
+          "argv": [
+            "/home/hengyi/.venvs/monai-brain/bin/python",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/python/scripts/mri_synthstrip",
+            "-i",
+            "/mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_553/image.nii.gz",
+            "-m",
+            "/mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_553/synthstrip.nii.gz",
+            "-b",
+            "1",
+            "--model",
+            "/home/hengyi/.local/opt/freesurfer-7.4.1-package/usr/local/freesurfer/7.4.1/models/synthstrip.1.pt",
+            "-g"
+          ],
+          "returncode": 0,
+          "stdout": "Configuring model on the GPU\nUsing custom model weights\nInput image read from: /mnt/c/Users/25696/Downloads/MONAI/data/synthstrip_v15_t1/ixi_t1_553/image.nii.gz\nProcessing frame (of 1): 1 done\nBinary brain mask saved to: /mnt/c/Users/25696/Downloads/MONAI/results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_553/synthstrip.nii.gz\n\nIf you use SynthStrip in your analysis, please cite:\n----------------------------------------------------\nSynthStrip: Skull-Stripping for Any Brain Image\nA Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann\nNeuroImage 206 (2022), 119474\nhttps://doi.org/10.1016/j.neuroimage.2022.119474 \n\nWebsite: https://w3id.org/synthstrip\n\n",
+          "stderr": ""
+        }
+      ],
+      "status": "ok",
+      "failure": null,
+      "output": "results/external_work/synthstrip_v15_t1/test/synthstrip/ixi_t1_553/native_mask.nii.gz",
+      "output_sha256": "2f2cd287c8a8fe62030586c47cff9b82c964bb2181585d766e3c59fef8e1a79e",
+      "foreground": 1635558,
+      "seconds": 7.75
+    }
+  ],
+  "dataset_sha256": "992660b51013059d7ee332b0fb0343768fc1066c2eee84a9446679a5f183c31a"
+}

@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="#results">Results</a> ·
+  <a href="#external-validation-ixi-and-asl-adult-t1w">External validation</a> ·
   <a href="docs/reproduce.md">Reproduce</a> ·
   <a href="docs/methods.md">Methods</a> ·
   <a href="docs/protocol.md">Protocol</a> ·
@@ -25,7 +26,7 @@ A reproducible brain-extraction benchmark comparing a **MONAI 3D U-Net** with fi
 
 ## Results
 
-The U-Net achieves **0.9863 ± 0.0018 Dice** on the 25 held-out NFBS scans. This is a single-dataset research evaluation; external generalization and clinical performance have not been established.
+The U-Net achieves **0.9863 ± 0.0018 Dice** on the 25 held-out NFBS scans. This is the held-out NFBS result; see the separate external T1w validation below. Neither analysis establishes clinical performance.
 
 ![U-Net predictions on the best, median and worst held-out cases](results/figures/overlays.png)
 
@@ -91,6 +92,24 @@ This independent post-hoc comparison uses the default watershed step in `recon-a
 Two FreeSurfer masks fell below Dice 0.8 despite successful processing. [Native overlays](results/supplementary/freesurfer_autorecon1/figures/low_dice_qc.png) show extensive extra foreground outside the brain in both cases.
 
 [Protocol](docs/protocol.md#addendum-2026-11-10-post-hoc-freesurfer-baseline) · [Full results and native QC](results/supplementary/freesurfer_autorecon1/summary.md) · [Run and audit instructions](docs/freesurfer.md) · [Download the 25 FreeSurfer masks](https://github.com/hennyi-yin/monai-brain-extraction/releases/tag/v1.2.0)
+
+## External validation: IXI and ASL adult T1w
+
+The frozen NFBS checkpoint was applied without retraining to **89 external scans** (48 IXI and 41 ASL-cohort T1w) from the official SynthStrip v1.5 test split.
+
+| Cohort | NFBS U-Net Dice | BET -R Dice | SynthStrip Dice | Cropped BET Dice (strict / corrected) |
+|---|---:|---:|---:|---:|
+| IXI (48) | 0.9560 | 0.9652 | 0.9701 | 0.4791 / 0.9558 |
+| ASL (41) | 0.8950 | 0.9488 | 0.9731 | 0.2434 / 0.9036 |
+| Pooled (89) | 0.9279 | 0.9577 | 0.9715 | 0.3705 / 0.9318 |
+
+**The NFBS advantage did not transfer to these external comparisons.** Mean paired U-Net Dice was **2.98 points lower than BET -R** and **4.35 points lower than SynthStrip** (95% bootstrap CI for U-Net minus SynthStrip: **[-4.84, -3.91]**; SynthStrip was higher in all 89 pairs).
+
+The pre-declared strict cropped BET comparison counted **54/89** map-back failures as empty masks, which drove its apparent +55.74-point U-Net difference. A separate post-hoc sensitivity recovered **54/54** from the original BET masks without rerunning extraction. The corrected paired difference was **-0.38 points [95% CI: -0.95, +0.22]**.
+
+The source references were manually refined from a consensus of classical methods. These results describe adult T1w transfer in these two cohorts and do not establish clinical performance.
+
+[Full external report](results/external/synthstrip_v15_t1/summary.md) · [Pre-declared protocol](docs/external_protocol.md) · [Geometry sensitivity](results/external/synthstrip_v15_t1/geometry_sensitivity/summary.md) · [Reproduce](docs/external_reproduce.md)
 
 ## Reproduce
 
